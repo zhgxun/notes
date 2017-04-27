@@ -14,11 +14,15 @@ int mycomp(const void * p1, const void * p2);
 int main(void)
 {
     double vals[NUM];
+
     fillarray(vals, NUM);
+
     puts("Rand list:");
     showarray(vals, NUM);
+
     // 第一个参数为数组的首地址，第二参数为数据项数，第三个参数为数组中每个元素占用空间的大小，第四个参数为自定义的比较函数
     qsort(vals, NUM, sizeof(double), mycomp);
+
     puts("Sorted list:");
     showarray(vals, NUM);
 
@@ -31,7 +35,6 @@ int main(void)
 void fillarray(double ar[], int n)
 {
     int index;
-    for (index = 0; index < n; index++) {
         ar[index] = (double) rand() / ((double) rand() + 0.1);
     }
 }
