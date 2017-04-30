@@ -23,7 +23,7 @@ typedef struct film Item;
  */
 typedef struct node {
     Item item;
-    struct note * next; // 指向该Node的下一个项地址
+    struct note * next; // 指向该Node的下一项地址
 } Node;
 
 // 重名名Node为指向List的指针

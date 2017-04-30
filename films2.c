@@ -30,7 +30,7 @@ int main(void)
             continue;
         }
 
-        if (AddItem(temp, &movies) == false) {
+        if (AddItem(temp, &movies)) {
             fprintf(stderr, "Problem allocating memory.\n");
             break;
         }
