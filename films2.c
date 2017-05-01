@@ -19,7 +19,7 @@ int main(void)
     InitializeList(&movies);
     if (ListIsFull(&movies)) {
         fprintf(stderr, "No memory available! Bye!\n");
-        exit(1);
+        exit(EXIT_FAILURE);
     }
 
     puts("Enter first movie title:");
@@ -30,7 +30,7 @@ int main(void)
             continue;
         }
 
-        if (AddItem(temp, &movies)) {
+        if (!AddItem(temp, &movies)) {
             fprintf(stderr, "Problem allocating memory.\n");
             break;
         }

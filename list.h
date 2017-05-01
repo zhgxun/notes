@@ -26,7 +26,7 @@ typedef struct node {
     struct note * next; // 指向该Node的下一项地址
 } Node;
 
-// 重名名Node为指向List的指针
+// 为了管理链表，定义一个List为指向链表开始处的指针
 typedef Node * List;
 
 /**

@@ -8,6 +8,8 @@
 
 /**
  * 拷贝一个电影基本信息到链表中
+ * 内部链接函数，影藏在list.c文件中
+ * 该函数是实现的一部分，而不是接口的一部分
  */
 static void CopyToNode(Item item, Node * pnode);
 
@@ -23,6 +25,7 @@ void InitializeList(List * plist)
 /**
  * 链表是否为空
  * 判断头指针即可
+ * 首次调用，必须初始化链表后才能使用
  */
 bool ListIsEmpty(const List * plist)
 {
@@ -31,6 +34,7 @@ bool ListIsEmpty(const List * plist)
 
 /**
  * 链表是否已满
+ 对链表而言，链表的大小取决于可用内存量
  */
 bool ListIsFull(const List * plist)
 {
@@ -58,6 +62,7 @@ unsigned int ListItemCount(const List * plist)
     while (pnode != NULL) {
         ++count;
         // 指向链表的下一个节点
+        // 会报不兼容的指针类型警告
         pnode = pnode->next;
     }
 
