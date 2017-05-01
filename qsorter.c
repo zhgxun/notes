@@ -35,6 +35,7 @@ int main(void)
 void fillarray(double ar[], int n)
 {
     int index;
+    for (index = 0; index < n; index++) {
         ar[index] = (double) rand() / ((double) rand() + 0.1);
     }
 }
