@@ -75,7 +75,7 @@ bool EnQueue(Item item, Queue * pq)
 		// 为空时该新项同时位于队列首端和尾端
 		pq->front = pnew;
 	} else {
-		// 否则链接到队列尾端
+		// 否则链接到队列尾端，即是重置当前队列的尾端
 		pq->rear->next = pnew;
 	}
 	// 记录队列尾端的位置
@@ -147,7 +147,7 @@ static void CopyToNode(Item item, Node * pn)
 /**
  * 把项拷贝到给定的变量中
  */
-static void CopyToItem(Node * pn, Item *pi)
+static void CopyToItem(Node * pn, Item * pi)
 {
 	*pi = pn->item;
 }
