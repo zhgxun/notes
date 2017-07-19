@@ -1,6 +1,9 @@
 package main
 
-import "log"
+import (
+	"database/sql"
+	"log"
+)
 
 func main() {
 

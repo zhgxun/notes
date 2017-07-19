@@ -18,15 +18,15 @@ func main() {
 	fmt.Fprintln(buf1, "Good")
 	// 数据都写入后, 调用者有义务调用Flush方法以保证所有的数据都交给了下层的io.Writer
 	buf1.Flush()
-	
+
 	// 写入[]byte类型
 	buf1.Write([]byte("My Name Is HiHi\n"))
 	buf1.Flush()
-	
+
 	// 写入string类型
 	buf1.WriteString("Nice to meet you\n")
 	buf1.Flush()
-	
+
 	// Scanner类型提供了方便的读取数据的接口，如从换行符分隔的文本里读取每一行。
 	//
 	// 成功调用的Scan方法会逐步提供文件的token，跳过token之间的字节。token由SplitFunc类型的分割函数指定;
@@ -66,7 +66,7 @@ func main() {
 	if err := scanner.Err(); err != nil {
 		fmt.Printf("Invalid input: %s\n", err)
 	}
-	
+
 	// 使用默认按行分隔, 从标准输入读取, 测试时打开, 否则会阻塞
 	//scanner = bufio.NewScanner(os.Stdin)
 	//for scanner.Scan() {
@@ -75,7 +75,7 @@ func main() {
 	//if err := scanner.Err(); err != nil {
 	//	fmt.Fprintln(os.Stderr, "reading standard input:", err)
 	//}
-	
+
 	// 按单词分隔
 	const input2 = "Now is the winter of our discontent,\nMade glorious summer by this sun of York.\n"
 	scanner = bufio.NewScanner(strings.NewReader(input2))

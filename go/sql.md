@@ -18,7 +18,7 @@
 
 **sql.DB**抽象旨在让您不必担心如何管理对底层数据存储的并发访问。当您使用它来执行任务时，连接被标记为可用，然后在不再使用时返回到可用池。一个后果是，如果您无法将连接释放到池中，则可能导致**db.SQL**打开大量连接，可能会耗尽资源（太多连接，打开的文件句柄太多，缺少可用网络端口等）。 我们稍后再讨论一下。
 
-创建sql.DB后，可以使用它来查询它所代表的数据库，以及创建语句和事务。
+创建**sql.DB**后，可以使用它来查询它所代表的数据库，以及创建语句和事务。
 
 ##2、导入数据库驱动
 
@@ -32,8 +32,8 @@
 
 ```go
 import (
-    "database/sql"
-    _ "github.com/go-sql-driver/mysql"
+	"database/sql"
+	_ "github.com/go-sql-driver/mysql"
 )
 ```
 
@@ -49,11 +49,11 @@ import (
 
 ```go
 func main() {
-    db, err := sql.Open("mysql", "user:password@tcp(127.0.0.1:3306)/hello")
-    if err != nil {
-        log.Fatal(err)
-    }
-    defer db.Close()
+	db, err := sql.Open("mysql", "user:password@tcp(127.0.0.1:3306)/hello")
+	if err != nil {
+		log.Fatal(err)
+	}
+	defer db.Close()
 }
 ```
 
@@ -72,7 +72,7 @@ func main() {
 ```go
 err = db.Ping()
 if err != nil {
-    // do something here
+	// do something here
 }
 ```
 
@@ -176,4 +176,34 @@ if err = rows.Err(); err != nil {
 ```
 
 在引擎下，**db.Query()**实际上准备，执行和关闭一个准备好的语句。 这是数据库的三次往返。 如果您不小心，您的应用程序可以将数据库交互的数量增加三倍！ 某些驱动程序可以在特定情况下避免这种情况，但并不是所有驱动程序都可以。 查看准备的声明更多。
+
+###4.4 单行查询
+
+如果一个查询返回最多一行，可以使用一些快速的样板代码：
+
+```go
+var name string
+err = db.QueryRow("select name from users where id = ?", 1).Scan(&name)
+if err != nil {
+    log.Fatal(err)
+}
+fmt.Println(name)
+```
+
+来自查询的错误将延迟到调用**Scan()**，然后从中返回。 您也可以在准备的语句中调用**QueryRow()**：
+
+```go
+stmt, err := db.Prepare("select name from users where id = ?")
+if err != nil {
+	log.Fatal(err)
+}
+var name string
+err = stmt.QueryRow(1).Scan(&name)
+if err != nil {
+	log.Fatal(err)
+}
+fmt.Println(name)
+```
+
+
 
