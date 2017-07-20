@@ -1,4 +1,8 @@
-# Go database/sql 教程
+[首页](../index.html)
+
+#Go database/sql 教程
+
+>zhgxun 2017年07月19日
 
 说明：内容来源于[Go database/sql tutorial](http://go-database-sql.org/index.html)，通过谷歌翻译完成。文档翻译成中文后，很多意思会被语言本身造成误解，请查看英文原文。
 
@@ -142,7 +146,7 @@ if err != nil {
 
 * 你应该总是**defer rows.Close()**，即使你也在循环结束时调用**rows.Close()**，这不是一个坏主意。
 
-* 不要在循环中推迟。 延迟语句在函数退出之前不会执行，所以长时间运行的函数不应该使用它。 如果你这样做，你会慢慢积累记忆。 如果你在循环中反复查询和使用结果集，则在完成每个结果后应显式调用**rows.Close()**，而不使用延迟。
+* 不要在循环中延迟(defer)。 延迟语句在函数退出之前不会执行，所以长时间运行的函数不应该使用它。 如果你这样做，你会慢慢积累记忆。 如果你在循环中反复查询和使用结果集，则在完成每个结果后应显式调用**rows.Close()**，而不使用延迟(defer)。
 
 ###4.2 Scan()如何工作
 
@@ -660,3 +664,5 @@ for rows.Next() {
 ```
 
 但是，Go不会阻止你尝试。 因此，如果你尝试在第一个释放资源并自行清理之前尝试执行另一个语句，则可能会遇到损坏的连接。 这也意味着事务中的每个语句都会产生一组单独的网络往返数据库。
+
+@本页面由[Open source Markdown editor for OS X.](http://macdown.uranusjr.com)生成, 由[GitHub Pages](https://pages.github.com)提供服务。
