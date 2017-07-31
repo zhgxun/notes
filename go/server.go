@@ -6,33 +6,46 @@ import (
 	"strconv"
 	"strings"
 	"time"
+	"os"
 )
 
 func main() {
 	// 监听的服务器端口
-	service := ":1200"
+	service := "127.0.0.1:1200"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", service)
-	checkError(err)
-	// 监听该地址
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
+	// 在服务器端我们需要绑定服务到指定的非激活端口, 并监听此端口,
+	// 当有客户端请求到达的时候可以接收到来自客户端连接的请求
 	listener, err := net.ListenTCP("tcp", tcpAddr)
-	checkError(err)
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
 	for {
 		// 接受每一种请求
 		conn, err := listener.Accept()
+		// 当有错误发生的情况下最好是由服务端记录错误, 然后当前连接的客户端直接报错而退出, 从而不会
+		// 影响到当前服务端运行的整个服务
 		if err != nil {
 			continue
 		}
+		// 处理客户端的连接
 		go handleClient(conn)
 	}
 }
 
 func handleClient(conn net.Conn) {
-	// 超时时间
-	conn.SetReadDeadline(time.Now().Add(2 * time.Minute)) // set 2 minutes timeout
-	request := make([]byte, 128)                          // set maxium request length to 128B to prevent flood attack
-	defer conn.Close()                                    // close connection before exit
+	// 超时时间, 当一定时间内客户端无请求发送, conn便会自动关闭, 下面的for循环即会因为连接已关闭而跳出
+	conn.SetReadDeadline(time.Now().Add(2 * time.Minute))
+	// request在创建时需要指定一个最大长度以防止flood attack; 每次读取到请求处理完毕后,
+	// 需要清理request, 因为conn.Read()会将新读取到的内容append到原内容之后
+	request := make([]byte, 128)
+	defer conn.Close()
 	for {
-		// 读取每个客户端发送的信息
+		// 不断读取客户端发来的请求, 由于我们需要保持与客户端的长连接, 所以不能在读取完一次请求后就关闭连接
 		read_len, err := conn.Read(request)
 
 		if err != nil {
@@ -51,6 +64,6 @@ func handleClient(conn net.Conn) {
 			conn.Write([]byte(daytime))
 		}
 
-		request = make([]byte, 128) // clear last read content
+		request = make([]byte, 128)
 	}
 }
