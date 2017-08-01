@@ -36,12 +36,20 @@ func main() {
 	// func (c *TCPConn) Write(b []byte) (n int, err os.Error)
 	// func (c *TCPConn) Read(b []byte) (n int, err os.Error)
 	// TCPConn可以用在客户端和服务器端来读写数据
-	_, err = conn.Write([]byte("HEAD / HTTP/1.0\r\n\r\n"))
+	//_, err = conn.Write([]byte("HEAD / HTTP/1.0\r\n\r\n"))
+	_, err = conn.Write([]byte("hi"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
+	// 当客户端停止写入时, 服务端就返回全部的数据
+	if err = conn.CloseWrite(); err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
 	// 读取服务器端响应的全部内容
+	// ReadAll从r读取数据直到EOF或遇到error, 返回读取的数据和遇到的错误
+	// 成功的调用返回的err为nil而非EOF, 因为本函数定义为读取r直到EOF, 它不会将读取返回的EOF视为应报告的错误
 	result, err := ioutil.ReadAll(conn)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
