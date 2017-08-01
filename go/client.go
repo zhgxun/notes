@@ -5,9 +5,9 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"net"
 	"os"
+	"io/ioutil"
 )
 
 func main() {
@@ -37,12 +37,27 @@ func main() {
 	// func (c *TCPConn) Read(b []byte) (n int, err os.Error)
 	// TCPConn可以用在客户端和服务器端来读写数据
 	//_, err = conn.Write([]byte("HEAD / HTTP/1.0\r\n\r\n"))
-	_, err = conn.Write([]byte("hi"))
+	_, err = conn.Write([]byte("1~~~"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-	// 当客户端停止写入时, 服务端就返回全部的数据
+	_, err = conn.Write([]byte("2~~~"))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
+	_, err = conn.Write([]byte("3~~~"))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
+	_, err = conn.Write([]byte("4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"))
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
+		os.Exit(1)
+	}
+	// 当客户端停止写入时, 需要告诉服务端, 信息发送终止, 服务端就返回全部的数据
 	if err = conn.CloseWrite(); err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)

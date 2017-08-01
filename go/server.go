@@ -1,3 +1,5 @@
+// 在服务器端我们需要绑定服务到指定的非激活端口, 并监听此端口
+// 当有客户端请求到达的时候可以接收到来自客户端连接的请求
 package main
 
 import (
@@ -42,28 +44,31 @@ func handleClient(conn net.Conn) {
 	conn.SetReadDeadline(time.Now().Add(1 * time.Minute))
 	// request在创建时需要指定一个最大长度以防止flood attack; 每次读取到请求处理完毕后,
 	// 需要清理request, 因为conn.Read()会将新读取到的内容append到原内容之后
-	request := make([]byte, 128)
+	// request 为提供的读取的最长缓冲区, 缓冲区满后会自动回写到客户端接收, 因此客户端需要注意接收到数据的完整性后在处理
+	// 但是也并非都是写满后才返回给客户端, 有可能提前返回数据, 需要一个协议
+	request := make([]byte, 8)
 	defer conn.Close()
 	for {
 		// 不断读取客户端发来的请求, 由于我们需要保持与客户端的长连接, 所以不能在读取完一次请求后就关闭连接
-		read_len, err := conn.Read(request)
-		fmt.Println(read_len)
+		// 将读取到的数据追加保存到request中
+		readLen, err := conn.Read(request)
 		if err != nil {
 			fmt.Println(err)
 			break
 		}
 
 		// 如果没有读取到客户端任何信息, 则默认客户端已经关闭
-		if read_len == 0 {
+		if readLen == 0 {
 			break
-		} else if strings.TrimSpace(string(request[:read_len])) == "timestamp" {
+		} else if strings.TrimSpace(string(request[:readLen])) == "timestamp" {
 			daytime := strconv.FormatInt(time.Now().Unix(), 10)
 			conn.Write([]byte(daytime))
 		} else {
-			daytime := time.Now().Format("2006-01-02 15:04:05")
-			conn.Write([]byte(daytime))
+			conn.Write([]byte(request[:readLen]))
+			conn.Write([]byte("End\n"))
 		}
-
-		request = make([]byte, 128)
+		
+		// 每次发送写完毕后都清除缓存空间, 防止追加
+		request = make([]byte, 8)
 	}
 }
