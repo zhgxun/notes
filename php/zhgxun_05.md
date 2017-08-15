@@ -1,6 +1,6 @@
 ###张广训简历
 
-18511748411 zhgxun1989@163.com 回龙观龙腾苑五区
+18511748411 `zhgxun1989@163.com` 回龙观龙腾苑五区
 
 ####个人概况
 
@@ -8,9 +8,9 @@
 
 本科/重庆市西南大学/教育学/2012年毕业
 
-Blog: https://zhgxun.github.io
+Blog: `https://zhgxun.github.io`
 
-GitHub: https://github.com/zhgxun
+GitHub: `https://github.com/zhgxun`
 
 期望职位/薪资: PHP开发工程师/12K
 
