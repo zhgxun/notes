@@ -17,11 +17,11 @@ GitHub: https://github.com/zhgxun
 #### 技能清单
 
 1. Web开发: PHP / HTML5 / CSS3 / JavaScript;
-2. Web框架: jQuery / Bootstrap / ThinkPHP / Yii / Yar / Laravel5.4 / Beego;
+2. Web框架: jQuery / Bootstrap / ThinkPHP / Yii / Yar;
 3. 环境: Linux / LAMP;
 4. 数据库: MySQL / Redis;
 5. 版本控制: SVN / Git / Mercurial;
-6. 了解 Golang / Elasticsearch / Hive。
+6. 了解 Golang / Elasticsearch / Hive / Beego。
 
 #### 工作经历
 
