@@ -19,14 +19,7 @@ class Test
 			// 启动进程后执行回调函数
 			$process = new \swoole_process(function(\swoole_process $work) use ($i) {
 				echo "{$i} - 所有进程都启动完毕之后才会执行到该处...\n";
-				$i = 1;
-				while ($i) {
-					$i++;
-					echo "{$i}\n";
-					if ($i == 5) {
-						break;
-					}
-				}
+				// 在这里运行一个php命令
 			});
 			// 成功启动子进程后返回子进程id
 			$pid = $process->start();
