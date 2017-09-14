@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	fmt.Println(Reverse(9000))
+	fmt.Println(Reverse(321))
 }
 
 // Reverse digits of an integer.
