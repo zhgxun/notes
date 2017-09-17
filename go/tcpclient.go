@@ -9,11 +9,11 @@ import (
 	"os"
 )
 
-type Args struct {
+type Arg struct {
 	A, B int
 }
 
-type Quotient struct {
+type Quot struct {
 	Quo, Rem int
 }
 
@@ -23,26 +23,26 @@ func main() {
 		os.Exit(1)
 	}
 	service := os.Args[1]
-	
+
 	// http 和 tcp 唯一的区别在这里, http 使用DialHTTP来连接, 而tcp使用Dial来连接
 	client, err := rpc.Dial("tcp", service)
 	if err != nil {
 		log.Fatal("dialing:", err)
 	}
 	// Synchronous call
-	args := Args{17, 8}
+	args := Arg{17, 8}
 	var reply int
-	err = client.Call("Arith.Multiply", args, &reply)
+	err = client.Call("Num.Multiply", args, &reply)
 	if err != nil {
-		log.Fatal("arith error:", err)
+		log.Fatal("num error:", err)
 	}
-	fmt.Printf("Arith: %d*%d=%d\n", args.A, args.B, reply)
-	
-	var quot Quotient
-	err = client.Call("Arith.Divide", args, &quot)
+	fmt.Printf("Num: %d*%d=%d\n", args.A, args.B, reply)
+
+	var quot Quot
+	err = client.Call("Num.Divide", args, &quot)
 	if err != nil {
-		log.Fatal("arith error:", err)
+		log.Fatal("num error:", err)
 	}
-	fmt.Printf("Arith: %d/%d=%d remainder %d\n", args.A, args.B, quot.Quo, quot.Rem)
-	
+	fmt.Printf("Num: %d/%d=%d remainder %d\n", args.A, args.B, quot.Quo, quot.Rem)
+
 }

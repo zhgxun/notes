@@ -13,7 +13,11 @@ import (
 func main() {
 	// 获取提供服务的服务器ip地址
 	service := os.Args[1]
+	// func ResolveTCPAddr(net, addr string) (*TCPAddr, error)
 	// ResolveTCPAddr获取一个TCPAddr, 一个TCPAddr类型, 他表示一个TCP的地址信息
+	// ResolveTCPAddr将addr作为TCP地址解析并返回
+	// 参数addr格式为"host:port"或"[ipv6-host%zone]:port", 解析得到网络名和端口名
+	// net必须是"tcp", "tcp4"或"tcp6"
 	tcpAddr, err := net.ResolveTCPAddr("tcp4", service)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
@@ -25,7 +29,12 @@ func main() {
 	//
 	// 一般而言, 客户端通过TCPConn对象将请求信息, 发送到服务器端, 读取服务器端响应的信息
 	// 服务器端读取并解析来自客户端的请求并返回应答信息, 这个连接只有当任一端关闭了连接之后才失效,
-	// 不然这连接可以一直在使用。
+	// 不然这连接可以一直在使用
+	//
+	// func DialTCP(net string, laddr, raddr *TCPAddr) (*TCPConn, error)
+	// DialTCP在网络协议net上连接本地地址laddr和远端地址raddr
+	// net必须是"tcp", "tcp4", "tcp6"
+	// 如果laddr不是nil, 将使用它作为本地地址, 否则自动选择一个本地地址
 	conn, err := net.DialTCP("tcp", nil, tcpAddr)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
@@ -37,22 +46,22 @@ func main() {
 	// func (c *TCPConn) Read(b []byte) (n int, err os.Error)
 	// TCPConn可以用在客户端和服务器端来读写数据
 	//_, err = conn.Write([]byte("HEAD / HTTP/1.0\r\n\r\n"))
-	_, err = conn.Write([]byte("1~~~"))
+	_, err = conn.Write([]byte("timestamp"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-	_, err = conn.Write([]byte("2~~~"))
+	_, err = conn.Write([]byte("a~~~"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-	_, err = conn.Write([]byte("3~~~"))
+	_, err = conn.Write([]byte("b~~~~~"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)
 	}
-	_, err = conn.Write([]byte("4~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"))
+	_, err = conn.Write([]byte("c~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~"))
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
 		os.Exit(1)

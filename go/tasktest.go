@@ -36,10 +36,10 @@ func testTask(n ...interface{}) {
 	//time.Sleep(5 * time.Second)
 
 	// 写一个死循环, 手动kill中断运行
-	i := 0
-	for {
-		i += 1
-	}
+	//i := 0
+	//for {
+	//	i += 1
+	//}
 
 	// 处理正常事件
 	for _, res := range n {

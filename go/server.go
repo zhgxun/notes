@@ -6,7 +6,6 @@ import (
 	"fmt"
 	"net"
 	"os"
-	"strconv"
 	"strings"
 	"time"
 )
@@ -21,6 +20,10 @@ func main() {
 	}
 	// 在服务器端我们需要绑定服务到指定的非激活端口, 并监听此端口,
 	// 当有客户端请求到达的时候可以接收到来自客户端连接的请求
+	//
+	// func ListenTCP(net string, laddr *TCPAddr) (*TCPListener, error)
+	// ListenTCP在本地TCP地址laddr上声明并返回一个*TCPListener, net参数必须是"tcp", "tcp4", "tcp6",
+	// 如果laddr的端口字段为0, 函数将选择一个当前可用的端口, 可以用Listener的Addr方法获得该端口
 	listener, err := net.ListenTCP("tcp", tcpAddr)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Fatal error: %s", err.Error())
@@ -28,6 +31,9 @@ func main() {
 	}
 	for {
 		// 接受每一种请求
+		// func (l *TCPListener) Accept() (Conn, error)
+		// Accept用于实现Listener接口的Accept方法
+		// 他会等待下一个呼叫, 并返回一个该呼叫的Conn接口
 		conn, err := listener.Accept()
 		// 当有错误发生的情况下最好是由服务端记录错误, 然后当前连接的客户端直接报错而退出, 从而不会
 		// 影响到当前服务端运行的整个服务
@@ -46,7 +52,8 @@ func handleClient(conn net.Conn) {
 	// 需要清理request, 因为conn.Read()会将新读取到的内容append到原内容之后
 	// request 为提供的读取的最长缓冲区, 缓冲区满后会自动回写到客户端接收, 因此客户端需要注意接收到数据的完整性后在处理
 	// 但是也并非都是写满后才返回给客户端, 有可能提前返回数据, 需要一个协议
-	request := make([]byte, 8)
+	// 如果该缓冲区给的不够, 可能造成客户端传递过来的信息被截断, 无法得到预期的结果
+	request := make([]byte, 9)
 	defer conn.Close()
 	for {
 		// 不断读取客户端发来的请求, 由于我们需要保持与客户端的长连接, 所以不能在读取完一次请求后就关闭连接
@@ -61,13 +68,12 @@ func handleClient(conn net.Conn) {
 		if readLen == 0 {
 			break
 		} else if strings.TrimSpace(string(request[:readLen])) == "timestamp" {
-			daytime := strconv.FormatInt(time.Now().Unix(), 10)
-			conn.Write([]byte(daytime))
+			date := time.Now().Format("2006-01-02 15:04:05")
+			conn.Write([]byte(date))
 		} else {
 			conn.Write([]byte(request[:readLen]))
-			conn.Write([]byte("End\n"))
 		}
-		
+
 		// 每次发送写完毕后都清除缓存空间, 防止追加
 		request = make([]byte, 8)
 	}

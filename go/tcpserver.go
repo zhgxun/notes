@@ -9,22 +9,28 @@ import (
 	"os"
 )
 
-type Args struct {
+// 参数
+type Params struct {
 	A, B int
 }
 
-type Quotient struct {
+// 除法和取余
+type Division struct {
 	Quo, Rem int
 }
 
-type Arith int
+type Num int
 
-func (t *Arith) Multiply(args *Args, reply *int) error {
+// 求积
+// 两个数相乘
+func (n *Num) Multiply(args *Params, reply *int) error {
 	*reply = args.A * args.B
 	return nil
 }
 
-func (t *Arith) Divide(args *Args, quo *Quotient) error {
+// 除法
+// 取余
+func (n *Num) Divide(args *Params, quo *Division) error {
 	if args.B == 0 {
 		return errors.New("divide by zero")
 	}
@@ -34,15 +40,15 @@ func (t *Arith) Divide(args *Args, quo *Quotient) error {
 }
 
 func main() {
-	arith := new(Arith)
-	rpc.Register(arith)
-	
+	num := new(Num)
+	rpc.Register(num)
+
 	tcpAddr, err := net.ResolveTCPAddr("tcp", ":1234")
 	checkError(err)
-	
+
 	listener, err := net.ListenTCP("tcp", tcpAddr)
 	checkError(err)
-	
+
 	// 采用TCP协议, 然后需要自己控制连接, 当有客户端连接上来后, 我们需要把这个连接交给rpc来处理
 	for {
 		conn, err := listener.Accept()
