@@ -10,7 +10,7 @@ import (
 // number 数字个数
 // lower 小写字母个数
 // upper 大写字母个数
-func Rand(size int, number int, lower int, upper int) []byte {
+func Rand(size int, number int, lower int, upper int, style int) []byte {
 	// 给出的类型不在指定范围内, 则默认使用类型 mix
 	warehouse := [][]int{{10, 48}, {65, 97}, {26, 65}}
 	output := make([]byte, size)
