@@ -31,7 +31,7 @@
 //
 // 更方便的函数Dial(DialHTTP)会在一个原始的连接(或HTTP连接)上依次执行这两个步骤
 //
-// 生成的Client类型值有两个方法, Call和Go, 它们的参数为要调用的服务和方法, 一个包含参数的指针, 一个用于接收接个的指针
+// 生成的Client类型值有两个方法, Call和Go, 它们的参数为要调用的服务和方法, 一个包含参数的指针, 一个用于接收结果的指针
 //
 // Call方法会等待远端调用完成, 而Go方法异步的发送调用请求并使用返回的Call结构体类型的Done通道字段传递完成信号
 //
@@ -50,7 +50,8 @@ type Args struct {
 	A, B int
 }
 
-// 两个整数值 Quo除法 Rem取余
+// 商
+// Quo除法 Rem取余
 type Quotient struct {
 	Quo, Rem int
 }
