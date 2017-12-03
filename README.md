@@ -1,3 +1,3 @@
 # cNotes
 
-C, GO, PHP学习笔记。
+C, Go, PHP学习笔记。
