@@ -40,8 +40,6 @@ int main(int argc, char const *argv[])
 					printf("Removing %d from queue.\n", temp);
 				}
 				break;
-			default:
-				continue;
 		}
 
 		printf("%d items in queue\n", QueueItemCount(&line));

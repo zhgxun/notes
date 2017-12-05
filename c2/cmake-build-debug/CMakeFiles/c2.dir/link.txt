@@ -1,0 +1,1 @@
+/Library/Developer/CommandLineTools/usr/bin/cc -g -Wl,-search_paths_first -Wl,-headerpad_max_install_names  CMakeFiles/c2.dir/main.c.o CMakeFiles/c2.dir/list.c.o CMakeFiles/c2.dir/s_gets.c.o  -o c2 

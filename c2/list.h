@@ -1,17 +1,17 @@
-/**
- * ADT 电影基本信息头文件
- */
+//
+// ADT 电影基本信息头文件
+//
 
-#ifndef LIST_H_
-#define LIST_H_
+#ifndef C2_LIST_H
+#define C2_LIST_H
 #include <stdbool.h>
-#define TSIZE 45
+#define SIZE 45
 
 /**
  * 定义一个存储电影基本信息的结构体
  */
 struct film {
-    char title[TSIZE];
+    char title[SIZE];
     int rating;
 };
 
@@ -31,28 +31,28 @@ typedef Node * List;
 
 /**
  * 初始化一个链表
- * *plist 指向链表的头指针
+ * *list 指向链表的头指针
  * 链表初始化为空
  */
-void InitializeList(List * plist);
+void InitializeList(List * list);
 
 /**
  * 确认链表是否为空
  * @return boolean 如果链表为空，返回true，否则返回false
  */
-bool ListIsEmpty(const List * plist);
+bool ListIsEmpty(const List * list);
 
 /**
  * 链表是否已满
  * @return boolean
  */
-bool ListIsFull(const List * plist);
+bool ListIsFull(const List * list);
 
 /**
  * 链表中的项数
  * @return unsigned int
  */
-unsigned int ListItemCount(const List * plist);
+unsigned int ListItemCount(const List * list);
 
 /**
  * 在链表的末尾添加项
@@ -64,12 +64,11 @@ bool AddItem(Item item, List * plist);
 /**
  * 把函数作用于链表中的每一项
  */
-void Traverse(const List * plist, void (*pfun)(Item item));
+void Traverse(const List * plist, void (*fun)(Item item));
 
 /**
  * 释放已分配的内存
  */
-void EmptyTheList(List * plist);
+void EmptyTheList(List * list);
 
-#endif
-
+#endif //C2_LIST_H
