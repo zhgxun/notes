@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/c2.dir/main.c.o"
   "CMakeFiles/c2.dir/list.c.o"
   "CMakeFiles/c2.dir/s_gets.c.o"
+  "CMakeFiles/c2.dir/test.c.o"
+  "CMakeFiles/c2.dir/tar.c.o"
   "c2.pdb"
   "c2"
 )

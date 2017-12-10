@@ -92,6 +92,12 @@
 		<Unit filename="/Users/zhgxun/go/src/notes/c2/s_gets.c">
 			<Option target="c2"/>
 		</Unit>
+		<Unit filename="/Users/zhgxun/go/src/notes/c2/tar.c">
+			<Option target="c2"/>
+		</Unit>
+		<Unit filename="/Users/zhgxun/go/src/notes/c2/test.c">
+			<Option target="c2"/>
+		</Unit>
 		<Unit filename="/Users/zhgxun/go/src/notes/c2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

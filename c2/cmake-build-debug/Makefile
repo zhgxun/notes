@@ -204,6 +204,60 @@ s_gets.c.s:
 	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/s_gets.c.s
 .PHONY : s_gets.c.s
 
+tar.o: tar.c.o
+
+.PHONY : tar.o
+
+# target to build an object file
+tar.c.o:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/tar.c.o
+.PHONY : tar.c.o
+
+tar.i: tar.c.i
+
+.PHONY : tar.i
+
+# target to preprocess a source file
+tar.c.i:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/tar.c.i
+.PHONY : tar.c.i
+
+tar.s: tar.c.s
+
+.PHONY : tar.s
+
+# target to generate assembly for a file
+tar.c.s:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/tar.c.s
+.PHONY : tar.c.s
+
+test.o: test.c.o
+
+.PHONY : test.o
+
+# target to build an object file
+test.c.o:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/test.c.o
+.PHONY : test.c.o
+
+test.i: test.c.i
+
+.PHONY : test.i
+
+# target to preprocess a source file
+test.c.i:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/test.c.i
+.PHONY : test.c.i
+
+test.s: test.c.s
+
+.PHONY : test.s
+
+# target to generate assembly for a file
+test.c.s:
+	$(MAKE) -f CMakeFiles/c2.dir/build.make CMakeFiles/c2.dir/test.c.s
+.PHONY : test.c.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -222,6 +276,12 @@ help:
 	@echo "... s_gets.o"
 	@echo "... s_gets.i"
 	@echo "... s_gets.s"
+	@echo "... tar.o"
+	@echo "... tar.i"
+	@echo "... tar.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
 .PHONY : help
 
 
