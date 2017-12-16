@@ -1,5 +1,6 @@
 //
 // Created by zhgxun on 10/12/2017.
+// 输入一个大写字母, 打印出类似堆叠的效果
 //
 
 #include <stdio.h>
