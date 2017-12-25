@@ -33,7 +33,9 @@
 *.su
 
 #idea
-.idea
-.classpath
-.project
-.settings
+*.idea
+*.classpath
+*.project
+*.settings
+*.metadata
+*.recommenders
