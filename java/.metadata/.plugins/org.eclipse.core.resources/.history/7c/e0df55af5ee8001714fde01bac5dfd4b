@@ -1,0 +1,11 @@
+package test;
+
+public class Week {
+
+	public static void main(String[] args) {
+		for (WeekDay day : WeekDay.values) {
+			
+		}
+	}
+
+}

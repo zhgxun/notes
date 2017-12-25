@@ -1,0 +1,21 @@
+package test;
+
+public class Catch {
+
+	public static void main(String[] args) {
+		try {
+			int n = Integer.parseInt("1abc");
+			int m = 100 / n;
+			System.out.printf("n = %d, m = %d\n", n, m);
+		} catch (NumberFormatException e) {
+			System.out.println("Bad input");
+			System.out.println(e);
+		} catch (ArithmeticException e) {
+			System.out.println("Bad input");
+			System.out.println(e);
+		} finally {
+			System.out.println("Exit");
+		}
+	}
+
+}
