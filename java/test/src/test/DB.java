@@ -32,13 +32,13 @@ public class DB {
 
 			// 更新数据记录
 			User u = users.get(0);
-			u.name = "张三";
+			u.name = "张十三";
 			update(u);
 
 			// 删除跟更新数据类似
 
 			// 新增数据
-			long id = insert(new User("马云", 50));
+			long id = insert(new User("关晓彤", 50));
 			System.out.printf("新增数据主键：%d\n", id);
 		} catch (SQLException e) {
 			e.printStackTrace();
