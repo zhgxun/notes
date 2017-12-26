@@ -1,3 +1,3 @@
-# cNotes
+# notes
 
-C, Go, PHP学习笔记。
+C, Go, PHP和Java学习笔记。
