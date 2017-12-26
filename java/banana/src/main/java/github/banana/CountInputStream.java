@@ -11,18 +11,18 @@ import java.io.InputStream;
  *
  */
 public class CountInputStream extends FilterInputStream {
-	// 统计读取到的文本字节数
-	public int count;
+    // 统计读取到的文本字节数
+    public int count;
 
-	public CountInputStream(InputStream in) {
-		super(in);
-	}
+    public CountInputStream(InputStream in) {
+        super(in);
+    }
 
-	@Override
-	public int read(byte[] b, int off, int len) throws IOException {
-		int n = super.read(b, off, len);
-		count += n;
-		return n;
-	}
+    @Override
+    public int read(byte[] b, int off, int len) throws IOException {
+        int n = super.read(b, off, len);
+        count += n;
+        return n;
+    }
 
 }
