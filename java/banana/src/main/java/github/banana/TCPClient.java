@@ -18,7 +18,14 @@ import java.nio.charset.StandardCharsets;
  */
 public class TCPClient {
 
-    public static void main(String[] args) throws IOException {
+    /**
+     * 向服务端请求一个日期
+     * 
+     * @param args
+     * @throws IOException
+     * @throws InterruptedException
+     */
+    public static void main(String[] args) throws IOException, InterruptedException {
         // 获取本机回环地址127.0.0.1
         InetAddress address = Inet4Address.getLoopbackAddress();
         // System.out.println(address);
@@ -35,7 +42,15 @@ public class TCPClient {
                     bufferedWriter.flush();
                     // 从服务端读取响应
                     String resp = bufferedReader.readLine();
-                    System.out.println("response: " + resp);
+                    System.out.println("response time: " + resp);
+                    // 停留1秒后继续发送请求
+                    Thread.sleep(1000);
+                    // 向服务端写入一个退出标识
+                    bufferedWriter.write("q\n");
+                    bufferedWriter.flush();
+                    // 尝试从服务端读取信息
+                    resp = bufferedReader.readLine();
+                    System.out.println("response end: " + resp);
                 }
             }
         }
