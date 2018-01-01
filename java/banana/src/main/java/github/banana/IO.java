@@ -2,6 +2,7 @@ package github.banana;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.BufferedReader;
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
@@ -221,6 +222,21 @@ public class IO {
         // Writer是基于OutputStream构造的，任何OutputStream都可指定编码并通过OutputStreamWriter转换为Writer
         // Writer writer = new OutputStreamWriter(output, "UTF-8")
         // output 为outputStream类型
+
+        // 从classpath中读取资源
+        // 相对于src目录来说是根目录
+        // 而且要明确指定路径/output.txt
+        try (InputStream inputStream = IO.class.getResourceAsStream("/output.txt")) {
+            // 读取失败返回null
+            if (inputStream != null) {
+                // 一次读取一行
+                BufferedReader bufReader = new BufferedReader(new InputStreamReader(inputStream));
+                System.out.println(bufReader.readLine());
+            } else {
+                System.out.println("file not found.");
+            }
+        }
+        System.out.println("end");
     }
 
 }

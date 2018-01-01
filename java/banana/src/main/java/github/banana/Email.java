@@ -12,7 +12,6 @@ import javax.mail.MessagingException;
 import javax.mail.Multipart;
 import javax.mail.PasswordAuthentication;
 import javax.mail.Session;
-import javax.mail.internet.AddressException;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
@@ -21,9 +20,8 @@ import javax.mail.util.ByteArrayDataSource;
 
 /**
  * 邮箱公共信息
- * 
- * @author zhgxun
  *
+ * @author zhgxun
  */
 public class Email {
     // 邮箱服务地址
@@ -43,25 +41,25 @@ public class Email {
 
     /**
      * 可复写默认配置
-     * 
-     * @param host
-     * @param username
-     * @param password
-     * @param debug
-     * @param posr
+     *
+     * @param host     邮件主机
+     * @param username 用户名
+     * @param password 密码
+     * @param debug    调试模式
+     * @param port     端口
      */
-    public Email(String host, String username, String password, boolean debug, String posr) {
+    public Email(String host, String username, String password, boolean debug, String port) {
         this.host = host;
         this.username = username;
         this.password = password;
         this.debug = debug;
-        this.port = posr;
+        this.port = port;
     }
 
     /**
      * 使用SSL方式认证
-     * 
-     * @return
+     *
+     * @return javax.mail.Session
      */
     public Session SSLSession() {
         Properties properties = new Properties();
@@ -88,18 +86,17 @@ public class Email {
 
     /**
      * 发送文本
-     * 
-     * @param session
-     * @param from
-     * @param to
-     * @param subject
-     * @param body
-     * @return
-     * @throws AddressException
-     * @throws MessagingException
+     *
+     * @param session javax.mail.Session
+     * @param from    发信人
+     * @param to      收信人
+     * @param subject 邮件主题
+     * @param body    邮件内容
+     * @return Message
+     * @throws MessagingException Message异常
      */
     public Message text(Session session, String from, String to, String subject, String body)
-            throws AddressException, MessagingException {
+            throws MessagingException {
         // 使用MimeMessage来发送邮件
         MimeMessage mimeMessage = new MimeMessage(session);
         // 设置发件人
@@ -115,18 +112,17 @@ public class Email {
 
     /**
      * 发送html格式邮件
-     * 
+     *
      * @param session
      * @param from
      * @param to
      * @param subject
      * @param body
      * @return
-     * @throws AddressException
      * @throws MessagingException
      */
     public Message html(Session session, String from, String to, String subject, String body)
-            throws AddressException, MessagingException {
+            throws MessagingException {
         // 使用MimeMessage来发送邮件
         MimeMessage mimeMessage = new MimeMessage(session);
         // 设置发件人
@@ -142,7 +138,7 @@ public class Email {
 
     /**
      * 发送图片附件
-     * 
+     *
      * @param session
      * @param from
      * @param to
@@ -151,12 +147,11 @@ public class Email {
      * @param fileName
      * @param inputStream
      * @return
-     * @throws AddressException
      * @throws MessagingException
      * @throws IOException
      */
     public Message attachment(Session session, String from, String to, String subject, String body, String fileName,
-            InputStream inputStream) throws AddressException, MessagingException, IOException {
+                              InputStream inputStream) throws MessagingException, IOException {
         // 使用MimeMessage来发送邮件
         MimeMessage mimeMessage = new MimeMessage(session);
         // 设置发件人
@@ -183,7 +178,7 @@ public class Email {
 
     /**
      * 发送一张内嵌的图片
-     * 
+     *
      * @param session
      * @param from
      * @param to
@@ -192,12 +187,11 @@ public class Email {
      * @param fileName
      * @param inputStream
      * @return
-     * @throws AddressException
      * @throws MessagingException
      * @throws IOException
      */
     public Message image(Session session, String from, String to, String subject, String body, String fileName,
-            InputStream inputStream) throws AddressException, MessagingException, IOException {
+                         InputStream inputStream) throws MessagingException, IOException {
         // 使用MimeMessage来发送邮件
         MimeMessage mimeMessage = new MimeMessage(session);
         // 设置发件人

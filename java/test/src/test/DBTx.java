@@ -116,17 +116,6 @@ public class DBTx {
 				e.printStackTrace();
 			}
 		}
-
-		// 回滚事务后再次查看用户列表
-		System.out.println("回滚事务后再次查看用户列表");
-		try {
-			users = getUsers();
-			for (User user : users) {
-				System.out.println(user);
-			}
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 	}
 
 	/**

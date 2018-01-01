@@ -1,12 +1,6 @@
 package github.banana;
 
-import java.io.Serializable;
-
-public class User implements Serializable {
-    /**
-     * 生成一个序列化的类版本号
-     */
-    private static final long serialVersionUID = 5386922947918687341L;
+public class User implements Comparable<User> {
 
     // 用户属性
     private long id;
@@ -23,9 +17,18 @@ public class User implements Serializable {
         this.name = name.trim();
         this.age = age;
     }
+    
+    public String getName() {
+        return this.name;
+    }
 
     @Override
     public String toString() {
         return "<User: id = " + id + ", name= " + name + ", age = " + age + ">";
+    }
+
+    @Override
+    public int compareTo(User o) {
+        return o.name.compareTo(this.name);
     }
 }

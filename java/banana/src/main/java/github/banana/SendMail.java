@@ -7,20 +7,18 @@ import javax.mail.Message;
 import javax.mail.MessagingException;
 import javax.mail.Session;
 import javax.mail.Transport;
-import javax.mail.internet.AddressException;
 
 /**
  * 发送邮件
- * 
- * @author zhgxun
  *
+ * @author zhgxun
  */
 public class SendMail {
     public static void main(String[] args) {
-         text();
-         html();
+        text();
+        html();
         try {
-             attachment();
+            attachment();
             image();
         } catch (IOException | MessagingException e) {
             e.printStackTrace();
@@ -34,11 +32,9 @@ public class SendMail {
         Email email = new Email();
         Session session = email.SSLSession();
         try {
-            Message message = email.text(session, "zhgxun1989@sina.com", "zhgxun1989@163.com", "这是一封用Java语言写的测试邮件",
+            Message message = email.text(session, "zhgxun1989@sina.com", "zhgxun1989@163.com", "千与千寻",
                     "天空是连着的，如果我们也能各自发光的话，无论距离有多远，都能看到彼此努力的身影。");
             Transport.send(message);
-        } catch (AddressException e) {
-            e.printStackTrace();
         } catch (MessagingException e) {
             e.printStackTrace();
         }
@@ -50,12 +46,11 @@ public class SendMail {
     private static void html() {
         Email email = new Email();
         Session session = email.SSLSession();
+        Message message;
         try {
-            Message message = email.text(session, "zhgxun1989@sina.com", "zhgxun1989@163.com", "风晴雪独白",
+            message = email.text(session, "zhgxun1989@sina.com", "zhgxun1989@163.com", "风晴雪独白",
                     "<p>曾经有人告诉过我，对生死之事毫无执念的人，只是因为还没有经历过真正绝望的别离。仿佛诅咒一般……</p>");
             Transport.send(message);
-        } catch (AddressException e) {
-            e.printStackTrace();
         } catch (MessagingException e) {
             e.printStackTrace();
         }
@@ -63,12 +58,13 @@ public class SendMail {
 
     /**
      * 发送图片附件
-     * 
+     *
      * @throws IOException
-     * @throws AddressException
+     *             IO异常
      * @throws MessagingException
+     *             Message异常
      */
-    private static void attachment() throws IOException, AddressException, MessagingException {
+    private static void attachment() throws IOException, MessagingException {
         Email email = new Email();
         Session session = email.SSLSession();
         try (InputStream inputStream = email.getClass().getResourceAsStream("/LinuxStory.jpeg")) {
@@ -81,12 +77,13 @@ public class SendMail {
 
     /**
      * 发送内嵌图片
-     * 
+     *
      * @throws IOException
-     * @throws AddressException
+     *             IO异常
      * @throws MessagingException
+     *             Message异常
      */
-    private static void image() throws IOException, AddressException, MessagingException {
+    private static void image() throws IOException, MessagingException {
         Email email = new Email();
         Session session = email.SSLSession();
         try (InputStream inputStream = email.getClass().getResourceAsStream("/LinuxStory.jpeg")) {
