@@ -8,8 +8,34 @@ public class Pow {
         // String a = "hello";
         // String b = "ll";
         // System.out.println(strStr(a, b));
-        int[] nums = { 1, 3, 5, 6 };
-        System.out.println(searchInsert(nums, 0));
+        // int[] nums = { 1, 3, 5, 6 };
+        // System.out.println(searchInsert(nums, 0));
+        System.out.println(mySqrt(-9));
+    }
+
+    /**
+     * 非负整数的平方根
+     * 
+     * @param x
+     * @return
+     */
+    private static int mySqrt(int x) {
+        // 转化为更高精度类型
+        double n, tmp;
+        // 保存结果
+        double d = 0.0;
+        // 0,1 返回本身
+        if (x == 0 || x == 1) {
+            return x;
+        }
+
+        n = (double) x;
+        while (Math.abs(n - d) > 0.000001) {
+            tmp = n;
+            n = 0.5 * (tmp + (double) x / tmp);
+            d = tmp;
+        }
+        return (int) d;
     }
 
     /**
