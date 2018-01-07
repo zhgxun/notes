@@ -29,7 +29,7 @@ public class Email {
     // 邮箱用户名
     private String username = "zhgxun1989@sina.com";
     // 邮箱密码
-    private String password = "br1sj&";
+    private String password = "******";
     // 是否开启调试模式
     private boolean debug = true;
     // 邮箱服务端口
