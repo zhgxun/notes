@@ -12,5 +12,10 @@ public class App {
         // 实例化一个日志工厂
         Log log = LogFactory.getLog(App.class);
         log.info("Hello, world!");
+        log.info(2-1.1);
+        int x = 0;
+        if (x == 0) {
+            log.info("o");
+        }
     }
 }
