@@ -8,10 +8,10 @@ public class Fork {
 
     public static void main(String[] args) {
         // 创建1000个随机数组成的数组
-        int[] array = new int[1000];
+        int[] array = new int[10000];
         long sum = 0;
         Random random = new Random(0);
-        for (int i = 0; i < 1000; i++) {
+        for (int i = 0; i < 10000; i++) {
             array[i] = random.nextInt(1000);
             sum += array[i];
         }

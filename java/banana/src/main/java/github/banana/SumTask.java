@@ -12,7 +12,7 @@ public class SumTask extends RecursiveTask<Long> {
 
     private static final long serialVersionUID = 1L;
     // 一次计算的数量
-    private final int length = 250;
+    private final int length = 1000;
     // 需要计算的数组
     int[] arr;
     // 数组下标开始位置
