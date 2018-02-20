@@ -33,4 +33,6 @@ func main() {
 	fmt.Println(fmt.Sprintf("%x", h.Sum(b)))
 	// 54686973206973206120627974659e6d75cab4665a54ac5b483ecf1c7fae
 	fmt.Println(hex.EncodeToString(h.Sum(b)))
+
+	fmt.Print("Hi\n")
 }

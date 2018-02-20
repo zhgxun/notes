@@ -4,10 +4,10 @@ package main
 
 import (
 	"bufio"
-	"os"
 	"fmt"
-	"strings"
+	"os"
 	"strconv"
+	"strings"
 )
 
 func main() {

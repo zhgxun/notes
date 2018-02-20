@@ -30,4 +30,5 @@ func main() {
 		log.Fatalf("JSON marshaling failed: %s", err)
 	}
 	fmt.Printf("%s\n", data)
+	fmt.Println("Done")
 }

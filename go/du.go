@@ -37,6 +37,8 @@ func main() {
 		n.Add(1)
 		go walkDir(root, &n, fileSizes)
 	}
+
+	// 单独用用一个协程去监控计数器减为0时关闭收集文件尺寸信息通道
 	go func() {
 		n.Wait()
 		close(fileSizes)
