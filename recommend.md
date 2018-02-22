@@ -30,6 +30,10 @@ SES的全称是Simple Email Service，它是亚马逊公司推出的一个邮件
 
 6、[PHP 程序员进阶学习书籍参考指南](https://mp.weixin.qq.com/s?__biz=MzA3MjEyNTE4MQ==&mid=2652726194&idx=1&sn=ad0c1f99b6d8dd9a1a07651d5c485370&chksm=84cadc20b3bd55361b2bf392a84fff9334473c29017614540af922efcae2aef84e65970855fe&scene=27#wechat_redirect)
 
+7、[PHP版本支持](http://php.net/supported-versions.php)
+
+PHP每个版本都有官方维护的生命周期。
+
 
 ## 二、MySQL
 1、[MySQL索引专题一 认识索引](https://segmentfault.com/a/1190000010264071)
