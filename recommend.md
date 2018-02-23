@@ -96,6 +96,10 @@ Session集中存储，session越多、tomcat容器越多的时候他的优势就
 
 1、[多研究些架构，少谈些框架](https://segmentfault.com/a/1190000013018777)
 
+2、[HashMap的工作原理](http://www.importnew.com/7099.html)
+
+HashMap基于hashing原理，我们通过put()和get()方法储存和获取对象。当我们将键值对传递给put()方法时，它调用键对象的hashCode()方法来计算hashcode，让后找到bucket位置来储存值对象。当获取对象时，通过键对象的equals()方法找到正确的键值对，然后返回值对象。HashMap使用链表来解决碰撞问题，当发生碰撞了，对象将会储存在链表的下一个节点中。 HashMap在每个链表节点中储存键值对对象。
+
 ## 七、安全
 
 1、 [Token 认证的来龙去脉](https://segmentfault.com/a/1190000013010835)
