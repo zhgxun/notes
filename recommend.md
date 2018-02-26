@@ -100,6 +100,10 @@ Session集中存储，session越多、tomcat容器越多的时候他的优势就
 
 HashMap基于hashing原理，我们通过put()和get()方法储存和获取对象。当我们将键值对传递给put()方法时，它调用键对象的hashCode()方法来计算hashcode，让后找到bucket位置来储存值对象。当获取对象时，通过键对象的equals()方法找到正确的键值对，然后返回值对象。HashMap使用链表来解决碰撞问题，当发生碰撞了，对象将会储存在链表的下一个节点中。 HashMap在每个链表节点中储存键值对对象。
 
+3、[Netty入门教程](https://www.jianshu.com/p/b9f3f6a16911)
+
+Netty 是一个利用 Java 的高级网络的能力，隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。
+
 ## 七、安全
 
 1、 [Token 认证的来龙去脉](https://segmentfault.com/a/1190000013010835)
