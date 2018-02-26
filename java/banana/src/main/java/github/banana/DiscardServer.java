@@ -9,6 +9,7 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioServerSocketChannel;
 
+// netty文档：http://netty.io/wiki/user-guide-for-4.x.html
 public class DiscardServer {
 
     private int port;
