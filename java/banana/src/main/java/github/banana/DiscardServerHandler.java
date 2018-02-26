@@ -1,4 +1,4 @@
-package com.flight;
+package github.banana;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;

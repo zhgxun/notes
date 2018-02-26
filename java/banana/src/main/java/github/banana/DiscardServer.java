@@ -1,4 +1,4 @@
-package com.flight;
+package github.banana;
 
 import io.netty.bootstrap.ServerBootstrap;
 import io.netty.channel.ChannelFuture;
