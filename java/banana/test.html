@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html, charset=utf-8" />
+	<title>test socket connect</title>
+	<script type="text/javascript">
+		var socket;
+		if (!window.WebSocket) {
+			window.WebSocket = window.MozWebSocket;
+		}
+		if (window.WebSocket) {
+			socket = new WebSocket("ws://127.0.0.1:8001/websocket")
+			socket.onmessage = function(event) {
+				var ta = document.getElementById("response");
+				ta.value += event.data + "\r\n";
+			}
+
+			socket.onopen = function(event) {
+				var ta = document.getElementById("response");
+				ta.value += "继续操作\r\n";
+			}
+
+			socket.onclose = function(event) {
+				var ta = document.getElementById("response");
+				ta.value += "已经关闭\r\n";
+			}
+		} else {
+			alert("不支持WebSocket");
+		}
+
+		function sendMsg(message) {
+			if (!window.WebSocket) {
+				return;
+			}
+			if (socket.readyState == WebSocket.OPEN) {
+				socket.send(message);
+			} else {
+				alert("连接不成功");
+			}
+		}
+	</script>
+</head>
+<body>
+	<form onsubmit="return false">
+		<input type="test" name="message" value="" />
+		<br />
+		<input type="button" onClick="sendMsg(this.form.message.value)" name="send" value="send web socket">
+
+		<hr />
+		<h2>response:</h2>
+		<textarea id="response" style="width: 900px; height: 200px"></textarea>
+	</form>
+</body>
+</html>

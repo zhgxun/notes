@@ -14,11 +14,11 @@ public class DiscardServer {
 
     private int port;
 
-    public DiscardServer(int port) {
+    private DiscardServer(int port) {
         this.port = port;
     }
 
-    public void run() throws Exception {
+    private void run() throws Exception {
         // NioEventLoopGroup 是一个处理I/O操作的多线程事件循环。
         // Netty为不同类型的传输提供了各种EventLoopGroup实现。
         // 在这个例子中，我们正在实现一个服务器端应用程序，因此将使用两个NioEventLoopGroup。 第一个通常被称为“老板”，接
