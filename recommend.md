@@ -104,6 +104,20 @@ HashMap基于hashing原理，我们通过put()和get()方法储存和获取对�
 
 Netty 是一个利用 Java 的高级网络的能力，隐藏其背后的复杂性而提供一个易于使用的 API 的客户端/服务器框架。
 
+4、[Netty 拆包粘包和服务启动流程分析](http://www.cnblogs.com/itdragon/p/8365694.html)
+
+Channel : Netty最核心的接口。NIO通讯模式中通过Channel进行Socket套接字的读，写和同时读写操作。
+
+ChannelHandler : 因为直接使用Channel会比较麻烦，所以在Netty编程中通过ChannelHandler间接操作Channel，从而简化开发。
+
+ChannelPipeline : 可以理解为一个管理ChandlerHandler的链表。对Channel进行操作时，Pipeline负责从尾部依次调用每一个Handler进行处理。每个Channel都有一个属于自己的ChannelPipeline。
+
+ChannelHandlerContext : ChannelPipeline通过ChannelHandlerContext间接管理每个ChannelHandler。
+
+5、[Netty序章之BIO NIO AIO演变](http://www.cnblogs.com/itdragon/p/8337234.html)
+
+IO：阻塞同步通信模式，客户端和服务器连接需要三次握手，使用简单，但吞吐量小；NIO：非阻塞同步通信模式，客户端与服务器通过Channel连接，采用多路复用器轮询注册的Channel。提高吞吐量和可靠性；AIO：非阻塞异步通信模式，NIO的升级版，采用异步通道实现异步通信，其read和write方法均是异步方法。
+
 ## 七、安全
 
 1、 [Token 认证的来龙去脉](https://segmentfault.com/a/1190000013010835)
