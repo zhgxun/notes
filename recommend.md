@@ -119,3 +119,25 @@ Netty 是一个利用 Java 的高级网络的能力，隐藏其背后的复杂�
 1、[IntelliJ IDEA 注册码](http://idea.lanyus.com)
 
 注册码有效期为2017年10月15日至2018年10月14日，使用前请将“0.0.0.0 account.jetbrains.com”添加到hosts文件中。
+
+2、[Nginx 教程 #1：基本概念](https://www.oschina.net/translate/nginx-tutorial-basics-concepts)
+
+Nginx 最初是作为一个 Web 服务器创建的，用于解决 C10k 的问题。作为一个 Web 服务器，它可以以惊人的速度为您的数据服务。但 Nginx 不仅仅是一个 Web 服务器，你还可以将其用作反向代理，与较慢的上游服务器（如：Unicorn 或 Puma）轻松集成。你可以适当地分配流量（负载均衡器）、流媒体、动态调整图像大小、缓存内容等等。
+
+基本的 nginx 体系结构由 master 进程和其 worker 进程组成。master 读取配置文件，并维护 worker 进程，而 worker 则会对请求进行实际处理。
+
+3、[Nginx 教程 #2：性能](https://www.oschina.net/translate/nginx-tutorial-performance)
+
+worker_process 指令会指定：应该运行多少个 worker。默认情况下，此值设置为 1。最安全的设置是通过传递 auto 选项来使用核心数量。
+
+但由于 Nginx 的架构，其处理请求的速度非常快 - 我们可能一次不会使用超过 2-4 个进程（除非你正在托管 Facebook 或在 nginx 内部执行一些 CPU 密集型的任务）。
+
+4、[Nginx 教程 #3：SSL 设置](https://www.oschina.net/translate/nginx-tutorial-ssl-setup)
+
+SSL（Socket Secure Layer 缩写）是一种通过 HTTP 提供安全连接的协议。
+
+SSL 1.0 由 Netscape 开发，但由于严重的安全漏洞从未公开发布过。SSL 2.0 于 1995 年发布，它存在一些问题，导致了最终的 SSL 3.0 在 1996 年发布。
+
+TLS（Transport Layer Security 缩写）的第一个版本是作为 SSL 3.0 的升级版而编写的。之后 TLS 1.1 和 1.2 出来了。现在，就在不久之后，TLS 1.3 即将推出（这确实值得期待），并且已经被一些浏览器所支持。
+
+从技术上讲，SSL 和 TLS 是不同的（因为每个协议都描述了协议的不同版本），但其中使用的许多名称是可以互换的。
