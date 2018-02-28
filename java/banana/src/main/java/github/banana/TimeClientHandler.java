@@ -1,4 +1,4 @@
-package com.flight;
+package github.banana;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelHandlerContext;
@@ -10,6 +10,7 @@ public class TimeClientHandler extends ChannelInboundHandlerAdapter {
 
     @Override
     public void channelRead(ChannelHandlerContext ctx, Object msg) throws Exception {
+        System.out.println("开始读...");
         // 在TCP/IP中，Netty将从对等方发送来的数据读入ByteBuf。
         ByteBuf m = (ByteBuf) msg; // (1)
         try {

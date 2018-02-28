@@ -1,4 +1,4 @@
-package com.flight;
+package github.banana;
 
 import io.netty.buffer.ByteBuf;
 import io.netty.channel.ChannelFuture;
@@ -18,6 +18,7 @@ public class TimeServerHandler extends ChannelInboundHandlerAdapter {
      */
     @Override
     public void channelActive(final ChannelHandlerContext ctx) throws Exception {
+        System.out.println("客户端与服务端连接连接...");
         // 要发送一条新消息，我们需要分配一个新的缓冲区，它将包含该消息。
         // 我们将写一个32位整数，因此我们需要一个容量至少为4个字节的ByteBuf。
         // 通过ChannelHandlerContext.alloc()获取当前的ByteBufAllocator并分配一个新的缓冲区。

@@ -22,7 +22,7 @@
 
 			socket.onclose = function(event) {
 				var ta = document.getElementById("response");
-				ta.value += "已经关闭\r\n";
+				ta.value += "当前未建立连接或已经关闭\r\n";
 			}
 		} else {
 			alert("不支持WebSocket");
@@ -41,13 +41,16 @@
 	</script>
 </head>
 <body>
+	<h3>模拟Socket请求</h3>
+
 	<form onsubmit="return false">
-		<input type="test" name="message" value="" />
+		<h4>输入：</h4>
+		<input type="test" name="message" value="" style="width: 50%; height: 10%;" />
 		<br />
-		<input type="button" onClick="sendMsg(this.form.message.value)" name="send" value="send web socket">
+		<input type="button" onClick="sendMsg(this.form.message.value)" name="send" value="send web socket" style="background: blue; color: white;" />
 
 		<hr />
-		<h2>response:</h2>
+		<h4>输出：</h4>
 		<textarea id="response" style="width: 900px; height: 200px"></textarea>
 	</form>
 </body>

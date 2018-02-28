@@ -14,8 +14,7 @@ import java.util.Date;
 
 public class SocketHandler extends SimpleChannelInboundHandler<Object> {
 
-    private WebSocketServerHandshaker handshaker;
-    private static String URI = "ws://127.0.0.1:8001/websocket";
+    private WebSocketServerHandshaker handShaker;
 
     // 客户端与服务端创建连接时调用
     @Override
@@ -72,12 +71,12 @@ public class SocketHandler extends SimpleChannelInboundHandler<Object> {
         }
 
         System.out.println("请求成功继续处理...");
-        WebSocketServerHandshakerFactory factory = new WebSocketServerHandshakerFactory(URI, null, false);
-        handshaker = factory.newHandshaker(request);
-        if (handshaker == null) {
+        WebSocketServerHandshakerFactory factory = new WebSocketServerHandshakerFactory(SocketConfig.URI, null, false);
+        handShaker = factory.newHandshaker(request);
+        if (handShaker == null) {
             WebSocketServerHandshakerFactory.sendUnsupportedVersionResponse(ctx.channel());
         } else {
-            handshaker.handshake(ctx.channel(), request);
+            handShaker.handshake(ctx.channel(), request);
         }
     }
 
@@ -111,7 +110,7 @@ public class SocketHandler extends SimpleChannelInboundHandler<Object> {
     private void handWebSocketFrame(ChannelHandlerContext ctx, WebSocketFrame frame) {
         // 关闭指令
         if (frame instanceof CloseWebSocketFrame) {
-            handshaker.close(ctx.channel(), (CloseWebSocketFrame) frame.retain());
+            handShaker.close(ctx.channel(), (CloseWebSocketFrame) frame.retain());
         }
 
         // ping

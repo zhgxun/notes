@@ -1,4 +1,4 @@
-package com.flight;
+package github.banana;
 
 import io.netty.bootstrap.Bootstrap;
 import io.netty.channel.ChannelFuture;
@@ -9,6 +9,9 @@ import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
+/**
+ * 时间显示客户端, 只能运行一次, 多次启动多次运行
+ */
 public class TimeClient {
     public static void main(String[] args) {
         String host = "localhost"; //args[0];
