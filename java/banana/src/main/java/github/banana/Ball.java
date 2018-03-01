@@ -4,12 +4,12 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Rectangle2D;
 
 class Ball {
-    private static final int XSIZE = 15;
-    private static final int YSIZE = 15;
+    private static final int X = 15;
+    private static final int Y = 15;
     private double x = 0;
     private double y = 0;
-    private double dx = 0;
-    private double dy = 0;
+    private double dx = 1;
+    private double dy = 1;
 
     public void move(Rectangle2D bounds) {
         x += dx;
@@ -17,26 +17,26 @@ class Ball {
 
         if (x < bounds.getMinX()) {
             x = bounds.getMinX();
-            dx -= dx;
+            dx = -dx;
         }
 
-        if ( x + XSIZE >= bounds.getMaxX()) {
-            x = bounds.getMaxX() - XSIZE;
-            dx -= dx;
+        if ( x + X >= bounds.getMaxX()) {
+            x = bounds.getMaxX() - X;
+            dx = -dx;
         }
 
         if (y < bounds.getMinY()) {
             y = bounds.getMinY();
-            dy -= dy;
+            dy = -dy;
         }
 
-        if (y + YSIZE >= bounds.getMaxY()) {
-            y = bounds.getMinY() - YSIZE;
-            dy -= dy;
+        if (y + Y >= bounds.getMaxY()) {
+            y = bounds.getMinY() - Y;
+            dy = -dy;
         }
     }
 
     public Ellipse2D getShape() {
-        return  new Ellipse2D.Double(x , y , XSIZE, YSIZE);
+        return  new Ellipse2D.Double(x , y , X, Y);
     }
 }
