@@ -1,16 +1,13 @@
 package github.banana;
 
-/**
- * 未加锁的数据竞争同步
- */
-public class UnsynchBankTest {
+public class BankTest {
     private static final int NACCOUNTS = 100;
     private static final double INITAL_BALANCE = 1000;
     private static final double MAX_AMOUNT = 1000;
     private static final int DELAY = 10;
 
     public static void main(String args[]) {
-        Bank bank = new Bank(NACCOUNTS, INITAL_BALANCE);
+        BankV2 bank = new BankV2(NACCOUNTS, INITAL_BALANCE);
         for (int i = 0; i < NACCOUNTS; i++) {
             int fromAccount = i;
             Runnable r = () -> {
