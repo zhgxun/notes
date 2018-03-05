@@ -2,38 +2,20 @@ package github.banana;
 
 /**
  * 单例模式
+ * 饿汉模式类加载时创建类，加载比较慢，获取比较快，同时饿汉模式是线程安全的
  */
-public enum Singleton {
+public class Singleton {
 
-    INSTANCE;
+    // 私有化构造方法，防止外部创建类
+    private Singleton() {
 
-    /**
-     * 属性
-     */
-    private String name;
-
-    /**
-     * 构造方法
-     */
-    Singleton() {
-        this.name = "Test";
     }
 
-    /**
-     * 获取实例
-     *
-     * @return
-     */
+    // 私有化类为静态属性，便于外部访问
+    private static Singleton instance = new Singleton();
+
+    // 外部获取类的实例
     public static Singleton getInstance() {
-        return INSTANCE;
-    }
-
-    /**
-     * 获取属性描述
-     *
-     * @return
-     */
-    public String getName() {
-        return this.name;
+        return instance;
     }
 }
