@@ -6,27 +6,36 @@ import java.util.Scanner;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
 
+/**
+ * 阻塞队列实例-搜索指定目录下文件中存在关键字的行
+ */
 public class BlockingQueueTest {
 
     // 文件队列长度
     private static final int FILE_QUEUE_SIZE = 10;
-    // 搜索线程数
+    // 当前可运行最大搜索线程数
     private static final int SEARCH_THREADS = 100;
-    // 当前目录
+    // 当前目录，作为队列处理完成的标识
     private static final File DUMMY = new File("");
     // 阻塞队列
     private static BlockingQueue<File> queue = new ArrayBlockingQueue<>(FILE_QUEUE_SIZE);
 
+    /**
+     * 搜索目录中存在关键字的行
+     *
+     * @param args args
+     */
     public static void main(String args[]) {
         try (Scanner in = new Scanner(System.in)) {
             System.out.println("输入目录名 (e.g. /opt/jdk1.8.0/src)");
             String directory = in.nextLine();
-            System.out.println("输入关键字 (e.g. volatile)");
+            System.out.println("输入要搜索的关键字 (e.g. volatile)");
             String keyword = in.nextLine();
 
             Runnable r = () -> {
                 try {
                     enumerate(new File(directory));
+                    // 最后存入空文件标识队列处理完毕
                     queue.put(DUMMY);
                 } catch (InterruptedException e) {
                     e.printStackTrace();
@@ -40,6 +49,7 @@ public class BlockingQueueTest {
                         boolean done = false;
                         while (!done) {
                             File file = queue.take();
+                            // 队列文件处理完毕，需要退出处理
                             if (file == DUMMY) {
                                 queue.put(file);
                                 done = true;
@@ -61,7 +71,7 @@ public class BlockingQueueTest {
      *
      * @param directory 目录名
      */
-    public static void enumerate(File directory) {
+    private static void enumerate(File directory) {
         // 列出目录下的所有文件和目录
         File[] files = directory.listFiles();
         try {
@@ -76,6 +86,7 @@ public class BlockingQueueTest {
                     enumerate(file);
                 } else {
                     // 把文件名存入队列中
+                    // 当Queue已经满了时，会进入等待，只要不被中断，就会插入数据到队列中。会阻塞，可以响应中断。
                     queue.put(file);
                 }
             }
@@ -90,7 +101,7 @@ public class BlockingQueueTest {
      * @param file    文件名
      * @param keyword 待搜索关键字
      */
-    public static void search(File file, String keyword) {
+    private static void search(File file, String keyword) {
         // 按UTF-8编码方式读取文件内容
         try (Scanner in = new Scanner(file, "UTF-8")) {
             int lineNumber = 0;
