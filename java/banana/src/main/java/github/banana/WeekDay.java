@@ -7,7 +7,7 @@ public enum WeekDay {
     private String chinese;
 
     // 对属性进行赋值
-    private WeekDay(String chinese) {
+    WeekDay(String chinese) {
         this.chinese = chinese;
     }
 
