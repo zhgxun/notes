@@ -20,7 +20,7 @@
             <configuration>
               <transformers>
                 <transformer>
-                  <mainClass>github.banana.Fork</mainClass>
+                  <mainClass>github.banana.demo.Fork</mainClass>
                 </transformer>
               </transformers>
             </configuration>

@@ -145,7 +145,7 @@
                             <transformers>
                                 <transformer
                                         implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>github.banana.Fork</mainClass>
+                                    <mainClass>github.banana.demo.Fork</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
