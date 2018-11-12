@@ -24,7 +24,7 @@ public class Garden {
         }
 
         // 设置对象的取消状态
-        Entrance.cacen();
+        Entrance.cancel();
 
         // 关闭线程
         executorService.shutdown();

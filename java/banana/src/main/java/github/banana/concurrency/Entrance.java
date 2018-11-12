@@ -47,7 +47,7 @@ public class Entrance implements Runnable {
     /**
      * 将对象状态置为取消状态
      */
-    public static void cacen() {
+    public static void cancel() {
         cancel = true;
     }
 
