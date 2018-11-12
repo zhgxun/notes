@@ -1,1 +1,11 @@
-/target/
+# compile
+/target
+*.iml
+/build_local.sh
+/output
+
+# ide
+.idea
+
+# Mac
+.DS_Store
