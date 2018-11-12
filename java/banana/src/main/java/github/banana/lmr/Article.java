@@ -28,4 +28,9 @@ public class Article {
     public void setContent(String content) {
         this.content = content;
     }
+
+    @Override
+    public String toString() {
+        return "id: " + this.id + ", title: " + this.getTitle() + ", content: " + this.content;
+    }
 }

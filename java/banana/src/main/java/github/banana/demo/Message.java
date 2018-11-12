@@ -24,6 +24,6 @@ public class Message {
      * @return
      */
     public void show() {
-        System.out.println(this.service.getMessgee());
+        System.out.println(this.service.getMessage());
     }
 }
