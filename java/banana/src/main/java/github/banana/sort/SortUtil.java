@@ -28,4 +28,26 @@ public class SortUtil {
             }
         }
     }
+
+    public static void select(int[] origin) {
+        int length = origin.length;
+        // 外层循环
+        for (int i = 0; i < length; i++) {
+            // 在未排序序列中找到最小的值，并记录最小值的下标
+            int pos = i;
+            // 每次从后续未排序序列中选择一个最小值的下标
+            for (int j = i + 1; j < length; j++) {
+                if (origin[j] < origin[pos]) {
+                    pos = j;
+                }
+            }
+
+            // 将最小值填充到当前位置
+            if (i != pos) {
+                int v = origin[i];
+                origin[i] = origin[pos];
+                origin[pos] = v;
+            }
+        }
+    }
 }
