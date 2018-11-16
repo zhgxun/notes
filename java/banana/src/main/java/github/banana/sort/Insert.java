@@ -1,5 +1,6 @@
 package github.banana.sort;
 
+import java.util.Arrays;
 import java.util.Date;
 
 /**
@@ -8,16 +9,21 @@ import java.util.Date;
  * <p>
  * 下面为测试用例:
  * 可以看到, 数组很大时, 性能非常的低, 因为几乎要遍历玩所有的数据(排除生成序列的时间)
- * Fri Nov 16 00:08:23 CST 2018
- * Fri Nov 16 00:08:23 CST 2018
- * 数组长度为: 100, 时消耗的时间: 3
- * Fri Nov 16 00:08:23 CST 2018
- * Fri Nov 16 00:08:23 CST 2018
- * 数组长度为: 100000, 时消耗的时间: 12817
+ * [1, 1, 2, 2, 3, 4, 5, 6, 7, 9]
+ * Fri Nov 16 09:15:08 CST 2018
+ * Fri Nov 16 09:15:08 CST 2018
+ * 数组长度为: 100, 时消耗的时间: 1
+ * Fri Nov 16 09:15:08 CST 2018
+ * Fri Nov 16 09:15:08 CST 2018
+ * 数组长度为: 100000, 时消耗的时间: 4775
  */
 public class Insert {
 
     public static void main(String[] args) {
+
+        int[] origin = RandList.getIntList(10);
+        SortUtil.insert(origin);
+        System.out.println(Arrays.toString(origin));
 
         for (int i = 100; i < 100000000; i *= 1000) {
             System.out.println(new Date());
