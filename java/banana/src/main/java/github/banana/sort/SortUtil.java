@@ -50,4 +50,20 @@ public class SortUtil {
             }
         }
     }
+
+    public static void bubble(int[] origin) {
+        int length = origin.length;
+
+        for (int i = 0; i < length; i++) {
+            // 每次比较后, 序列逐渐减小
+            for (int j = 0; j < length - i - 1; j++) {
+                // 每次从剩余的选择中选择最大值
+                if (origin[j] > origin[j + 1]) {
+                    int v = origin[j];
+                    origin[j] = origin[j + 1];
+                    origin[j + 1] = v;
+                }
+            }
+        }
+    }
 }
