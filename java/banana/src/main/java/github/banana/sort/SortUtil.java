@@ -66,4 +66,35 @@ public class SortUtil {
             }
         }
     }
+
+    public static void quick(int[] origin, int low, int high) {
+        int l = low;
+        int h = high;
+        int base = origin[low];
+        while (l < h) {
+            while (l < h && origin[h] >= base) {
+                h--;
+            }
+
+            if (l < h) {
+                int temp = origin[h];
+                origin[h] = origin[l];
+                origin[l] = temp;
+                l++;
+            }
+
+            while (l < h && origin[l] <= base) {
+                l++;
+            }
+
+            if (l < h) {
+                int temp = origin[h];
+                origin[h] = origin[l];
+                origin[l] = temp;
+                h--;
+            }
+        }
+        if (l > low) quick(origin, low, l - 1);
+        if (h < high) quick(origin, l + 1, high);
+    }
 }
