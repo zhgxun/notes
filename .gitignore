@@ -39,3 +39,6 @@
 *.settings
 *.metadata
 *.recommenders
+
+# Mac
+.DS_Store
