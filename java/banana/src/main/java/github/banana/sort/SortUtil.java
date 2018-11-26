@@ -1,5 +1,7 @@
 package github.banana.sort;
 
+import java.util.Arrays;
+
 /**
  * 排序工具
  */
@@ -67,34 +69,62 @@ public class SortUtil {
         }
     }
 
+    /**
+     * 快速排序
+     *
+     * @param origin 待排序数组
+     * @param low    低位, 初始值初始0
+     * @param high   高位, 初始值为末尾下标
+     */
     public static void quick(int[] origin, int low, int high) {
-        int l = low;
-        int h = high;
+        int start = low;
+        int end = high;
+        // 基数值, 即是每次处理的首元素, 一般也直接使用首元素
         int base = origin[low];
-        while (l < h) {
-            while (l < h && origin[h] >= base) {
-                h--;
+        // 低位小于高位时处理, 找寻一次, 直接低位和高位相遇为止
+        while (start < end) {
+            // 从高位往低位降, 找到比基数小的元素, 记录当前
+            // 降找时依然不能不能低位低位标识
+            // 找到一个比基数小的数时记录该小数的下标, 同时退出循环
+            while (start < end && origin[end] >= base) {
+                // 找到一个比基数小的数值的下标
+                end--;
             }
 
-            if (l < h) {
-                int temp = origin[h];
-                origin[h] = origin[l];
-                origin[l] = temp;
-                l++;
+            // 如果这两个下标有效, 则交换两个数值
+            if (start < end) {
+                int temp = origin[end];
+                origin[end] = origin[start];
+                origin[start] = temp;
+                start++;
             }
 
-            while (l < h && origin[l] <= base) {
-                l++;
+            // 起始下标依然在降序范围内, 继续寻找
+            // 升序方式找到一个比基数大的数
+            while (start < end && origin[start] <= base) {
+                // 记录下标
+                start++;
             }
 
-            if (l < h) {
-                int temp = origin[h];
-                origin[h] = origin[l];
-                origin[l] = temp;
-                h--;
+            // 交换
+            if (start < end) {
+                int temp = origin[end];
+                origin[end] = origin[start];
+                origin[start] = temp;
+                end--;
             }
         }
-        if (l > low) quick(origin, low, l - 1);
-        if (h < high) quick(origin, l + 1, high);
+
+        System.out.println(Arrays.toString(origin));
+
+        // 低位还有数
+        if (start > low) {
+            quick(origin, low, start - 1);
+        }
+
+        // 高位还有数
+        if (end < high) {
+            quick(origin, start + 1, high);
+        }
     }
 }
