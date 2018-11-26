@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.github.zhgxun.learn.dao.PostDao">
+    <!--
+        id标识为抽象接口的方法名
+        parameterType 接收的参数为Long类型, 可选, 可被类型推断出正确类型来
+        resultType 返回值是一个实体对象
+    -->
+    <select id="one" parameterType="long" resultType="com.github.zhgxun.learn.entity.Post">
+        SELECT *
+        FROM post
+        WHERE id=${id}
+    </select>
+
+    <!--
+        timeout 这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数
+        resultType 返回一个 HashMap 类型的对象，其中的键是列名，值便是结果行中的对应值
+    -->
+    <select id="list" timeout="1" resultType="hashmap">
+        SELECT *
+        FROM post
+    </select>
+</mapper>
