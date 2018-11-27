@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @ResponseBody
 public class HealthController {
 
-    @RequestMapping(params = "/health", method = RequestMethod.GET)
+    @RequestMapping(path = "/health", method = RequestMethod.GET)
     public String health() {
         return "success";
     }

@@ -1,6 +1,6 @@
 package com.github.zhgxun.learn.controller;
 
-import com.github.zhgxun.learn.bean.User;
+import com.github.zhgxun.learn.common.bean.User;
 import com.github.zhgxun.learn.common.aop.annotation.Test;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;

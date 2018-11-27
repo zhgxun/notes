@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.bean;
+package com.github.zhgxun.learn.common.bean;
 
 import lombok.Data;
 

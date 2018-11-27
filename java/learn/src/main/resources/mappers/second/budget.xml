@@ -1,0 +1,12 @@
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.github.zhgxun.learn.dao.second.BudgetDao">
+    <select id="findOne" resultType="com.github.zhgxun.learn.entity.second.Budget">
+        SELECT * FROM budget WHERE id = #{id}
+    </select>
+
+    <select id="findAll" resultType="map">
+        SELECT * FROM budget
+    </select>
+</mapper>

@@ -34,10 +34,26 @@
         </dependency>
         <!--
             提供web服务, 包括tomcat, springmvc, json等封装和处理
+            排除默认提供的 tomcat web 服务, 使用 undertow 替代
         -->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.springframework.boot</groupId>
+                    <artifactId>spring-boot-starter-tomcat</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <!--
+            https://mvnrepository.com/artifact/org.springframework.boot/spring-boot-starter-undertow
+            使用 undertow 作为web服务提供
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-undertow</artifactId>
         </dependency>
 
         <!--
@@ -105,6 +121,4 @@
             </plugin>
         </plugins>
     </build>
-
-
 </project>
