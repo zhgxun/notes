@@ -2,11 +2,90 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.zhgxun.learn.dao.first.LaunchInfoDao">
+    <!--
+        相同的字段属性可以定义为SQL语句的一部分
+    -->
+    <sql id="columns">
+        id,
+        category_id as "categoryId",
+        ps_source_id as "psSourceId",
+        is_shadow as "isShadow",
+        is_stat_provider as "isStatProvider",
+        launch_category_name as "launchCategoryName"
+    </sql>
+
     <select id="findOne" resultType="com.github.zhgxun.learn.entity.first.LaunchInfo">
-        SELECT * FROM launch_info WHERE id = #{id}
+        SELECT
+        <include refid="columns"/>
+        FROM launch_info
+        WHERE id = #{id}
     </select>
 
     <select id="findAll" resultType="map">
         SELECT * FROM launch_info
+    </select>
+
+    <!--
+        动态SQL语句, 可根据传入的参数进行筛选, 最简单也是非常常用的情况, 即是有一个 where 是明确的
+
+    <select id="findAny" resultType="map">
+        SELECT
+            id,
+            category_id as "categoryId",
+            ps_source_id as "psSourceId",
+            is_shadow as "isShadow",
+            is_stat_provider as "isStatProvider",
+            launch_category_name as "launchCategoryName"
+        FROM launch_info
+        WHERE id = #{id}
+        <if test="launchCategoryName != null">
+            AND launch_category_name LIKE #{launchCategoryName}
+        </if>
+    </select>
+    -->
+
+    <!--
+        两个条件均未知并且可以接收空置作为默认值
+        where 元素只会在至少有一个子元素的条件返回 SQL 子句的情况下才去插入“WHERE”子句
+        而且, 若语句的开头为“AND”或“OR”, where 元素也会将它们去除
+    -->
+    <select id="findAny" resultType="map">
+        SELECT
+        <include refid="columns"/>
+        FROM launch_info
+        <where>
+            <if test="id != null">
+                id = #{id}
+            </if>
+            <!--
+                针对LIKE查询, 需要自行拼接LIKE方式, 比如传入 %商品%, 否则转化为相等匹配, 无法匹配区间
+            -->
+            <if test="name != null">
+                AND launch_category_name LIKE #{name}
+            </if>
+        </where>
+    </select>
+
+    <!--
+        IN操作符
+        允许你指定一个集合, 声明可以在元素体内使用的集合项 item 和索引 index 变量
+        它也允许你指定开头与结尾的字符串以及在迭代结果之间放置分隔符
+
+        当使用可迭代对象或者数组时, index 是当前迭代的次数, item 的值是本次迭代获取的元素
+        当使用 Map 对象, 或者 Map.Entry 对象的集合时, index 是键, item 是值
+
+        该种情况对传入的参数本身不敏感, 只对类型是一个可迭代的集合进行操作即可
+    -->
+    <select id="findIn" resultType="map">
+        SELECT
+        <include refid="columns"/>
+        FROM launch_info
+        WHERE id IN
+        <!--
+            list遍历结果为每一个ID
+        -->
+        <foreach index="index" item="item" collection="list" open="(" separator="," close=")">
+            #{item}
+        </foreach>
     </select>
 </mapper>

@@ -2,8 +2,22 @@
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.github.zhgxun.learn.dao.second.BudgetDao">
+    <!--
+        单个的对象比较特殊, 需要自己做映射, 或者选用map类型, 但是接收到的数据不是单一对象, 需要自行遍历
+    -->
     <select id="findOne" resultType="com.github.zhgxun.learn.entity.second.Budget">
-        SELECT * FROM budget WHERE id = #{id}
+        SELECT
+            id,
+            budget_id as "budgetId",
+            daily_budget as "dailyBudget",
+            type,
+            user_id as "userId",
+            create_time as "createTime",
+            update_time as "updateTime",
+            creator,
+            updater,
+            version
+        FROM budget WHERE id = #{id}
     </select>
 
     <select id="findAll" resultType="map">

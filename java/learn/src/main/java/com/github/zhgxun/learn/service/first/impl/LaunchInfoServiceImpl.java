@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.util.List;
 
 @Service
-public class LaunchInfoImpl implements LaunchInfoService {
+public class LaunchInfoServiceImpl implements LaunchInfoService {
 
     @Autowired
     private LaunchInfoDao launchInfoDao;
@@ -26,5 +26,17 @@ public class LaunchInfoImpl implements LaunchInfoService {
     @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
     public List<LaunchInfo> findAll() {
         return launchInfoDao.findAll();
+    }
+
+    @Override
+    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+    public List<LaunchInfo> findAny(Long id, String name) {
+        return launchInfoDao.findAny(id, name);
+    }
+
+    @Override
+    @Transactional(readOnly = true, propagation = Propagation.SUPPORTS)
+    public List<LaunchInfo> findIn(List<Long> ids) {
+        return launchInfoDao.findIn(ids);
     }
 }

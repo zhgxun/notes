@@ -12,4 +12,8 @@ public interface LaunchInfoDao {
     LaunchInfo findOne(@Param("id") Long id);
 
     List<LaunchInfo> findAll();
+
+    List<LaunchInfo> findAny(@Param("id") Long id, @Param("name") String name);
+
+    List<LaunchInfo> findIn(List<Long> ids);
 }

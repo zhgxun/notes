@@ -9,4 +9,8 @@ public interface LaunchInfoService {
     LaunchInfo findOne(Long id);
 
     List<LaunchInfo> findAll();
+
+    List<LaunchInfo> findAny(Long id, String name);
+
+    List<LaunchInfo> findIn(List<Long> ids);
 }
