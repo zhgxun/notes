@@ -6,6 +6,8 @@ import com.github.zhgxun.learn.service.PostService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 public class PostServiceImpl implements PostService {
 
@@ -15,5 +17,13 @@ public class PostServiceImpl implements PostService {
     @Override
     public Post getOne(Long id) {
         return postDao.one(id);
+    }
+
+    public List<Post> list() {
+        return postDao.list();
+    }
+
+    public List<Post> titles() {
+        return postDao.titles();
     }
 }

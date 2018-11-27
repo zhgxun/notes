@@ -14,10 +14,22 @@
 
     <!--
         timeout 这个设置是在抛出异常之前，驱动程序等待数据库返回请求结果的秒数
-        resultType 返回一个 HashMap 类型的对象，其中的键是列名，值便是结果行中的对应值
+        resultType 返回一个 HashMap 类型的对象，其中的键是列名，值便是结果行中的对应值, map或hashmap一致, 返回结果需要使用List接收
     -->
     <select id="list" timeout="1" resultType="hashmap">
         SELECT *
+        FROM post
+    </select>
+
+    <!--
+        指定返回结果类型
+    -->
+    <resultMap id="postMap" type="com.github.zhgxun.learn.entity.Post">
+        <result property="id" column="id"/>
+        <result property="title" column="title"/>
+    </resultMap>
+    <select id="titles" resultMap="postMap">
+        SELECT id,title
         FROM post
     </select>
 </mapper>
