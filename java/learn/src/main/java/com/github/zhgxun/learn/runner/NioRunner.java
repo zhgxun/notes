@@ -1,6 +1,8 @@
-package com.github.zhgxun.learn.server;
+package com.github.zhgxun.learn.runner;
 
-import java.io.IOException;
+import org.springframework.boot.CommandLineRunner;
+import org.springframework.stereotype.Component;
+
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
 import java.nio.channels.SelectionKey;
@@ -14,16 +16,18 @@ import java.util.Set;
 /**
  * Nio
  * <p>
- * This is a Java server-side program written in NiO
+ * This is a Java runner-side program written in NiO
  */
-public class NioServer {
+@Component
+public class NioRunner implements CommandLineRunner {
 
     // 主线程, 即当前示例main方法
     // Channel[Server, Client]
     // Selector
     // Register
     // ByteBuffer
-    public static void main(String[] args) throws IOException {
+    @Override
+    public void run(String... args) throws Exception {
         // 开启一个连接, 作为boss线程, 专门负责轮询selector
         ServerSocketChannel channel = ServerSocketChannel.open();
 
