@@ -19,6 +19,12 @@ import java.lang.reflect.Method;
 import java.net.URL;
 import java.util.*;
 
+/**
+ * 简单的能处理一个参数的Spring MVC 框架
+ *
+ * 仅供学习用, 毕竟现在的Java程序都是打包成Java应用, 即是可执行jar包来运行, 新的应用很少在使用war包的方式来运行了
+ * 尤其是SpringBoot开始, 内嵌了容器
+ */
 public class DispatcherServlet extends HttpServlet {
 
     private static final String LOCATION = "contextConfigLocation";
@@ -50,8 +56,6 @@ public class DispatcherServlet extends HttpServlet {
         initHandleMapping();
 
         // 6. 等待请求doGet, doPost 方法
-
-        // 7.
     }
 
     /**
@@ -60,6 +64,7 @@ public class DispatcherServlet extends HttpServlet {
      * @param location 配置文件路径
      */
     private void loadConfig(String location) {
+        // application.properties
         System.out.println("加载配置文件: " + location);
         InputStream stream = null;
         try {
@@ -84,6 +89,8 @@ public class DispatcherServlet extends HttpServlet {
      * @param packName 包名 com.github.zhgxun.simple
      */
     private void scanner(String packName) {
+        // com.github.zhgxun.simple.hello
+        // com.github.zhgxun.simple.hello.controller
         System.out.println("扫描包: " + packName);
         URL url = this.getClass().getClassLoader().getResource("/" + packName.replaceAll("\\.", "/"));
         if (url == null) {
@@ -99,6 +106,8 @@ public class DispatcherServlet extends HttpServlet {
                 scanner(packName + "." + file.getName());
             } else {
                 // class类文件名称不保存扩展名, 但保存绝对路径
+                // com.github.zhgxun.simple.hello.controller.HelloController
+                // com.github.zhgxun.simple.hello.service.impl.HelloServiceImpl
                 String className = packName + "." + file.getName().replace(".class", "").trim();
                 classNames.add(className);
                 System.out.println("扫描到的className: " + className);
@@ -128,6 +137,7 @@ public class DispatcherServlet extends HttpServlet {
                     // 看是否有 @Service 注解
                     Service service = clazz.getAnnotation(Service.class);
                     // 看接口的实现类是否自定义名称
+                    // helloController
                     String beanName = service.value();
                     if (!beanName.equals("")) {
                         ioc.put(beanName, clazz.newInstance());
@@ -141,6 +151,7 @@ public class DispatcherServlet extends HttpServlet {
                             throw new RuntimeException("接口: " + i.getName() + " 的实现类不止一个");
                         }
                         ioc.put(i.getName(), clazz.newInstance());
+                        // com.github.zhgxun.simple.hello.service.HelloService
                         System.out.println("实例化@Service interface beanName: " + i.getName());
                     }
                 }
@@ -189,6 +200,7 @@ public class DispatcherServlet extends HttpServlet {
                 try {
                     // 从ioc容易中获取对应的对象实例赋值到对象的属性中, 即是依赖注入响应的实例
                     field.set(entry.getValue(), ioc.get(beanName));
+                    // com.github.zhgxun.simple.hello.service.HelloService
                     System.out.println("注入属性 beanName: " + beanName);
                 } catch (IllegalAccessException e) {
                     throw new RuntimeException("实例: " + entry.getValue().getClass().getName() + " 的属性: " + beanName + " 无可注入的实现类");
@@ -227,6 +239,7 @@ public class DispatcherServlet extends HttpServlet {
                 RequestMapping requestMapping = method.getAnnotation(RequestMapping.class);
                 String url = ("/" + baseUrl + "/" + requestMapping.value()).replaceAll("/+", "/");
                 // 将方法与method关联
+                // /hello/test
                 handlerMapping.put(url, method);
                 System.out.println("handlerMapping: " + url);
             }
@@ -255,6 +268,7 @@ public class DispatcherServlet extends HttpServlet {
         }
     }
 
+    @SuppressWarnings("unchecked")
     private void dispatch(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if (handlerMapping.isEmpty()) {
             return;
@@ -266,41 +280,19 @@ public class DispatcherServlet extends HttpServlet {
             resp.getWriter().write("Error: 404 Not Found");
             return;
         }
+        // /hello/test
         System.out.println("请求URL: " + url);
 
         Method method = handlerMapping.get(url);
-        // 获取方法的参数列表
-        Class<?>[] paramTypes = method.getParameterTypes();
         // 获取请求参数
         Map<String, String[]> params = req.getParameterMap();
-        // 保存请求参数
-        Object[] values = new Object[paramTypes.length];
-        for (int i = 0; i < paramTypes.length; i++) {
-            Class paramType = paramTypes[i];
-            if (paramType == HttpServletRequest.class) {
-                System.out.println("响应参数: ");
-                values[i] = req;
-            } else if (paramType == HttpServletResponse.class) {
-                System.out.println("响应参数: ");
-                values[i] = req;
-            } else if (paramType == String.class) {
-                System.out.println("字符串参数");
-                // 遍历请求参数列表
-                for (Map.Entry<String, String[]> entry : params.entrySet()) {
-                    String value = Arrays.toString(entry.getValue()).replaceAll("\\[|\\]", "").replaceAll(",\\s", ",");
-                    values[i] = value;
-                }
-            } else {
-                System.out.println("未处理的参数类型");
-            }
-        }
-
         // 获取当前方法的实例名称
         String beanName = lowerFirstCase(method.getDeclaringClass().getSimpleName());
+        // helloController
         System.out.println("获取当前方法的实例名称: " + beanName);
         try {
-            // 利用反射执行该方法
-            method.invoke(ioc.get(beanName), values);
+            // 利用反射执行该方法, 简化操作只传输一个固定变量
+            method.invoke(ioc.get(beanName), req, resp, params.getOrDefault("name", new String[]{"param 'name' is need"})[0]);
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }

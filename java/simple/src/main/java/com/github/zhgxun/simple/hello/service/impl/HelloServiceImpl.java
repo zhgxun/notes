@@ -9,6 +9,6 @@ import java.util.Date;
 public class HelloServiceImpl implements HelloService {
 
     public String parse(String name) {
-        return String.format("当前时间: %s, 接收到你的请求: %s", new Date(), name);
+        return String.format("Current Date: %s, request: %s", new Date(), name);
     }
 }
