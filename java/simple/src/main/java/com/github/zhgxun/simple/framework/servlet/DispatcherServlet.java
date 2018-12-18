@@ -102,7 +102,7 @@ public class DispatcherServlet extends HttpServlet {
                 scanner(packName + "." + file.getName());
             } else {
                 // class类文件名称不保存扩展名, 但保存绝对路径
-                classNames.add(packName + "." + file.getName().replace("\\.class", "").trim());
+                classNames.add(packName + "." + file.getName().replace(".class", "").trim());
             }
         }
     }
@@ -138,7 +138,7 @@ public class DispatcherServlet extends HttpServlet {
                         if (ioc.containsKey(i.getName())) {
                             throw new RuntimeException("接口: " + i.getName() + " 的实现类不止一个");
                         }
-                        ioc.put(i.getName(), i.newInstance());
+                        ioc.put(i.getName(), clazz.newInstance());
                     }
                 }
             }
@@ -219,9 +219,10 @@ public class DispatcherServlet extends HttpServlet {
                     continue;
                 }
                 RequestMapping requestMapping = method.getAnnotation(RequestMapping.class);
-                String url = "/" + baseUrl + "/" + requestMapping.value().replaceAll("\\/+", "/");
+                String url = ("/" + baseUrl + "/" + requestMapping.value()).replaceAll("/+", "/");
                 // 将方法与method关联
                 handlerMapping.put(url, method);
+                System.out.println("handlerMapping: " + url);
             }
         }
     }
@@ -250,7 +251,7 @@ public class DispatcherServlet extends HttpServlet {
         }
         String url = req.getRequestURI();
         String contextPath = req.getContextPath();
-        url = url.replace(contextPath, "").replaceAll("\\/+", "/");
+        url = url.replace(contextPath, "").replaceAll("/+", "/");
         if (!handlerMapping.containsKey(url)) {
             resp.getWriter().write("Error: 404 Not Found");
             return;
