@@ -9,6 +9,13 @@
     <version>1.0-SNAPSHOT</version>
     <packaging>war</packaging>
 
+    <!--
+        一个学习的练手项目, 原文请参考Tom原创——我是这样手写Spring的，麻雀虽小五脏俱全(http://bbs.gupaoedu.com/forum.php?mod=viewthread&tid=572&highlight=%E6%89%8B%E5%86%99spring)
+        项目中有一些差异, 比如最后的invoke()方法, 未知参数的情况下需要继续处理
+
+        项目需要借助 tomcat 运行
+    -->
+
     <properties>
         <java.version>1.8</java.version>
     </properties>
