@@ -17,12 +17,7 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import java.util.Properties;
+import java.util.*;
 
 public class DispatcherServlet extends HttpServlet {
 
@@ -65,6 +60,7 @@ public class DispatcherServlet extends HttpServlet {
      * @param location 配置文件路径
      */
     private void loadConfig(String location) {
+        System.out.println("加载配置文件: " + location);
         InputStream stream = null;
         try {
             stream = this.getClass().getClassLoader().getResourceAsStream(location);
@@ -88,6 +84,7 @@ public class DispatcherServlet extends HttpServlet {
      * @param packName 包名 com.github.zhgxun.simple
      */
     private void scanner(String packName) {
+        System.out.println("扫描包: " + packName);
         URL url = this.getClass().getClassLoader().getResource("/" + packName.replaceAll("\\.", "/"));
         if (url == null) {
             throw new RuntimeException("包名称: " + packName + "不能为空");
@@ -102,7 +99,9 @@ public class DispatcherServlet extends HttpServlet {
                 scanner(packName + "." + file.getName());
             } else {
                 // class类文件名称不保存扩展名, 但保存绝对路径
-                classNames.add(packName + "." + file.getName().replace(".class", "").trim());
+                String className = packName + "." + file.getName().replace(".class", "").trim();
+                classNames.add(className);
+                System.out.println("扫描到的className: " + className);
             }
         }
     }
@@ -111,6 +110,7 @@ public class DispatcherServlet extends HttpServlet {
      * 实例化对象
      */
     private void instance() {
+        System.out.println("开始实例化对象");
         if (classNames.size() == 0) {
             return;
         }
@@ -123,6 +123,7 @@ public class DispatcherServlet extends HttpServlet {
                 if (clazz.isAnnotationPresent(Controller.class)) {
                     String beanName = lowerFirstCase(clazz.getSimpleName());
                     ioc.put(beanName, clazz.newInstance());
+                    System.out.println("实例化@Controller beanName: " + beanName);
                 } else if (clazz.isAnnotationPresent(Service.class)) {
                     // 看是否有 @Service 注解
                     Service service = clazz.getAnnotation(Service.class);
@@ -130,6 +131,7 @@ public class DispatcherServlet extends HttpServlet {
                     String beanName = service.value();
                     if (!beanName.equals("")) {
                         ioc.put(beanName, clazz.newInstance());
+                        System.out.println("实例化@Service beanName: " + beanName);
                         continue;
                     }
 
@@ -139,10 +141,11 @@ public class DispatcherServlet extends HttpServlet {
                             throw new RuntimeException("接口: " + i.getName() + " 的实现类不止一个");
                         }
                         ioc.put(i.getName(), clazz.newInstance());
+                        System.out.println("实例化@Service interface beanName: " + i.getName());
                     }
                 }
             }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
@@ -163,6 +166,7 @@ public class DispatcherServlet extends HttpServlet {
      * 对属性进行依赖注入对应的实例
      */
     private void autowired() {
+        System.out.println("自动注入类的@Autowired注解实例...");
         if (ioc.isEmpty()) {
             return;
         }
@@ -185,6 +189,7 @@ public class DispatcherServlet extends HttpServlet {
                 try {
                     // 从ioc容易中获取对应的对象实例赋值到对象的属性中, 即是依赖注入响应的实例
                     field.set(entry.getValue(), ioc.get(beanName));
+                    System.out.println("注入属性 beanName: " + beanName);
                 } catch (IllegalAccessException e) {
                     throw new RuntimeException("实例: " + entry.getValue().getClass().getName() + " 的属性: " + beanName + " 无可注入的实现类");
                 }
@@ -196,6 +201,7 @@ public class DispatcherServlet extends HttpServlet {
      * 初始化所有方法的映射
      */
     private void initHandleMapping() {
+        System.out.println("初始化映射关系...");
         if (ioc.isEmpty()) {
             return;
         }
@@ -229,19 +235,23 @@ public class DispatcherServlet extends HttpServlet {
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("开始GET请求");
         try {
             dispatch(req, resp);
         } catch (Exception e) {
             resp.getWriter().write("500 Error");
+            e.printStackTrace();
         }
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        System.out.println("开始POST请求");
         try {
             dispatch(req, resp);
         } catch (Exception e) {
             resp.getWriter().write("500 Error");
+            e.printStackTrace();
         }
     }
 
@@ -256,6 +266,7 @@ public class DispatcherServlet extends HttpServlet {
             resp.getWriter().write("Error: 404 Not Found");
             return;
         }
+        System.out.println("请求URL: " + url);
 
         Method method = handlerMapping.get(url);
         // 获取方法的参数列表
@@ -265,10 +276,15 @@ public class DispatcherServlet extends HttpServlet {
         // 保存请求参数
         Object[] values = new Object[paramTypes.length];
         for (int i = 0; i < paramTypes.length; i++) {
-            Class<?> paramType = paramTypes[i];
-            if (paramType == HttpServletRequest.class || paramType == HttpServletResponse.class) {
+            Class paramType = paramTypes[i];
+            if (paramType == HttpServletRequest.class) {
+                System.out.println("响应参数: ");
+                values[i] = req;
+            } else if (paramType == HttpServletResponse.class) {
+                System.out.println("响应参数: ");
                 values[i] = req;
             } else if (paramType == String.class) {
+                System.out.println("字符串参数");
                 // 遍历请求参数列表
                 for (Map.Entry<String, String[]> entry : params.entrySet()) {
                     String value = Arrays.toString(entry.getValue()).replaceAll("\\[|\\]", "").replaceAll(",\\s", ",");
@@ -281,6 +297,7 @@ public class DispatcherServlet extends HttpServlet {
 
         // 获取当前方法的实例名称
         String beanName = lowerFirstCase(method.getDeclaringClass().getSimpleName());
+        System.out.println("获取当前方法的实例名称: " + beanName);
         try {
             // 利用反射执行该方法
             method.invoke(ioc.get(beanName), values);
