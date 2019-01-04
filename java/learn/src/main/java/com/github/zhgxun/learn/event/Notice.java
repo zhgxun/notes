@@ -10,18 +10,18 @@ import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
-public class Message {
+public class Notice {
 
     @Async
     @EventListener
-    public void send(OrderRegisterEvent event) {
-        log.info("Message Start... {}", new Date());
-        log.info("短信发送信息: {}", event.getOrderBean());
+    public void notice(PayRegisterEvent event) {
+        log.info("Pay Start... {}", new Date());
+        log.info("支付成功回调信息: {}", event.getPay());
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info("Message End: {}", new Date());
+        log.info("Pay End: {}", new Date());
     }
 }

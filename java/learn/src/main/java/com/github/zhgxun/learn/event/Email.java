@@ -12,16 +12,21 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class Email {
 
+    /**
+     * 监听其实只需关注事件即可
+     *
+     * @param event 监听的事件
+     */
     @Async
     @EventListener
-    public void send(OrderBean orderBean) {
-        log.info("Start... {}", new Date());
-        log.info("邮件发送信息: {}", orderBean);
+    public void send(OrderRegisterEvent event) {
+        log.info("Email Start... {}", new Date());
+        log.info("邮件发送信息: {}", event.getOrderBean());
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info("End: {}", new Date());
+        log.info("Email End: {}", new Date());
     }
 }
