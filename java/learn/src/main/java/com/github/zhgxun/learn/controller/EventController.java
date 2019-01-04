@@ -30,7 +30,8 @@ import java.util.Random;
  * <p>
  * 在Spring内部中有多种方式实现监听如: @EventListener注解, 实现ApplicationListener泛型接口, 实现SmartApplicationListener接口等
  * @see org.springframework.context.event.EventListener
- * @see org.springframework.context.event.SmartApplicationListener
+ * @see org.springframework.context.event.SmartApplicationListener 可以实现有序, 但是如果事件依赖顺序, 就成了同步操作, 还不如使用队列等其它方式实现, 或者事件循环往下广播即可
+ * 比如必须确定先发送短信成功后再发送邮件, 则可以发送短信后再注册邮件事件, 但是这样就退化为同步操作, 使用不上异步的性能和低延迟了
  */
 @RestController
 @Slf4j
