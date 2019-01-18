@@ -17,11 +17,16 @@ import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.net.URL;
-import java.util.*;
+import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import java.util.Properties;
 
 /**
  * 简单的能处理一个参数的Spring MVC 框架
- *
+ * <p>
  * 仅供学习用, 毕竟现在的Java程序都是打包成Java应用, 即是可执行jar包来运行, 新的应用很少在使用war包的方式来运行了
  * 尤其是SpringBoot开始, 内嵌了容器
  */
@@ -292,7 +297,8 @@ public class DispatcherServlet extends HttpServlet {
         System.out.println("获取当前方法的实例名称: " + beanName);
         try {
             // 利用反射执行该方法, 简化操作只传输一个固定变量
-            method.invoke(ioc.get(beanName), req, resp, params.getOrDefault("name", new String[]{"param 'name' is need"})[0]);
+            String name = params.getOrDefault("name", new String[]{"param 'name' is need"})[0];
+            method.invoke(ioc.get(beanName), req, resp, new String(name.getBytes(StandardCharsets.UTF_8)));
         } catch (IllegalAccessException | InvocationTargetException e) {
             e.printStackTrace();
         }
