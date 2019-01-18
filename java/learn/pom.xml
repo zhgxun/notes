@@ -57,6 +57,15 @@
         </dependency>
 
         <!--
+            配置文件注解
+        -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--
             导入原始的 mybatis 包, 扫描需要自行处理, 使用spring boot2 封装的包, 能优雅的处理包扫描, 并提供了注解
         -->
         <dependency>
@@ -114,6 +123,7 @@
     </dependencies>
 
     <build>
+        <finalName>learn</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

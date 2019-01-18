@@ -28,6 +28,7 @@ public class NioRunner implements CommandLineRunner {
     // ByteBuffer
     @Override
     public void run(String... args) throws Exception {
+        System.out.println("CommandLineRunner 开始运行 ...");
         // 开启一个连接, 作为boss线程, 专门负责轮询selector
         ServerSocketChannel channel = ServerSocketChannel.open();
 
