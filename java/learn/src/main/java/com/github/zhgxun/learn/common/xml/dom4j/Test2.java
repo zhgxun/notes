@@ -32,14 +32,18 @@ public class Test2 {
         // 该处本不想用 fastjson 库, 但是看还只要 fastjson 库 JSONObject 支持查找当前对象中是否包含某元素
         // 该元素在同级下有多个
         if (json.containsKey(nodeName)) {
-            Object Object = json.get(nodeName);
+            Object object = json.get(nodeName);
+
+            // 既然是相同的元素, 存储为 JsonArray
+            // 保存已有元素
             JSONArray array;
-            if (Object instanceof JSONArray) {
-                array = (JSONArray) Object;
+            if (object instanceof JSONArray) {
+                array = (JSONArray) object;
             } else {
                 array = new JSONArray();
-                array.add(Object);
+                array.add(object);
             }
+            // 添加新元素
             // 获取该元素下所有子元素
             List<Element> listElement = node.elements();
             if (listElement.isEmpty()) {
