@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.common;
+package com.github.zhgxun.learn.common.util;
 
 import com.github.zhgxun.learn.common.bean.TestBean;
 import org.springframework.beans.factory.BeanFactory;
