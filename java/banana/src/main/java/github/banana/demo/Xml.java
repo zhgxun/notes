@@ -20,7 +20,7 @@ import org.xml.sax.SAXException;
  */
 public class Xml {
 	// 新浪rss订阅地址
-	static final String XML_URL = "http://rss.sina.com.cn/tech/internet/home28.xml";
+	static final String XML_URL = "/Users/baidu/Desktop/22.xml";
 
 	/**
 	 * 解析xml内容
