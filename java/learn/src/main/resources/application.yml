@@ -21,3 +21,5 @@ logging:
             dao:
               first:
                 LaunchInfoDao: debug
+
+# hikari 连接池配置

@@ -19,6 +19,7 @@ import java.util.stream.Stream;
  * 该监听器本身不能访问容器变量, 如果需要访问, 需要从上下文中获取对象实例后方可继续访问实例信息
  * 如果其它类中启动了多线程, 是无法接管异常抛出的, 需要子线程中正确处理退出操作
  * 该监听器最好不用直接做线程操作, 子类的实现不干预
+ * 容器刷新事件可用, 启动事件不支持该触发
  */
 @Slf4j
 public class TaskApplicationListener implements ApplicationListener<ContextRefreshedEvent> {
@@ -47,11 +48,11 @@ public class TaskApplicationListener implements ApplicationListener<ContextRefre
     @Override
     @SuppressWarnings("unchecked")
     public void onApplicationEvent(ContextRefreshedEvent event) {
-        context = event.getApplicationContext();
         // 不存在时可能为正常的容器启动运行, 无需关心
         String taskClass = System.getProperty(SPRING_TASK_CLASS);
         log.info("ScheduleTask spring task Class: {}", taskClass);
         if (taskClass != null) {
+            context = event.getApplicationContext();
             try {
                 // 获取类字节码文件
                 Class clazz = findClass(taskClass);
