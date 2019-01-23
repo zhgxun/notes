@@ -25,6 +25,12 @@ public class TestTask {
             new MyTask(i).start();
         }
 
+        String builder = "";
+        for (int i = 0; i < 10; i++) {
+            builder = builder + "a";
+        }
+        System.out.println(builder);
+
         try {
             TimeUnit.SECONDS.sleep(3);
         } catch (InterruptedException e) {
