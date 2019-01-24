@@ -23,9 +23,6 @@ public class AddTwoNumbers {
 
         ListNode node = addTwoNumbers(listNode1, listNode2);
         System.out.println("Total: " + total(node));
-
-        System.out.println(10 / 6);
-        System.out.println(10 % 6);
     }
 
     /**
