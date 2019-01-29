@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import lombok.extern.slf4j.Slf4j;
+
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
@@ -28,6 +30,7 @@ import java.util.Set;
  *
  * @link https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/solution/
  */
+@Slf4j
 public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
@@ -111,12 +114,15 @@ public class LengthOfLongestSubstring {
         Set<Character> set = new HashSet<>();
         int ans = 0, i = 0, j = 0;
         while (i < n && j < n) {
+            log.info("---------------");
+            log.info("初始set: {}", set);
             if (!set.contains(s.charAt(j))) {
                 set.add(s.charAt(j++));
                 ans = Math.max(ans, j - i);
             } else {
                 set.remove(s.charAt(i++));
             }
+            log.info("结果set: {}", set);
         }
         return ans;
     }
