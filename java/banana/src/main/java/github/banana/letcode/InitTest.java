@@ -7,7 +7,7 @@ import java.util.Map;
 /**
  * 创建不可变数据类型
  */
-public class Test {
+public class InitTest {
 
     /**
      * 该处修饰其实无法限定不可改变, 只是表明该数据类型应该是一个不可变而已
