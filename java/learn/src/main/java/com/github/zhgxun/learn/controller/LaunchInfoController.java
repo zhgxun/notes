@@ -4,16 +4,14 @@ import com.github.zhgxun.learn.entity.first.LaunchInfo;
 import com.github.zhgxun.learn.service.first.LaunchInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
 
-@Controller
-@ResponseBody
+@RestController
 @Slf4j
 public class LaunchInfoController {
 
