@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="sumImpl" class="github.banana.rmi.server.SumServiceImpl"/>
+    <!-- 将类发布为一个rmi服务 -->
+    <bean id="sumRmi" class="org.springframework.remoting.rmi.RmiServiceExporter">
+        <!-- 服务类 -->
+        <property name="service" ref="sumImpl"/>
+        <!-- 服务名 -->
+        <property name="serviceName" value="sum"/>
+        <!-- 服务接口 -->
+        <property name="serviceInterface" value="github.banana.rmi.api.SumService"/>
+        <!-- 服务发布端口端口 -->
+        <property name="registryPort" value="9002"/>
+    </bean>
+</beans>
