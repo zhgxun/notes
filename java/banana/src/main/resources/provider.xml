@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:dubbo="http://dubbo.apache.org/schema/dubbo"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd">
+
+    <!-- 生产者方信息 -->
+    <dubbo:application name="demo-app"/>
+
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181?client=curator" file="/Users/baidu/Desktop/dubbo.txt"/>
+
+    <dubbo:protocol name="dubbo" port="9005"/>
+
+    <!-- 声明需要暴露的服务接口 -->
+    <dubbo:service interface="github.banana.rmi.api.DemoService" ref="demoService"/>
+
+    <!-- 本地服务实现 -->
+    <bean id="demoService" class="github.banana.rmi.server.DemoServiceImpl"/>
+</beans>
