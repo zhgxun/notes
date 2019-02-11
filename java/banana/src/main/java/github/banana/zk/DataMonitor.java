@@ -46,6 +46,11 @@ import java.util.Arrays;
  * 客户端Watcher回调的过程是一个串行同步的过程, 这是为了保证顺序, 同时需要谨记千万不要因为一个Watcher的处理逻辑影响了整个客户端的Watcher回调
  * WatchedEvent是ZK整个Watcher通知机制的最小通知单元, 从上文已经介绍了这个数据结构中只包含三部分: 通知状态, 事件类型, 节点路径. 也就是说, Watcher通知仅仅告诉客户端发生了什么事情, 而不会说明事件的具体内容
  * 因此事件的具体内容需要借助回调来完成
+ * <p>
+ * 总结:
+ * 其实Watcher的事件类型本身能反应出AsyncCallback回调的状态, 只是回调能获取更多的信息, 而事件获取的信息稍微有限, 一定层面上来说, 事件机制即可实现大多数功能
+ * 但是回调类型更丰富, 借助回调实现一些功能更简单
+ * 总结来说就是"Watcher通知仅仅告诉客户端发生了什么事情, 而不会说明事件的具体内容, 如果想知道具体发生的事情, 需要借助其它API或者实现对应的回调"
  */
 @Slf4j
 public class DataMonitor implements Watcher, StatCallback {
@@ -107,6 +112,8 @@ public class DataMonitor implements Watcher, StatCallback {
                     break;
             }
         } else {
+            // 其实如果不是要求高或者有特殊实现, 仅需要事件机制就可以做很多事情, 可以避免回调的编写
+            log.info("事件: {}", event.getType());
             // 路径是我们当前关心的路径时
             if (path != null && path.equals(znode)) {
                 zk.exists(znode, true, this, null);
