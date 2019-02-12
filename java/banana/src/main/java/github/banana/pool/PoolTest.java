@@ -1,6 +1,5 @@
 package github.banana.pool;
 
-
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.ScheduledExecutorService;
@@ -10,6 +9,22 @@ import java.util.concurrent.TimeUnit;
  * 创建和销毁线程存在一定的开销, 因此涉及线程的操作相当的昂贵
  * 跟实例化对象一样, 需要时实例化, 并且能实例化一次的就不实例化多次, 这需要用一些方式解决, 确保对象只实例化一次, 高效利用
  * 核心线程数, 可以理解为长期驻留的线程数
+ * <p>
+ * 线程池使用注意事项:
+ * 1. 避免任务堆积, jmap查看是否有大量的任务对象入队
+ * 2. 避免过度扩展线程, 在无法确定线程数目时可能高峰期导致大量线程涌入
+ * 3. 线程泄漏, 大量线程不断增长, 可以使用jstack排除, 看看线程是否卡在近似的代码处
+ * 4. 避免死锁或同步等等问题
+ * 5. 尽量避免 {@link ThreadLocal} 使用, 可能无法进行垃圾回收
+ * <p>
+ * 线上数目策略:
+ * 1. 任务主要是进行计算
+ * CPU的处理能力是稀缺资源, 那增加线程就无法解决, 反而增加了线程上下文不断切换的开销
+ * 2. 任务主要是等待
+ * 即是操作较慢, 大量的任务在互相等待, 则可以通过增加线程来解决
+ * 然后就是系统资源限制等等问题
+ * <p>
+ * 通常来说, 线程数目 = CPU核数 * ( 1 + 平均等待时间 / 平均工作时间)
  */
 public class PoolTest {
 
