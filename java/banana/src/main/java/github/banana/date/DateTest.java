@@ -1,5 +1,6 @@
 package github.banana.date;
 
+import java.util.Calendar;
 import java.util.Date;
 
 /**
@@ -25,5 +26,11 @@ public class DateTest {
         if (date1.after(date2)) {
             System.out.printf("%s 在 %s 之后", date1, date2);
         }
+
+        // 打印当前时间毫秒数的三种方法
+        System.out.println("打印当前时间毫秒数的三种方法");
+        System.out.println("系统: " + System.currentTimeMillis());
+        System.out.println("日期: " + new Date().getTime());
+        System.out.println("日历: " + Calendar.getInstance().getTimeInMillis());
     }
 }
