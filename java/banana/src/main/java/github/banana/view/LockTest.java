@@ -1,5 +1,7 @@
 package github.banana.view;
 
+import java.lang.reflect.Method;
+
 /**
  * synchronized 和 {@link java.util.concurrent.locks.Lock}
  * <p>
@@ -22,11 +24,14 @@ public class LockTest {
             // 静态段会被初始化
             Class<?> s = Class.forName("github.banana.view.TestClassLoader");
             System.out.println(s.getSimpleName());
+            // 找到方法并执行
+            Method method = s.getMethod("exec");
+            method.invoke(s);
 
             // 静态段不会被初始化
             Class<?> s1 = new MyClassLoader().loadClass("github.banana.view.TestClassLoader");
             System.out.println(s1.getSimpleName());
-        } catch (ClassNotFoundException e) {
+        } catch (Exception e) {
             e.printStackTrace();
         }
     }
