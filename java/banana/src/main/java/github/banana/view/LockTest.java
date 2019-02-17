@@ -31,6 +31,8 @@ public class LockTest {
             // 静态段不会被初始化
             Class<?> s1 = new MyClassLoader().loadClass("github.banana.view.TestClassLoader");
             System.out.println(s1.getSimpleName());
+            Method method1 = s1.getMethod("exec");
+            method1.invoke(s1);
         } catch (Exception e) {
             e.printStackTrace();
         }
