@@ -1,4 +1,4 @@
-package github.banana.concurrency;
+package github.banana.view;
 
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.concurrent.locks.AbstractQueuedSynchronizer;
