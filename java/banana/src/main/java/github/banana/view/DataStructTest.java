@@ -84,7 +84,8 @@ public class DataStructTest {
 
         // 3. 链式队列
         System.out.println("链式队列");
-        LinkQueue linkQueue = new LinkQueue();
+        @SuppressWarnings("unchecked")
+        LinkQueue<String> linkQueue = new LinkQueue();
         linkQueue.en("abc");
         linkQueue.en("abd");
         linkQueue.en("abe");
@@ -97,6 +98,12 @@ public class DataStructTest {
             System.out.println(linkQueue.de());
             head = head.next;
         }
+
+        LinkQueue<Integer> linkQueue1 = new LinkQueue<>();
+        linkQueue1.en(100);
+        linkQueue1.en(200);
+        System.out.println(linkQueue1.de());
+        System.out.println(linkQueue1.de());
     }
 }
 
@@ -257,7 +264,7 @@ class ArrayQueue {
  * 链式队列
  * 可以理解为链式为无限队列, 受系统资源限制
  */
-class LinkQueue {
+class LinkQueue<T> {
 
     // 保存队列的头和尾指针
     private Node head;
@@ -271,19 +278,20 @@ class LinkQueue {
     /**
      * 链表
      */
-    public static class Node {
+    static class Node<T> {
         // 存储当前对象
-        String value;
+        T value;
         // 下一个节点
         Node next;
 
-        Node(String value, Node next) {
+        Node(T value, Node next) {
             this.value = value;
             this.next = next;
         }
     }
 
-    public void en(String item) {
+    @SuppressWarnings("unchecked")
+    void en(T item) {
         // 首次入队, 头尾指针都指向同一个节点
         if (tail == null) {
             /**
@@ -313,12 +321,13 @@ class LinkQueue {
         }
     }
 
-    public String de() {
+    @SuppressWarnings("unchecked")
+    T de() {
         // 没有元素要出队
         if (head == null) {
             return null;
         }
-        String value = head.value;
+        T value = (T) head.value;
         head = head.next;
         // 最后一个位置, 队列中已无元素
         if (head == null) {
@@ -332,7 +341,7 @@ class LinkQueue {
      *
      * @return 头指针
      */
-    public Node getHead() {
+    Node getHead() {
         return head;
     }
 }
