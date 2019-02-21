@@ -50,6 +50,15 @@ package github.banana.view;
  * <p>
  * 队列也有个问题, 即是不断的入队到队列满时, 尾指针达到最大值, 头指针也达到最大值, 即元素都出队结束, 队列其实为空, 但是却不可用
  * 数据搬移, 类似扩索容操作, 重新初始化队列的头尾指针
+ * <p>
+ * 环形队列
+ * 针对数组, 访问比较快速, 但是数据搬移操作实际上比较耗资源
+ * 因此衍生出环形队列, 变相的解决数据搬移操作, 但依然存在的问题是, 队列满时无法再继续入队数据了
+ * 循环队列队列满的判断比较特殊 (tail + 1) % n = head
+ * 队列为空依然是 head = tail
+ * 环形队列会浪费一个数组位置的空间
+ * <p>
+ * 衍生出 Java 自身提供的阻塞队列 {@link java.util.concurrent.ArrayBlockingQueue}, 并发队列等实现
  */
 public class DataStructTest {
 
@@ -104,6 +113,19 @@ public class DataStructTest {
         linkQueue1.en(200);
         System.out.println(linkQueue1.de());
         System.out.println(linkQueue1.de());
+
+        // 4. 环形队列
+        System.out.println("环形队列");
+        // 容量为3的话, 其实只有2个元素位置始终是可用的
+        CircularQueue<String> circularQueue = new CircularQueue<>(3);
+        circularQueue.en("这是");
+        circularQueue.en("一个");
+        System.out.println(circularQueue.de());
+        System.out.println(circularQueue.de());
+        circularQueue.en("测试");
+        circularQueue.en("是的测试");
+        System.out.println(circularQueue.de());
+        System.out.println(circularQueue.de());
     }
 }
 
@@ -343,5 +365,59 @@ class LinkQueue<T> {
      */
     Node getHead() {
         return head;
+    }
+}
+
+/**
+ * 环形队列
+ */
+class CircularQueue<E> {
+    // 底层存储对象, 传入泛型参数来处理
+    private Object[] items;
+    private int capacity;
+    private int head;
+    private int tail;
+
+    CircularQueue(int capacity) {
+        // 泛型参数不可实例化, 因为泛型是编译器模板替换的, 不是一种类型, 无法实例化
+        items = new Object[capacity];
+        this.capacity = capacity;
+        head = 0;
+        tail = 0;
+    }
+
+    boolean en(E item) {
+        // 队列是否已满, 这个判断比较关键
+        // 即是即将用来存储数据的位置是否是最后一个空位
+        // 即该空位往下一个锁分配的位置是否为当前的头指针位置
+        // 这样的话队列就已经满
+        if ((tail + 1) % capacity == head) {
+            return false;
+        }
+        // 否则计算 tail 的位置, 存入数据即可
+        // 该处的 tail 也是上一次计算好的, 分配在数组中的位置
+        items[tail] = item;
+        // 计算 tail 即将分配在数组中的位置
+        // 下一个位置 tail + 1
+        // 分配位置
+        tail = (tail + 1) % capacity;
+        return true;
+    }
+
+    @SuppressWarnings("unchecked")
+    E de() {
+        // 队列为空
+        if (head == tail) {
+            return null;
+        }
+
+        // 出队头指针元素
+        E value = (E) items[head];
+        // 指向下一个头指针
+        // 跟容量取余分配到容量位置上
+        // 下一个指针=当前指针 + 1
+        // 还需要看分配到那个位置
+        head = (head + 1) % capacity;
+        return value;
     }
 }
