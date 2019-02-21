@@ -54,6 +54,8 @@ package github.banana.view;
 public class DataStructTest {
 
     public static void main(String[] args) {
+        // 1. 栈
+        System.out.println("栈");
         ArrayStack stack = new ArrayStack(5);
         stack.push("a");
         stack.push("b");
@@ -65,15 +67,35 @@ public class DataStructTest {
             System.out.println(stack.pop());
         }
 
+        // 2. 顺序队列
+        System.out.println("顺序队列");
         ArrayQueue queue = new ArrayQueue(5);
         queue.enQueue("aa");
         queue.enQueue("bb");
         queue.enQueue("cc");
         queue.enQueue("dd");
         queue.enQueue("ee");
-        queue.enQueue("ff");
         for (int i = 0; i < 5; i++) {
             System.out.println(queue.deQueue());
+        }
+        // 此时入队成功
+        queue.enQueue("ff");
+        System.out.println(queue.deQueue());
+
+        // 3. 链式队列
+        System.out.println("链式队列");
+        LinkQueue linkQueue = new LinkQueue();
+        linkQueue.en("abc");
+        linkQueue.en("abd");
+        linkQueue.en("abe");
+        linkQueue.en("abf");
+        linkQueue.en("abg");
+        // 遍历链式队列, 需要知道头指针
+        LinkQueue.Node head = linkQueue.getHead();
+        while (head != null) {
+            // 直接出队即可
+            System.out.println(linkQueue.de());
+            head = head.next;
         }
     }
 }
@@ -134,6 +156,7 @@ class ArrayStack {
 /**
  * 简单队列
  * 无法利用空间, 满之后不可再使用
+ * 补充数据搬移操作
  */
 class ArrayQueue {
     // 队列底层数据结构
@@ -159,17 +182,64 @@ class ArrayQueue {
         this.tail = 0;
     }
 
+    /**
+     * 入队
+     * 需要考虑数据搬移操作
+     *
+     * @param item 待入队的对象
+     * @return 入队结果
+     */
     public boolean enQueue(String item) {
-        // 队列已满
+        // 队列头尾指针相撞
         if (tail == capacity) {
-            return false;
+            // 队列是否还有空间, 看元素数量是否是最大容量
+            // 即看出队的头指针移动位置, 0则为未出队, 队列暂无更多空间
+            // 搬移也无法操作, 只能扩容到更大的数组
+            if (head == 0) {
+                return false;
+            }
+            // 否则进行数据搬移
+            // 看头指针的位置, 进行数据搬移
+            // 其实就是将尾部元素移动到头部去
+            /*
+             *                               head             tail
+             * |--------------------------------------------------
+             * |  |  |  |  |  |  |  |  |  |  | 3 | 5 | 8 | 2 | 4 |
+             * |--------------------------------------------------
+             */
+            // 类似上述队列, 方向无所谓, 统一按队列一边入队, 一边出队即可
+            // 此时 tail 就到达容量处, 但是 head 之前有大量的空缺, 故此时触发数据搬移工作
+            // 即将数据全部搬移到 head = 0 开始, 并更新 tail 指针
+            if (head < tail) {
+                for (int i = head; i < tail; ++i) {
+                    items[i - head] = items[i];
+                }
+                // 更新头尾指针
+                head = 0;
+                tail -= head;
+            } else {
+                /*                   head
+                 * |---------------------
+                 * |  |  |  |  |  |  |  |
+                 * |---------------------
+                 *                   tail
+                 * 这种情况比较特殊, 无数据可搬移, 需要重新移动指针到开始位置即可
+                 */
+                // 如果队列满后再入队, 更新指针为初始值即可
+                head = tail = 0;
+            }
         }
-        // 往队尾添加元素
+        // 往队尾添加元素, 不影响, 只关注尾指针即可
         items[tail] = item;
         ++tail;
         return true;
     }
 
+    /**
+     * 其实出队不需要关心数据是否搬移, 正常出队即可
+     *
+     * @return
+     */
     public String deQueue() {
         // 队列为空
         if (tail == head) {
@@ -180,5 +250,89 @@ class ArrayQueue {
         // 头部元素后移
         ++head;
         return s;
+    }
+}
+
+/**
+ * 链式队列
+ * 可以理解为链式为无限队列, 受系统资源限制
+ */
+class LinkQueue {
+
+    // 保存队列的头和尾指针
+    private Node head;
+    private Node tail;
+
+    LinkQueue() {
+        head = null;
+        tail = null;
+    }
+
+    /**
+     * 链表
+     */
+    public static class Node {
+        // 存储当前对象
+        String value;
+        // 下一个节点
+        Node next;
+
+        Node(String value, Node next) {
+            this.value = value;
+            this.next = next;
+        }
+    }
+
+    public void en(String item) {
+        // 首次入队, 头尾指针都指向同一个节点
+        if (tail == null) {
+            /**
+             * head
+             * |--------------
+             * | item | next | -> null
+             * |--------------
+             * tail
+             */
+            // 节点的下一个节点默认为null, 暂时还不存在节点
+            Node node = new Node(item, null);
+            head = node;
+            tail = node;
+        } else {
+            // 需要实时更新队尾数据
+            /**
+             * head 位置
+             * |--------------    |--------------
+             * | item | next | -> | item | next | -> null
+             * |-------------|    |--------------
+             *                    tail 位置
+             */
+            // 队尾, 入队都把数据添加到队尾, 先进后出顺序
+            tail.next = new Node(item, null);
+            // 更新当前队尾的位置其实就是最后一个入队的数据
+            tail = tail.next;
+        }
+    }
+
+    public String de() {
+        // 没有元素要出队
+        if (head == null) {
+            return null;
+        }
+        String value = head.value;
+        head = head.next;
+        // 最后一个位置, 队列中已无元素
+        if (head == null) {
+            tail = null;
+        }
+        return value;
+    }
+
+    /**
+     * 暴露头指针, 提供遍历链式队列
+     *
+     * @return 头指针
+     */
+    public Node getHead() {
+        return head;
     }
 }
