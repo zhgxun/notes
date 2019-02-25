@@ -8,6 +8,14 @@ public class Palindrome {
         System.out.println("abba: " + longestPalindrome("abba"));
         System.out.println("a: " + longestPalindrome("a"));
         System.out.println("aba: " + longestPalindrome("abacdfgdcaba"));
+
+        // a = 97
+        // b = 98
+        // c = 99
+        // a = 65
+        String s = "abc";
+        System.out.println((int) s.charAt(0));
+        System.out.println((int) " ".charAt(0));
     }
 
     /**
