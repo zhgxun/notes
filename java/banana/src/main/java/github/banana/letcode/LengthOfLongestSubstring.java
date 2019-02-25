@@ -34,7 +34,7 @@ import java.util.Set;
 public class LengthOfLongestSubstring {
 
     public static void main(String[] args) {
-        String s = "pwwkew";
+        String s = "abbbbbbbba";
         System.out.println(lengthOfLongestSubstring(s));
         System.out.println(lengthOfLongestSubstring2(s));
         System.out.println(lengthOfLongestSubstring3(s));
@@ -140,13 +140,49 @@ public class LengthOfLongestSubstring {
      * @return 无重复最长子字符串长度
      */
     public static int lengthOfLongestSubstring3(String s) {
-        int n = s.length(), ans = 0;
+        /*
+         * |----------------------------
+         * | a | b | b | b | b | b | a |
+         * |----------------------------
+         */
+        /*
+         * i = j = 0
+         * |--------------------------------
+         * | a | b | c | a | b | c | b | b |
+         * |--------------------------------
+         *   0   1   2   3   4   5   6   7
+         */
+        // 其实无重复子字符串的可以是很多中组合
+        // 只需要记录已遍历移动中曾经记录的最大长度即可
+        // 而最大长度其实是遇见相同字符串的时候就比较一次即可
+        // j 是遍历数组用, 只会遍历一次
+        // i 是距离当前时刻相同字母上一次出现的位置
+        // i 相当于是一个不记录比较历史的临时变量
+        // 保证 i 的更新机制即可, 即出现相同元素就需要更新 i
+        int n = s.length(), ans = 0, i = 0;
+        // 记录当前元素出现的最后位置
         Map<Character, Integer> map = new HashMap<>();
-        for (int j = 0, i = 0; j < n; j++) {
+        for (int j = 0; j < n; j++) {
             if (map.containsKey(s.charAt(j))) {
+                // 获取当前字母出现的最大位置
+                // 因为重复出现时, 位置会被更新为当前最大位置
                 i = Math.max(map.get(s.charAt(j)), i);
             }
+            // i 为该字母当前出现的最大位置, 首次出现则为0
+            // j - i + 1 记为当前无重复字符串的最大长度
             ans = Math.max(ans, j - i + 1);
+            /*
+             * 记录字母在数组中的位置
+             * 未重复之前
+             * a = 1
+             * b = 2
+             * c = 3
+             *
+             * 重复之后
+             * a = 4
+             * b = 5
+             * c = 6
+             */
             map.put(s.charAt(j), j + 1);
         }
         return ans;
