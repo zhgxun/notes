@@ -10,6 +10,11 @@ public class SearchRange {
     public static void main(String[] args) {
         int[] nums = {1, 2, 3};
         System.out.println(Arrays.toString(searchRange(nums, 1)));
+        System.out.println(Arrays.toString(searchRange(nums, 2)));
+        int[] nums1 = {2, 2};
+        System.out.println(Arrays.toString(searchRange(nums1, 2)));
+        int[] nums2 = {2};
+        System.out.println(Arrays.toString(searchRange(nums2, 2)));
     }
 
     public static int[] searchRange(int[] nums, int target) {
@@ -19,18 +24,6 @@ public class SearchRange {
         }
         if (nums.length == 1 && nums[0] == target) {
             return new int[]{0, 0};
-        }
-        if (nums.length == 2) {
-            if (nums[0] == nums[1] && nums[0] == target) {
-                return new int[]{0, 1};
-            }
-            if (nums[0] == target) {
-                return new int[]{0, 0};
-            }
-            if (nums[1] == target) {
-                return new int[]{1, 1};
-            }
-            return new int[]{left, right};
         }
 
         int length = nums.length;
