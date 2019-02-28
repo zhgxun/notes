@@ -78,4 +78,14 @@ public class RemoveElement {
 
         return node.next;
     }
+
+    /**
+     * 该节点就是待删除的节点
+     *
+     * @param node
+     */
+    public void deleteNode(ListNode node) {
+        node.val = node.next.val;
+        node.next = node.next.next;
+    }
 }
