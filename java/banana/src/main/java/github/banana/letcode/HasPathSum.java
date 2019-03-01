@@ -30,6 +30,7 @@ public class HasPathSum {
             return false;
         }
         // 注意这个退出递归的条件, 是到叶子节点相等, 意味着不能提前终止, 哪怕已经超过范围, 而是直到找到一个符合条件的路径为止
+        // 必须走到叶子节点
         if (root.left == null && root.right == null) {
             return root.val == sum;
         }
