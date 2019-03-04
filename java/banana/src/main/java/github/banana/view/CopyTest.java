@@ -36,7 +36,6 @@ package github.banana.view;
 public class CopyTest {
 
     public static void main(String[] args) {
-
     }
 
 
