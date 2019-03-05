@@ -4,6 +4,8 @@ package github.banana.letcode;
  * 643. 子数组最大平均数 I
  * <p>
  * 给定 n 个整数, 找出平均数最大且长度为 k 的连续子数组, 并输出该最大平均数
+ * <p>
+ * 数组不可变, 暴力比较即可
  */
 public class FindMaxAverage {
 
