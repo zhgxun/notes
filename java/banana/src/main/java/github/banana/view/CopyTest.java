@@ -36,7 +36,15 @@ package github.banana.view;
 public class CopyTest {
 
     public static void main(String[] args) {
+        int i = 0xFFFFFFFF;
+        System.out.println(i);
+        char c = '\u0571';
+        System.out.println(c);
+        byte b = 01;
+        System.out.println(b);
+        int j = 'a';
+        System.out.println(j);
+        long k = 455555666666L;
+        System.out.println(k);
     }
-
-
 }

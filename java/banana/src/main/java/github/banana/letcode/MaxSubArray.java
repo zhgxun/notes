@@ -8,22 +8,21 @@ package github.banana.letcode;
 public class MaxSubArray {
 
     public static void main(String[] args) {
-
+        int[] nums = {1, 3, -2, -4, 5, 7};
+        System.out.println(new MaxSubArray().maxSubArray(nums));
     }
 
     public int maxSubArray(int[] nums) {
         /*
          * [-2,1,-3,4,-1,2,1,-5,4]
          */
-        // 记录序列中的最大值
+        // 记录序列中的最大值和
         int res = nums[0];
         int sum = 0;
         for (int num : nums) {
-            // 整数累加越大
             if (sum > 0) {
                 sum += num;
             } else {
-                // 负数变小了, 赋当前值
                 sum = num;
             }
             res = Math.max(res, sum);

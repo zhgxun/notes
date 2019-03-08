@@ -26,4 +26,8 @@ public class TP {
 
         return map.getOrDefault(id, "未知");
     }
+
+    public static void main(String[] args) {
+
+    }
 }
