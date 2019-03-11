@@ -35,10 +35,13 @@ public class FindErrorNums {
         // 求和公式 sum = (n+1)*n/2 (n为个数)
         int sum = (1 + nums.length) * nums.length / 2;
         for (int i = 0; i < nums.length; i++) {
+            // 重复的元素
             if (isIn[nums[i]]) {
                 res[0] = nums[i];
+                // 重复的元素不记录进求和的部分
             } else {
                 isIn[nums[i]] = true;
+                // 求和的方式找到缺失的数字
                 sum -= nums[i];
             }
         }

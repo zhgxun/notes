@@ -36,14 +36,26 @@ public class AddTwoNumbers {
      * @return
      */
     public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        /*
+         * <pre>
+         * 输入: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+         * 输出: 7 -> 0 -> 8
+         * 原因: 342 + 465 = 807
+         * </pre>
+         */
         ListNode head = new ListNode(0);
         ListNode p = l1, q = l2, curr = head;
+        // 记录超过10的进位
         int carry = 0;
         while (p != null || q != null) {
+            // 可能链表长度不相等或者到达末尾
             int x = p != null ? p.val : 0;
             int y = q != null ? q.val : 0;
+            // 对链表对应位置求和, 可能超过10, 最大其实为 9+9=18 如果有进位1, 则为 9+9+1=19
             int sum = carry + x + y;
+            // 整除, 10以内整除均为0, 10-19整数均为1, 刚好为进位
             carry = sum / 10;
+            // 取余, 因为只能存储一位数, 10以内和19以内其实余数是一致的
             curr.next = new ListNode(sum % 10);
             curr = curr.next;
             if (p != null) {
@@ -53,6 +65,8 @@ public class AddTwoNumbers {
                 q = q.next;
             }
         }
+
+        // 如果有余数说明最终超出原始长度了, 需要补一个节点
         if (carry > 0) {
             curr.next = new ListNode(carry);
         }

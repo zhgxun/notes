@@ -166,10 +166,12 @@ public class LengthOfLongestSubstring {
             if (map.containsKey(s.charAt(j))) {
                 // 获取当前字母出现的最大位置
                 // 因为重复出现时, 位置会被更新为当前最大位置
+                // 未比较前的i我不知道是什么值, 相当于获取最近一次获取到的i值
                 i = Math.max(map.get(s.charAt(j)), i);
             }
             // i 为该字母当前出现的最大位置, 首次出现则为0
             // j - i + 1 记为当前无重复字符串的最大长度
+            // 求长度差, 其实是 j+1 - i
             ans = Math.max(ans, j - i + 1);
             /*
              * 记录字母在数组中的位置
@@ -183,6 +185,7 @@ public class LengthOfLongestSubstring {
              * b = 5
              * c = 6
              */
+            // j 是下标, 记录的是下标后面的位置, 即是到达该字母时的字符长度
             map.put(s.charAt(j), j + 1);
         }
         return ans;
