@@ -3,7 +3,15 @@ package github.banana.letcode;
 public class InsertionSortList {
 
     public static void main(String[] args) {
-
+        ListNode node = new ListNode(4);
+        node.next = new ListNode(2);
+        node.next.next = new ListNode(1);
+        node.next.next.next = new ListNode(3);
+        ListNode root = new InsertionSortList().insertionSortList(node);
+        while (root != null) {
+            System.out.println(root.val);
+            root = root.next;
+        }
     }
 
     public ListNode insertionSortList(ListNode head) {

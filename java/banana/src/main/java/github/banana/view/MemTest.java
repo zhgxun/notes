@@ -24,6 +24,20 @@ package github.banana.view;
 public class MemTest {
 
     public static void main(String[] args) {
+        System.out.println("返回输出: " + test());
+    }
 
+    private static int test() {
+        System.out.println("方法执行...");
+        int b = 10;
+        try {
+            System.out.println("马上返回...");
+            return b += 10;
+        } finally {
+            System.out.println("最后");
+            if (b != 10) {
+                System.out.println("有这个输出, 说明 finally 是在 return 之后方法返回前执行, b= " + b);
+            }
+        }
     }
 }
