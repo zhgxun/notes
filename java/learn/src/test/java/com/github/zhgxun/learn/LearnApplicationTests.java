@@ -5,18 +5,12 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.BeanFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.support.BeanDefinitionRegistry;
 import org.springframework.beans.factory.support.DefaultListableBeanFactory;
 import org.springframework.beans.factory.xml.XmlBeanDefinitionReader;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.web.servlet.MockMvc;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
-import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
-import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 
 /**
  * BeforeClass 在所有测试方法前执行一次，一般在其中写上整体初始化的代码
@@ -30,21 +24,12 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
  * RunWith 在JUnit中有很多个Runner，他们负责调用你的测试代码，每一个Runner都有各自的特殊功能，你要根据需要选择不同的Runner来运行你的测试代码
  */
 @RunWith(SpringRunner.class)
-@SpringBootTest(classes = {LearnApplication.class})
-@EnableWebMvc
+@SpringBootTest
 public class LearnApplicationTests {
-
-    @Autowired
-    private MockMvc mockMvc;
 
     @Before
     public void before() {
         System.out.println("测试开始");
-    }
-
-    @Test
-    public void contextLoads() {
-        System.out.println("上下文导入");
     }
 
     @Test
@@ -56,11 +41,5 @@ public class LearnApplicationTests {
         reader.loadBeanDefinitions(new ClassPathResource("test-bean.xml"));
         TestBean bean1 = (TestBean) factory1.getBean("testBean");
         System.out.println(bean1);
-    }
-
-    @Test
-    public void api() throws Exception {
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders.get("/budget/all")).andExpect(MockMvcResultMatchers.status().isOk()).andReturn();
-        System.out.println(result.getResponse().getStatus());
     }
 }

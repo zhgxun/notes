@@ -28,4 +28,4 @@ logging:
 spring:
   data:
     mongodb:
-      uri: mongodb://test:test123@127.0.0.1/express
+      uri: mongodb://127.0.0.1/express

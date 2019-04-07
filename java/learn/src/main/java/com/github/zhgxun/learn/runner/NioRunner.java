@@ -1,7 +1,6 @@
 package com.github.zhgxun.learn.runner;
 
 import org.springframework.boot.CommandLineRunner;
-import org.springframework.stereotype.Component;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;
@@ -17,8 +16,10 @@ import java.util.Set;
  * Nio
  * <p>
  * This is a Java runner-side program written in NiO
+ * <p>
+ * 该类的启动会一直阻塞服务往下运行, 比如无法进行单元测试
  */
-@Component
+//@Component
 public class NioRunner implements CommandLineRunner {
 
     // 主线程, 即当前示例main方法
