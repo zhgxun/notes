@@ -44,4 +44,21 @@ func main() {
 	// 将一系列字符串连接为一个字符串，之间用sep来分隔
 	s := []string{"foo", "bar", "baz"}
 	fmt.Println(strings.Join(s, ", "))
+
+	var sn string
+	rungIndex := strings.Index("419040169433050401-", "-")
+	if rungIndex == -1 {
+		cnCommaIndex := strings.Index("419040169433050401-", "，")
+		if cnCommaIndex == -1 {
+			enCommaIndex := strings.Index("419040169433050401-", ",")
+			if enCommaIndex > 0 {
+				sn = "419040169433050401-"[:enCommaIndex]
+			}
+		} else {
+			sn = "419040169433050401-"[:cnCommaIndex]
+		}
+	} else {
+		sn = "419040169433050401-"[:rungIndex]
+	}
+	fmt.Println("sn: ", sn)
 }

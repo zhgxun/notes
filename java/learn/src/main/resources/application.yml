@@ -23,3 +23,9 @@ logging:
                 LaunchInfoDao: debug
 
 # hikari 连接池配置
+
+# mongo
+spring:
+  data:
+    mongodb:
+      uri: mongodb://test:test123@127.0.0.1/express

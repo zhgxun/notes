@@ -1,0 +1,2148 @@
+# 物流公司配置, 注意需要指定前缀, Spring Boot 2 才能将值进行 Map 方式装配
+all-logistics:
+  logistics:
+    aae:
+      # 映射yms标识, 不对应时默认为 -1
+      id: -1
+      biz-code: aae
+      biz-name: AAE全球专递
+      # 映射 yms 物流公司简称, yms系统不对应该物流公司时保留原名称
+      biz-simple-name: AAE全球专递
+      biz-order-name: aaequanqiuzhuandi
+      logic-id: 032
+      order: 0
+      map-code: AAE
+
+    annengwuliu:
+      id: -1
+      biz-code: annengwuliu
+      biz-name: 安能物流
+      biz-simple-name: 安能物流
+      biz-order-name: annengwuliu
+      logic-id: 111
+      order: 0
+      map-code: ANE
+      kuaidaoyun-name: 安能物流
+      kuaidaoyun-code: ANE56
+
+    anxindakuaixi:
+      id: -1
+      biz-code: anxindakuaixi
+      biz-name: 安信达快递
+      biz-simple-name: 安信达快递
+      biz-order-name: anxindakuaidi
+      logic-id: 028
+      order: 0
+      map-code: AXD
+
+    anxl:
+      id: -1
+      biz-code: anxl
+      biz-name: 安迅物流
+      biz-simple-name: 安迅物流
+      biz-order-name: anxunwuliu
+      logic-id: 112
+      order: 0
+      map-code:
+
+    baifudongfang:
+      id: -1
+      biz-code: baifudongfang
+      biz-name: 百福东方国际物流
+      biz-simple-name: 百福东方国际物流
+      biz-order-name: baifudongfangguojiwuliu
+      logic-id: 035
+      order: 0
+      map-code: BFDF
+
+    balunzhi:
+      id: -1
+      biz-code: balunzhi
+      biz-name: 巴伦支快递
+      biz-simple-name: 巴伦支快递
+      biz-order-name: balunzhikuaidi
+      logic-id: 113
+      order: 0
+      map-code:
+
+    bangsongwuliu:
+      id: -1
+      biz-code: bangsongwuliu
+      biz-name: 邦送物流
+      biz-simple-name: 邦送物流
+      biz-order-name: bangsongwuliu
+      logic-id: 045
+      order: 0
+      map-code:
+
+    bht:
+      id: -1
+      biz-code: bht
+      biz-name: bht快递
+      biz-simple-name: bht快递
+      biz-order-name: bhtkuaidi
+      logic-id: 034
+      order: 0
+      map-code: BHT
+
+    bqcwl:
+      id: -1
+      biz-code: bqcwl
+      biz-name: 百千诚物流
+      biz-simple-name: 百千诚物流
+      biz-order-name: baiqianchengwuliu
+      logic-id: 116
+      order: 0
+      map-code:
+
+    byht:
+      id: -1
+      biz-code: byht
+      biz-name: 博源恒通
+      biz-simple-name: 博源恒通
+      biz-order-name: boyuanhengtong
+      logic-id: 117
+      order: 0
+      map-code:
+
+    cces:
+      id: -1
+      biz-code: cces
+      biz-name: 希伊艾斯（CCES）
+      biz-simple-name: 希伊艾斯（CCES）
+      biz-order-name: xiyiaisi
+      logic-id: 052
+      order: 0
+      map-code: CCES
+
+    changyuwuliu:
+      id: -1
+      biz-code: changyuwuliu
+      biz-name: 长宇物流
+      biz-simple-name: 长宇物流
+      biz-order-name: changyuwuliu
+      logic-id: 036
+      order: 0
+      map-code:
+
+    chengjisudi:
+      id: -1
+      biz-code: chengjisudi
+      biz-name: 城际速递
+      biz-simple-name: 城际速递
+      biz-order-name: chengjisudi
+      logic-id: 120
+      order: 0
+      map-code: CJKD
+      kuaidaoyun-name: 城际速递
+      kuaidaoyun-code: CHENGJI
+
+    chinatzx:
+      id: -1
+      biz-code: chinatzx
+      biz-name: 同舟行物流
+      biz-simple-name: 同舟行物流
+      biz-order-name: tongzhouxing
+      logic-id: 181
+      order: 0
+      map-code:
+
+    chuanxiwuliu:
+      id: -1
+      biz-code: chuanxiwuliu
+      biz-name: 传喜物流
+      biz-simple-name: 传喜物流
+      biz-order-name: chuanxiwuliu
+      logic-id: 054
+      order: 0
+      map-code:
+
+    chukou1:
+      id: -1
+      biz-code: chukou1
+      biz-name: 出口易
+      biz-simple-name: 出口易
+      biz-order-name: chukouyi
+      logic-id: 122
+      order: 0
+      map-code: ICKY
+
+    city100:
+      id: -1
+      biz-code: city100
+      biz-name: 城市100
+      biz-simple-name: 城市100
+      biz-order-name: chengshi100
+      logic-id: 119
+      order: 0
+      map-code: CITY100
+      kuaidaoyun-name: 城市100
+      kuaidaoyun-code: BJCS
+
+    coe:
+      id: -1
+      biz-code: coe
+      biz-name: 中国东方（COE）
+      biz-simple-name: 中国东方（COE）
+      biz-order-name: zhongguodongfang
+      logic-id: 053
+      order: 0
+      map-code: COE
+
+    czwlyn:
+      id: -1
+      biz-code: czwlyn
+      biz-name: 云南中诚
+      biz-simple-name: 云南中诚
+      biz-order-name: yunnanzhongcheng
+      logic-id: 201
+      order: 0
+      map-code:
+
+    datianwuliu:
+      id: 9 # yms
+      biz-code: datianwuliu
+      biz-name: 大田物流
+      biz-simple-name: 大田
+      biz-order-name: datianwuliu
+      logic-id: 037
+      order: 0
+      map-code: DTWL
+
+    dayangwuliu:
+      id: -1
+      biz-code: dayangwuliu
+      biz-name: 大洋物流
+      biz-simple-name: 大洋物流
+      biz-order-name: dayangwuliu
+      logic-id: 125
+      order: 0
+      map-code:
+
+    debangwuliu:
+      id: 29 # yms
+      biz-code: debangwuliu
+      biz-name: 德邦
+      biz-simple-name: 德邦
+      biz-order-name: debang
+      logic-id: 009
+      order: 0
+      map-code: DBL
+
+    dechuangwuliu:
+      id: -1
+      biz-code: dechuangwuliu
+      biz-name: 德创物流
+      biz-simple-name: 德创物流
+      biz-order-name: dechuangwuliu
+      logic-id: 127
+      order: 0
+      map-code:
+
+    dfpost:
+      id: -1
+      biz-code: dfpost
+      biz-name: 达方物流
+      biz-simple-name: 达方物流
+      biz-order-name: dafangwuliu
+      logic-id: 130
+      order: 0
+      map-code: IDFWL
+
+    dhl:
+      id: 58 # yms
+      biz-code: dhl
+      biz-name: DHL快递
+      biz-simple-name: DHL
+      biz-order-name: dhlkuaidi
+      logic-id: 031
+      order: 0
+      map-code: DHL
+      kuaidaoyun-name: DHL
+      kuaidaoyun-code: DHL
+
+    dhlde:
+      id: -1
+      biz-code: dhlde
+      biz-name: DHL(德国件)
+      biz-simple-name: DHL(德国件)
+      biz-order-name: dhldeguojian
+      logic-id: 124
+      order: 0
+      map-code: DHLGM
+
+    dhlen:
+      id: -1
+      biz-code: dhlen
+      biz-name: DHL(国际件)
+      biz-simple-name: DHL(国际件)
+      biz-order-name: dhlguojijian
+      logic-id: 123
+      order: 0
+      map-code: DHL_EN
+
+    diantongkuaidi:
+      id: -1
+      biz-code: diantongkuaidi
+      biz-name: 店通快递
+      biz-simple-name: 店通快递
+      biz-order-name: diantongkuaidi
+      logic-id: 126
+      order: 0
+      map-code:
+
+    disifang:
+      id: -1
+      biz-code: disifang
+      biz-name: 递四方
+      biz-simple-name: 递四方
+      biz-order-name: disifang
+      logic-id: 056
+      order: 0
+      map-code: D4PX
+
+    donghanwl:
+      id: -1
+      biz-code: donghanwl
+      biz-name: 东瀚物流
+      biz-simple-name: 东瀚物流
+      biz-order-name: donghanwuliu
+      logic-id: 129
+      order: 0
+      map-code:
+
+    donghong:
+      id: -1
+      biz-code: donghong
+      biz-name: 东红物流
+      biz-simple-name: 东红物流
+      biz-order-name: donghongwuliu
+      logic-id: 128
+      order: 0
+      map-code:
+
+    dpex:
+      id: -1
+      biz-code: dpex
+      biz-name: DPEX物流
+      biz-simple-name: DPEX物流
+      biz-order-name: dpexwuliu
+      logic-id: 038
+      order: 0
+      map-code: DEPX
+
+    dsukuaidi:
+      id: -1
+      biz-code: dsukuaidi
+      biz-name: D速快递
+      biz-simple-name: D速快递
+      biz-order-name: dsukuaidi
+      logic-id: 055
+      order: 0
+      map-code: DSWL
+
+    ems:
+      id: 2 # yms
+      biz-code: ems
+      biz-name: 中国邮政EMS
+      biz-simple-name: EMS
+      biz-order-name: ems
+      logic-id: 012
+      order: 3
+      map-code: EMS
+      kuaidaoyun-name: EMS
+      kuaidaoyun-code: EMS
+
+    emsguoji:
+      id: -1
+      biz-code: emsguoji
+      biz-name: EMS国际快递
+      biz-simple-name: EMS国际快递
+      biz-order-name: emsguojikuaiji
+      logic-id: 131
+      order: 0
+      map-code: EMSGJ
+
+    eshunda:
+      id: -1
+      biz-code: eshunda
+      biz-name: 俄顺达
+      biz-simple-name: 俄顺达
+      biz-order-name: eshunda'
+      logic-id: 132
+      order: 0
+      map-code:
+
+    fandaguoji:
+      id: 75 # yms
+      biz-code: fandaguoji
+      biz-name: 颿达国际
+      biz-simple-name: 颿达
+      biz-order-name: fandaguoji
+      logic-id: 137
+      order: 0
+      map-code:
+
+    fanyukuaidi:
+      id: -1
+      biz-code: fanyukuaidi
+      biz-name: 凡宇速递
+      biz-simple-name: 凡宇速递
+      biz-order-name: fanyusudi
+      logic-id: 136
+      order: 0
+      map-code:
+
+    fedex:
+      id: 50 # yms
+      biz-code: fedex
+      biz-name: FedEx
+      biz-simple-name: Fedex
+      biz-order-name: fedex
+      logic-id: 133
+      order: 0
+      map-code: FEDEX
+
+    fedexcn:
+      id: 73 # yms
+      biz-code: fedexcn
+      biz-name: 联邦快递
+      biz-simple-name: 联邦快递
+      biz-order-name: lianbangkuaidi
+      logic-id: 110
+      order: 0
+      map-code:
+      kuaidaoyun-name: 联邦快递
+      kuaidaoyun-code: FEDEX
+
+    fedexus:
+      id: -1
+      biz-code: fedexus
+      biz-name: FedEx(美国)
+      biz-simple-name: FedEx(美国)
+      biz-order-name: fedexus
+      logic-id: 134
+      order: 0
+      map-code: FEDEX_GJ
+
+    feibaokuaidi:
+      id: -1
+      biz-code: feibaokuaidi
+      biz-name: 飞豹快递
+      biz-simple-name: 飞豹快递
+      biz-order-name: feibaokuaidi
+      logic-id: 049
+      order: 0
+      map-code:
+
+    feihukuaidi:
+      id: -1
+      biz-code: feihukuaidi
+      biz-name: 飞狐快递
+      biz-simple-name: 飞狐快递
+      biz-order-name: feihukuaidi
+      logic-id: 135
+      order: 0
+      map-code:
+
+    feikangda:
+      id: 37 # yms
+      biz-code: feikangda
+      biz-name: 飞康达物流
+      biz-simple-name: 飞康达
+      biz-order-name: feikangdawuliu
+      logic-id: 046
+      order: 0
+      map-code: FKD
+
+    feikuaida:
+      id: -1
+      biz-code: feikuaida
+      biz-name: 飞快达
+      biz-simple-name: 飞快达
+      biz-order-name: feikuaida
+      logic-id: 047
+      order: 0
+      map-code:
+
+    feiyuanvipshop:
+      id: 69 # yms
+      biz-code: feiyuanvipshop
+      biz-name: 飞远配送
+      biz-simple-name: 飞远
+      biz-order-name: feiyuanpeisong
+      logic-id: 138
+      order: 0
+      map-code:
+
+    fengxingtianxia:
+      id: -1
+      biz-code: fengxingtianxia
+      biz-name: 风行天下
+      biz-simple-name: 风行天下
+      biz-order-name: fengxingtianxia
+      logic-id: 048
+      order: 0
+      map-code:
+      kuaidaoyun-name: 风行天下
+      kuaidaoyun-code: FXTX
+
+    gangzhongnengda:
+      id: -1
+      biz-code: gangzhongnengda
+      biz-name: 港中能达物流
+      biz-simple-name: 港中能达物流
+      biz-order-name: gangzhongnengdawuliu
+      logic-id: 040
+      order: 0
+      map-code:
+
+    ganzhongnengda:
+      id: -1
+      biz-code: ganzhongnengda
+      biz-name: 港中能达
+      biz-simple-name: 港中能达
+      biz-order-name: gangzhongnengda
+      logic-id: 050
+      order: 0
+      map-code:
+
+    gaticn:
+      id: -1
+      biz-code: gaticn
+      biz-name: GATI快递
+      biz-simple-name: GATI快递
+      biz-order-name: gatikuaidi
+      logic-id: 140
+      order: 0
+      map-code:
+
+    gda:
+      id: 76 # yms
+      biz-code: gda
+      biz-name: 冠达快递
+      biz-simple-name: 冠达快递
+      biz-order-name: guandakuaidi
+      logic-id: 145
+      order: 0
+      map-code:
+
+    gdkd:
+      id: 77 # yms
+      biz-code: gdkd
+      biz-name: 港快速递
+      biz-simple-name: 港快速递
+      biz-order-name: gangkuaisudi
+      logic-id: 143
+      order: 0
+      map-code:
+
+    gls:
+      id: -1
+      biz-code: gls
+      biz-name: GLS
+      biz-simple-name: GLS
+      biz-order-name: gls
+      logic-id: 058
+      order: 0
+      map-code: GLS
+
+    gml:
+      id: -1
+      biz-code: gml
+      biz-name: 英脉物流
+      biz-simple-name: 英脉物流
+      biz-order-name: yingmaiwuliu
+      logic-id: 199
+      order: 0
+      map-code:
+
+    gongsuda:
+      id: -1
+      biz-code: gongsuda
+      biz-name: 共速达
+      biz-simple-name: 共速达
+      biz-order-name: gongsuda
+      logic-id: 059
+      order: 0
+      map-code: GSD
+      kuaidaoyun-name: 共速达
+      kuaidaoyun-code: GSD
+
+    gtongsudi:
+      id: -1
+      biz-code: gtongsudi
+      biz-name: 广通速递
+      biz-simple-name: 广通速递
+      biz-order-name: guangtongsudi
+      logic-id: 141
+      order: 0
+      map-code:
+
+    guangdongyouzhengwuliu:
+      id: -1
+      biz-code: guangdongyouzhengwuliu
+      biz-name: 广东邮政
+      biz-simple-name: 广东邮政
+      biz-order-name: guangdongyouzheng
+      logic-id: 057
+      order: 0
+      map-code: GDEMS
+
+    guotongkuaidi:
+      id: 43 # yms
+      biz-code: guotongkuaidi
+      biz-name: 国通快递
+      biz-simple-name: 国通
+      biz-order-name: yuantongkuaidi
+      logic-id: 039
+      order: 0
+      map-code: GTO
+      kuaidaoyun-name: 国通快递
+      kuaidaoyun-code: GTO
+
+    haihongwangsong:
+      id: -1
+      biz-code: haihongwangsong
+      biz-name: 山东海红
+      biz-simple-name: 山东海红
+      biz-order-name: shandonghaihong
+      logic-id: 064
+      order: 0
+      map-code:
+
+    haimengsudi:
+      id: -1
+      biz-code: haimengsudi
+      biz-name: 海盟速递
+      biz-simple-name: 海盟速递
+      biz-order-name: haimengsudi
+      logic-id: 062
+      order: 0
+      map-code:
+
+    haiwaihuanqiu:
+      id: -1
+      biz-code: haiwaihuanqiu
+      biz-name: 海外环球
+      biz-simple-name: 海外环球
+      biz-order-name: haiwaihuanqiu
+      logic-id: 061
+      order: 0
+      map-code:
+
+    hanrun:
+      id: -1
+      biz-code: hanrun
+      biz-name: 韩润物流
+      biz-simple-name: 韩润物流
+      biz-order-name: hanrunwuliu
+      logic-id: 152
+      order: 0
+      map-code:
+
+    hebeijianhua:
+      id: -1
+      biz-code: hebeijianhua
+      biz-name: 昊盛物流
+      biz-simple-name: 昊盛物流
+      biz-order-name: haoshengwuliu
+      logic-id: 147
+      order: 0
+      map-code:
+
+    hengluwuliu:
+      id: -1
+      biz-code: hengluwuliu
+      biz-name: 恒路物流
+      biz-simple-name: 恒路物流
+      biz-order-name: hengluwuliu
+      logic-id: 027
+      order: 0
+      map-code: HLWL
+      kuaidaoyun-name: 恒路物流
+      kuaidaoyun-code: HENGLU
+
+    hkpost:
+      id: -1
+      biz-code: hkpost
+      biz-name: 香港邮政
+      biz-simple-name: 香港邮政
+      biz-order-name: xianggangyouzheng
+      logic-id: 097
+      order: 0
+      map-code:
+
+    hlyex:
+      id: -1
+      biz-code: hlyex
+      biz-name: 好来运快递
+      biz-simple-name: 好来运快递
+      biz-order-name: haoyunlaikuaidi
+      logic-id: 146
+      order: 0
+      map-code: HYLSD
+
+    hnfy:
+      id: -1
+      biz-code: hnfy
+      biz-name: 飞鹰物流
+      biz-simple-name: 飞鹰物流
+      biz-order-name: feiyingwuliu'
+      logic-id: 139
+      order: 0
+      map-code:
+
+    hre:
+      id: -1
+      biz-code: hre
+      biz-name: 高铁速递
+      biz-simple-name: 高铁速递
+      biz-order-name: gaotiesudi
+      logic-id: 144
+      order: 0
+      map-code: GTSD
+
+    huangmajia:
+      id: -1
+      biz-code: huangmajia
+      biz-name: 黄马甲快递
+      biz-simple-name: 黄马甲快递
+      biz-order-name: huangmajiakuaidi
+      logic-id: 150
+      order: 0
+      map-code:
+      kuaidaoyun-name: 黄马甲快递
+      kuaidaoyun-code: HUANGMJ
+
+    huaqikuaiyun:
+      id: -1
+      biz-code: huaqikuaiyun
+      biz-name: 华企快运
+      biz-simple-name: 华企快运
+      biz-order-name: huaqikuaiyun
+      logic-id: 063
+      order: 0
+      map-code:
+
+    huaxialongwuliu:
+      id: -1
+      biz-code: huaxialongwuliu
+      biz-name: 华夏龙
+      biz-simple-name: 华夏龙
+      biz-order-name: huaxialong
+      logic-id: 060
+      order: 0
+      map-code: HXLWL
+
+    huiqiangkuaidi:
+      id: -1
+      biz-code: huiqiangkuaidi
+      biz-name: 汇强快递
+      biz-simple-name: 汇强快递
+      biz-order-name: huiqiangkuaidi
+      logic-id: 041
+      order: 0
+      map-code: ZHQKD
+
+    huitongkuaidi:
+      id: -1
+      biz-code: huitongkuaidi
+      biz-name: 百世汇通
+      biz-simple-name: 百世汇通
+      biz-order-name: baishihuitong
+      logic-id: 033
+      order: 0
+      map-code: HTKY
+      kuaidaoyun-name: 百世汇通
+      kuaidaoyun-code: HTKY
+
+    huoban:
+      id: -1
+      biz-code: huoban
+      biz-name: 伙伴物流
+      biz-simple-name: 伙伴物流
+      biz-order-name: huobanwuliu
+      logic-id: 154
+      order: 0
+      map-code:
+
+    hutongwuliu:
+      id: -1
+      biz-code: hutongwuliu
+      biz-name: 户通物流
+      biz-simple-name: 户通物流
+      biz-order-name: hutongwuliu
+      logic-id: 148
+      order: 0
+      map-code:
+
+    hzpl:
+      id: -1
+      biz-code: hzpl
+      biz-name: 华航快递
+      biz-simple-name: 华航快递
+      biz-order-name: huahangkuaidi
+      logic-id: 149
+      order: 0
+      map-code:
+
+    idada:
+      id: -1
+      biz-code: idada
+      biz-name: 百成大达物流
+      biz-simple-name: 百成大达物流
+      biz-order-name: baichengdadawuliu'
+      logic-id: 118
+      order: 0
+      map-code:
+
+    iparcel:
+      id: -1
+      biz-code: iparcel
+      biz-name: i-parcel
+      biz-simple-name: i-parcel
+      biz-order-name: iparcel
+      logic-id: 156
+      order: 0
+      map-code:
+
+    jd:
+      id: 26 # yms
+      biz-code: jd
+      biz-name: 京东快递
+      biz-simple-name: 京东
+      biz-order-name: jingdongkuaidi'
+      logic-id: 157
+      order: 4
+      map-code: JD
+      kuaidaoyun-name: 京东快递
+      kuaidaoyun-code: JD
+
+    jiajiwuliu:
+      id: 52 # yms
+      biz-code: jiajiwuliu
+      biz-name: 佳吉物流
+      biz-simple-name: 佳吉
+      biz-order-name: jiajiwuliu
+      logic-id: 051
+      order: 0
+      map-code: JJKY
+
+    jialidatong:
+      id: 30 # yms
+      biz-code: jialidatong
+      biz-name: 嘉里大通
+      biz-simple-name: 嘉里大通物流
+      biz-order-name: jialidatong
+      logic-id: 071
+      order: 0
+      map-code: JLDT
+      kuaidaoyun-name: 嘉里大通
+      kuaidaoyun-code: KERRYLOGISTICS
+
+    jiayiwuliu:
+      id: -1
+      biz-code: jiayiwuliu
+      biz-name: 佳怡物流
+      biz-simple-name: 佳怡物流
+      biz-order-name: jiayiwuliu
+      logic-id: 065
+      order: 0
+      map-code: JYWL
+
+    jiayunmeiwuliu:
+      id: -1
+      biz-code: jiayunmeiwuliu
+      biz-name: 加运美
+      biz-simple-name: 加运美
+      biz-order-name: jiayunmei
+      logic-id: 066
+      order: 0
+      map-code: JYM
+
+    jietekuaidi:
+      id: -1
+      biz-code: jietekuaidi
+      biz-name: 捷特快递
+      biz-simple-name: 捷特快递
+      biz-order-name: jietekuaidi
+      logic-id: 069
+      order: 0
+      map-code: JTKD
+
+    jindawuliu:
+      id: -1
+      biz-code: jindawuliu
+      biz-name: 金大物流
+      biz-simple-name: 金大物流
+      biz-order-name: jindawuliu
+      logic-id: 070
+      order: 0
+      map-code:
+
+    jinguangsudikuaijian:
+      id: 67 # yms
+      biz-code: jinguangsudikuaijian
+      biz-name: 京广速递
+      biz-simple-name: 京广速递
+      biz-order-name: jingguangsudi
+      logic-id: 067
+      order: 0
+      map-code: JGSD
+      kuaidaoyun-name: 京广速递
+      kuaidaoyun-code: SZKKE
+
+    jinyuekuaidi:
+      id: -1
+      biz-code: jinyuekuaidi
+      biz-name: 晋越快递
+      biz-simple-name: 晋越快递
+      biz-order-name: jinyuekuaidi
+      logic-id: 068
+      order: 0
+      map-code: JYKD
+
+    jiuyicn:
+      id: -1
+      biz-code: jiuyicn
+      biz-name: 久易快递
+      biz-simple-name: 久易快递
+      biz-order-name: jiuyikuaidi'
+      logic-id: 158
+      order: 0
+      map-code:
+
+    jixianda:
+      id: -1
+      biz-code: jixianda
+      biz-name: 急先达
+      biz-simple-name: 急先达
+      biz-order-name: jixianda
+      logic-id: 026
+      order: 0
+      map-code: JXD
+
+    jjwl:
+      id: -1
+      biz-code: jjwl
+      biz-name: 佳吉快递
+      biz-simple-name: 佳吉快递
+      biz-order-name: jiajikuaidi
+      logic-id: 025
+      order: 0
+      map-code: JJKY
+
+    kangliwuliu:
+      id: -1
+      biz-code: kangliwuliu
+      biz-name: 康力物流
+      biz-simple-name: 康力物流
+      biz-order-name: kangliwuliu
+      logic-id: 072
+      order: 0
+      map-code:
+
+    kuaijiesudi:
+      id: 36 # yms
+      biz-code: kuaijiesudi
+      biz-name: 快捷速递
+      biz-simple-name: 快捷
+      biz-order-name: kuaijiesudi
+      logic-id: 023
+      order: 0
+      map-code: FAST
+      kuaidaoyun-name: 快捷速递
+      kuaidaoyun-code: FAST
+
+    kuaitao:
+      id: -1
+      biz-code: kuaitao
+      biz-name: 快淘快递
+      biz-simple-name: 快淘快递
+      biz-order-name: kuaitaokuaidi
+      logic-id: 160
+      order: 0
+      map-code:
+
+    kuaiyouda:
+      id: -1
+      biz-code: kuaiyouda
+      biz-name: 快优达速递
+      biz-simple-name: 快优达速递
+      biz-order-name: kuaiyoudasudi
+      logic-id: 159
+      order: 0
+      map-code:
+
+    kuayue:
+      id: 53 # yms
+      biz-code: kuayue
+      biz-name: 跨越物流
+      biz-simple-name: 跨越
+      biz-order-name: kuayuewuliu
+      logic-id: 073
+      order: 0
+      map-code: KYSY
+
+    lanbiaokuaidi:
+      id: -1
+      biz-code: lanbiaokuaidi
+      biz-name: 蓝镖快递
+      biz-simple-name: 蓝镖快递
+      biz-order-name: lanbiaokuaidi
+      logic-id: 075
+      order: 0
+      map-code:
+
+    lanhukuaidi:
+      id: -1
+      biz-code: lanhukuaidi
+      biz-name: 蓝弧快递
+      biz-simple-name: 蓝弧快递
+      biz-order-name: lanhukuaidi
+      logic-id: 162
+      order: 0
+      map-code:
+
+    lbbk:
+      id: -1
+      biz-code: lbbk
+      biz-name: 宝凯物流
+      biz-simple-name: 宝凯物流
+      biz-order-name: baokaiwuliu'
+      logic-id: 115
+      order: 0
+      map-code:
+
+    lejiedi:
+      id: -1
+      biz-code: lejiedi
+      biz-name: 乐捷递
+      biz-simple-name: 乐捷递
+      biz-order-name: lejiedi
+      logic-id: 161
+      order: 0
+      map-code:
+
+    leopard:
+      id: -1
+      biz-code: leopard
+      biz-name: 云豹国际货运
+      biz-simple-name: 云豹国际货运
+      biz-order-name: yubaoguojihuoyun
+      logic-id: 200
+      order: 0
+      map-code:
+
+    lianbangkuaidi:
+      id: -1
+      biz-code: lianbangkuaidi
+      biz-name: 联邦快递
+      biz-simple-name: 联邦快递
+      biz-order-name: lianbangkuaidi
+      logic-id: 022
+      order: 0
+      map-code:
+
+    lianhaowuliu:
+      id: 63 # yms
+      biz-code: lianhaowuliu
+      biz-name: 联昊通
+      biz-simple-name: 联昊通
+      biz-order-name: lianhaotong
+      logic-id: 074
+      order: 0
+      map-code: LHT
+
+    lijisong:
+      id: -1
+      biz-code: lijisong
+      biz-name: 成都立即送
+      biz-simple-name: 成都立即送
+      biz-order-name: chengdulijisong
+      logic-id: 121
+      order: 0
+      map-code:
+
+    longbanwuliu:
+      id: 45 # yms
+      biz-code: longbanwuliu
+      biz-name: 龙邦速递
+      biz-simple-name: 龙邦
+      biz-order-name: longbangsudi
+      logic-id: 044
+      order: 0
+      map-code: LB
+      kuaidaoyun-name: 龙邦速递
+      kuaidaoyun-code: LBEX
+
+    longlangkuaidi:
+      id: -1
+      biz-code: longlangkuaidi
+      biz-name: 隆浪快递
+      biz-simple-name: 隆浪快递
+      biz-order-name: longlangkuaidi
+      logic-id: 076
+      order: 0
+      map-code:
+
+    mailikuaidi:
+      id: -1
+      biz-code: mailikuaidi
+      biz-name: 麦力快递
+      biz-simple-name: 麦力快递
+      biz-order-name: mailikuaidi
+      logic-id: 165
+      order: 0
+      map-code:
+
+    meiguokuaidi:
+      id: -1
+      biz-code: meiguokuaidi
+      biz-name: 美国快递
+      biz-simple-name: 美国快递
+      biz-order-name: meiguokuaidi
+      logic-id: 078
+      order: 0
+      map-code: ZY_MGZY
+
+    menduimen:
+      id: -1
+      biz-code: menduimen
+      biz-name: 门对门
+      biz-simple-name: 门对门
+      biz-order-name: menduimen
+      logic-id: 077
+      order: 0
+      map-code:
+
+    minbangsudi:
+      id: 66 # yms
+      biz-code: minbangsudi
+      biz-name: 民邦速递
+      biz-simple-name: 民邦
+      biz-order-name: minbangsudi
+      logic-id: 163
+      order: 0
+      map-code:
+
+    minghangkuaidi:
+      id: 54 # yms
+      biz-code: minghangkuaidi
+      biz-name: 民航快递
+      biz-simple-name: 民航
+      biz-order-name: minhangkuaidi
+      logic-id: 021
+      order: 0
+      map-code: MHKD
+      kuaidaoyun-name: 民航快递
+      kuaidaoyun-code: MHKD
+
+    mingliangwuliu:
+      id: -1
+      biz-code: mingliangwuliu
+      biz-name: 明亮物流
+      biz-simple-name: 明亮物流
+      biz-order-name: mingliangwuliu
+      logic-id: 079
+      order: 0
+      map-code: MLWL
+
+    minshengkuaidi:
+      id: -1
+      biz-code: minshengkuaidi
+      biz-name: 闽盛快递
+      biz-simple-name: 闽盛快递
+      biz-order-name: minshengkuaidi'
+      logic-id: 164
+      order: 0
+      map-code:
+
+    nanjingshengbang:
+      id: -1
+      biz-code: nanjingshengbang
+      biz-name: 南京晟邦物流
+      biz-simple-name: 南京晟邦物流
+      biz-order-name: nanjinshengbangwuliu
+      logic-id: 167
+      order: 0
+      map-code:
+
+    nedahm:
+      id: -1
+      biz-code: nedahm
+      biz-name: 红马速递
+      biz-simple-name: 红马速递
+      biz-order-name: hongmasudi
+      logic-id: 155
+      order: 0
+      map-code:
+
+    neweggozzo:
+      id: -1
+      biz-code: neweggozzo
+      biz-name: 新蛋奥硕物流
+      biz-simple-name: 新蛋奥硕物流
+      biz-order-name: xindanaoshuowuliu
+      logic-id: 096
+      order: 0
+      map-code:
+
+    nntengda:
+      id: -1
+      biz-code: nntengda
+      biz-name: 腾达速递
+      biz-simple-name: 腾达速递
+      biz-order-name: tengdasudi
+      logic-id: 182
+      order: 0
+      map-code:
+
+    nuoyaao:
+      id: -1
+      biz-code: nuoyaao
+      biz-name: 偌亚奥国际
+      biz-simple-name: 偌亚奥国际
+      biz-order-name: nuoyaaoguoji
+      logic-id: 166
+      order: 0
+      map-code:
+
+    ocs:
+      id: -1
+      biz-code: ocs
+      biz-name: OCS
+      biz-simple-name: OCS
+      biz-order-name: ocs
+      logic-id: 080
+      order: 0
+      map-code:
+
+    ontrac:
+      id: -1
+      biz-code: ontrac
+      biz-name: onTrac
+      biz-simple-name: onTrac
+      biz-order-name: ontrac
+      logic-id: 081
+      order: 0
+      map-code: ONTRAC
+
+    peixingwuliu:
+      id: -1
+      biz-code: peixingwuliu
+      biz-name: 陪行物流
+      biz-simple-name: 陪行物流
+      biz-order-name: peixingwuliu
+      logic-id: 169
+      order: 0
+      map-code:
+
+    pfcexpress:
+      id: -1
+      biz-code: pfcexpress
+      biz-name: 皇家物流
+      biz-simple-name: 皇家物流
+      biz-order-name: huangjiawuliu
+      logic-id: 153
+      order: 0
+      map-code:
+
+    pingandatengfei:
+      id: 65 # yms
+      biz-code: pingandatengfei
+      biz-name: 平安达腾飞
+      biz-simple-name: 平安达
+      biz-order-name: pinandatengfei
+      logic-id: 168
+      order: 0
+      map-code: PADTF
+
+    qbexpress:
+      id: -1
+      biz-code: qbexpress
+      biz-name: 秦邦快运
+      biz-simple-name: 秦邦快运
+      biz-order-name: qinbangkuaiyun
+      logic-id: 171
+      order: 0
+      map-code:
+
+    quanchenkuaidi:
+      id: -1
+      biz-code: quanchenkuaidi
+      biz-name: 全晨快递
+      biz-simple-name: 全晨快递
+      biz-order-name: quanchenkuaidi
+      logic-id: 082
+      order: 0
+      map-code: QCKD
+
+    quanfengkuaidi:
+      id: 31 # yms
+      biz-code: quanfengkuaidi
+      biz-name: 全峰快递
+      biz-simple-name: 全峰
+      biz-order-name: quanfengkuaidi
+      logic-id: 024
+      order: 0
+      map-code: QFKD
+      kuaidaoyun-name: 全峰快递
+      kuaidaoyun-code: QFKD
+
+    quanjitong:
+      id: -1
+      biz-code: quanjitong
+      biz-name: 全际通
+      biz-simple-name: 全际通
+      biz-order-name: quanjitong
+      logic-id: 083
+      order: 0
+      map-code:
+
+    quanritongkuaidi:
+      id: -1
+      biz-code: quanritongkuaidi
+      biz-name: 全日通
+      biz-simple-name: 全日通
+      biz-order-name: quanritong
+      logic-id: 084
+      order: 0
+      map-code: QRT
+
+    quanyikuaidi:
+      id: 42 # yms
+      biz-code: quanyikuaidi
+      biz-name: 全一快递
+      biz-simple-name: 全一
+      biz-order-name: quanyikuaidi
+      logic-id: 020
+      order: 0
+      map-code: UAPEX
+      kuaidaoyun-name: 全一
+      kuaidaoyun-code: APEX
+
+    rfsd:
+      id: -1
+      biz-code: rfsd
+      biz-name: 瑞丰速递
+      biz-simple-name: 瑞丰速递
+      biz-order-name: ruifengsudi
+      logic-id: 173
+      order: 0
+      map-code: RFEX
+
+    riyuwuliu:
+      id: -1
+      biz-code: riyuwuliu
+      biz-name: 日昱物流
+      biz-simple-name: 日昱物流
+      biz-order-name: riyuwuliu
+      logic-id: 172
+      order: 0
+      map-code:
+
+    rufengda:
+      id: 8 # yms
+      biz-code: rufengda
+      biz-name: 如风达
+      biz-simple-name: 如风达
+      biz-order-name: rufengda
+      logic-id: 008
+      order: 0
+      map-code: RFD
+      kuaidaoyun-name: 如风达
+      kuaidaoyun-code: RUFENGDA
+
+    saiaodi:
+      id: -1
+      biz-code: saiaodi
+      biz-name: 赛澳递
+      biz-simple-name: 赛澳递
+      biz-order-name: saiaodi
+      logic-id: 089
+      order: 0
+      map-code: SAD
+      kuaidaoyun-name: 赛澳递
+      kuaidaoyun-code: COD
+
+    santaisudi:
+      id: -1
+      biz-code: santaisudi
+      biz-name: 三态速递
+      biz-simple-name: 三态速递
+      biz-order-name: santaisudi
+      logic-id: 085
+      order: 0
+      map-code:
+
+    sevendays:
+      id: -1
+      biz-code: sevendays
+      biz-name: 7天连锁物流
+      biz-simple-name: 7天连锁物流
+      biz-order-name: qitianliansuowuliu
+      logic-id: 170
+      order: 0
+      map-code:
+
+    sfift:
+      id: -1
+      biz-code: sfift
+      biz-name: 十方通物流
+      biz-simple-name: 十方通物流
+      biz-order-name: shifangtongwuliu
+      logic-id: 178
+      order: 0
+      map-code:
+
+    shangda:
+      id: -1
+      biz-code: shangda
+      biz-name: 上大物流
+      biz-simple-name: 上大物流
+      biz-order-name: shangdawuliu
+      logic-id: 088
+      order: 0
+      map-code: SDWL
+
+    shenganwuliu:
+      id: -1
+      biz-code: shenganwuliu
+      biz-name: 圣安物流
+      biz-simple-name: 圣安物流
+      biz-order-name: shenganwuliu
+      logic-id: 090
+      order: 0
+      map-code: SAWL
+
+    shengfengwuliu:
+      id: -1
+      biz-code: shengfengwuliu
+      biz-name: 盛丰物流
+      biz-simple-name: 盛丰物流
+      biz-order-name: shengfengwuliu
+      logic-id: 087
+      order: 0
+      map-code: SFWL
+
+    shenghuiwuliu:
+      id: 55 # yms
+      biz-code: shenghuiwuliu
+      biz-name: 盛辉物流
+      biz-simple-name: 盛辉
+      biz-order-name: shenghuiwuliu
+      logic-id: 019
+      order: 0
+      map-code: SHWL
+      kuaidaoyun-name: 盛辉物流
+      kuaidaoyun-code: SHENGHUI56
+
+    shentong:
+      id: 3 # yms
+      biz-code: shentong
+      biz-name: 申通快递
+      biz-simple-name: 申通
+      biz-order-name: shentongkuaidi
+      logic-id: 007
+      order: 2
+      map-code: STO
+      kuaidaoyun-name: 申通快递
+      kuaidaoyun-code: STO
+
+    shiyunkuaidi:
+      id: -1
+      biz-code: shiyunkuaidi
+      biz-name: 世运快递
+      biz-simple-name: 世运快递
+      biz-order-name: shiyunkuaidi
+      logic-id: 174
+      order: 0
+      map-code:
+
+    shlindao:
+      id: -1
+      biz-code: shlindao
+      biz-name: 上海林道货运
+      biz-simple-name: 上海林道货运
+      biz-order-name: shanghailindaohuoyun
+      logic-id: 177
+      order: 0
+      map-code:
+
+    shunfeng:
+      id: 1 # yms
+      biz-code: shunfeng
+      biz-name: 顺丰速运
+      biz-simple-name: 顺丰
+      biz-order-name: shunfengsuyun
+      logic-id: 010
+      order: 1
+      map-code: SF
+      kuaidaoyun-name: 顺丰速运
+      kuaidaoyun-code: SF
+
+    suer:
+      id: 35 # yms
+      biz-code: suer
+      biz-name: 速尔物流
+      biz-simple-name: 速尔
+      biz-order-name: suerwuliu
+      logic-id: 086
+      order: 0
+      map-code: SURE
+      kuaidaoyun-name: 速尔
+      kuaidaoyun-code: SURE
+
+    suijiawuliu:
+      id: -1
+      biz-code: suijiawuliu
+      biz-name: 穗佳物流
+      biz-simple-name: 穗佳物流
+      biz-order-name: huijiawuliu
+      logic-id: 091
+      order: 0
+      map-code:
+
+    sujievip:
+      id: -1
+      biz-code: sujievip
+      biz-name: 郑州速捷
+      biz-simple-name: 郑州速捷
+      biz-order-name: zhengzhousujie
+      logic-id: 206
+      order: 0
+      map-code:
+
+    suteng:
+      id: 62 # yms
+      biz-code: suteng
+      biz-name: 广东速腾物流
+      biz-simple-name: 速腾
+      biz-order-name: guangdongsutengwuliu
+      logic-id: 142
+      order: 0
+      map-code:
+
+    sxhongmajia:
+      id: -1
+      biz-code: sxhongmajia
+      biz-name: 山西红马甲
+      biz-simple-name: 山西红马甲
+      biz-order-name: shanxihongmajia
+      logic-id: 175
+      order: 0
+      map-code:
+
+    syjiahuier:
+      id: -1
+      biz-code: syjiahuier
+      biz-name: 沈阳佳惠尔
+      biz-simple-name: 沈阳佳惠尔
+      biz-order-name: shenyangjiahuier
+      logic-id: 176
+      order: 0
+      map-code:
+
+    tiandihuayu:
+      id: 56 # yms
+      biz-code: tiandihuayu
+      biz-name: 天地华宇
+      biz-simple-name: 天地华宇
+      biz-order-name: tiandihuayu
+      logic-id: 018
+      order: 0
+      map-code: HOAU
+      kuaidaoyun-name: 天地华宇
+      kuaidaoyun-code: TDHY
+
+    tiantian:
+      id: 34 # yms
+      biz-code: tiantian
+      biz-name: 天天快递
+      biz-simple-name: 天天
+      biz-order-name: tiantiankuaidi
+      logic-id: 006
+      order: 0
+      map-code: HHTT
+      kuaidaoyun-name: 天天快递
+      kuaidaoyun-code: TT
+
+    tianzong:
+      id: -1
+      biz-code: tianzong
+      biz-name: 天纵物流
+      biz-simple-name: 天纵物流
+      biz-order-name: tianzongwuliu
+      logic-id: 180
+      order: 0
+      map-code:
+
+    tnt:
+      id: 57 # yms
+      biz-code: tnt
+      biz-name: TNT快递
+      biz-simple-name: TNT
+      biz-order-name: tntkuaidi
+      logic-id: 030
+      order: 0
+      map-code: TNT
+      kuaidaoyun-name: TNT
+      kuaidaoyun-code: TNT
+
+    tonghetianxia:
+      id: -1
+      biz-code: tonghetianxia
+      biz-name: 通和天下
+      biz-simple-name: 通和天下
+      biz-order-name: tonghetianxia
+      logic-id: 179
+      order: 0
+      map-code:
+
+    ucs:
+      id: -1
+      biz-code: ucs
+      biz-name: 合众速递(UCS)
+      biz-simple-name: 合众速递(UCS)
+      biz-order-name: ucs
+      logic-id: 151
+      order: 0
+      map-code: ZY_UCS
+
+    ups:
+      id: 59 # yms
+      biz-code: ups
+      biz-name: UPS快运
+      biz-simple-name: UPS
+      biz-order-name: upskuaiyun
+      logic-id: 029
+      order: 0
+      map-code: UPS
+      kuaidaoyun-name: UPS
+      kuaidaoyun-code: UPS
+
+    usps:
+      id: -1
+      biz-code: usps
+      biz-name: USPS美国邮政
+      biz-simple-name: USPS美国邮政
+      biz-order-name: uspsmeiguoyouzheng
+      logic-id: 183
+      order: 0
+      map-code: USPS
+
+    wanboex:
+      id: -1
+      biz-code: wanboex
+      biz-name: 万博快递
+      biz-simple-name: 万博快递
+      biz-order-name: wanbo
+      logic-id: 184
+      order: 0
+      map-code:
+
+    wanjiawuliu:
+      id: -1
+      biz-code: wanjiawuliu
+      biz-name: 万家物流
+      biz-simple-name: 万家物流
+      biz-order-name: wanjiawuliu
+      logic-id: 093
+      order: 0
+      map-code: WJWL
+
+    wanxiangwuliu:
+      id: 60 # yms
+      biz-code: wanxiangwuliu
+      biz-name: 万象物流
+      biz-simple-name: 万象
+      biz-order-name: wanxiangwuliu
+      logic-id: 094
+      order: 0
+      map-code: WXWL
+      kuaidaoyun-name: 万象物流
+      kuaidaoyun-code: EWINSHINE
+
+    weitepai:
+      id: -1
+      biz-code: weitepai
+      biz-name: 微特派
+      biz-simple-name: 微特派
+      biz-order-name: weitepai
+      logic-id: 095
+      order: 0
+      map-code:
+
+    wxwl:
+      id: -1
+      biz-code: wxwl
+      biz-name: 万象物流
+      biz-simple-name: 万象物流
+      biz-order-name: wanxiangwuliu
+      logic-id: 017
+      order: 0
+      map-code: WXWL
+
+    xianchengliansudi:
+      id: -1
+      biz-code: xianchengliansudi
+      biz-name: 西安城联速递
+      biz-simple-name: 西安城联速递
+      biz-order-name: xianchengliansudi
+      logic-id: 187
+      order: 0
+      map-code:
+
+    xianglongyuntong:
+      id: -1
+      biz-code: xianglongyuntong
+      biz-name: 祥龙运通物流
+      biz-simple-name: 祥龙运通物流
+      biz-order-name: xianglongyuntongwuliu
+      logic-id: 186
+      order: 0
+      map-code:
+
+    xiaohongmao:
+      id: -1
+      biz-code: xiaohongmao
+      biz-name: 北青小红帽
+      biz-simple-name: 北青小红帽
+      biz-order-name: beiqingxiaohongmao
+      logic-id: 114
+      order: 0
+      map-code: BQXHM
+      kuaidaoyun-name: 北青小红帽
+      kuaidaoyun-code: BJXHM
+
+    xilaikd:
+      id: -1
+      biz-code: xilaikd
+      biz-name: 西安喜来快递
+      biz-simple-name: 西安喜来快递
+      biz-order-name: xianxilaikuaidi
+      logic-id: 188
+      order: 0
+      map-code:
+
+    xinbangwuliu:
+      id: -1
+      biz-code: xinbangwuliu
+      biz-name: 新邦物流
+      biz-simple-name: 新邦物流
+      biz-order-name: xinbangwuliu
+      logic-id: 016
+      order: 0
+      map-code: XBWL
+      kuaidaoyun-name: 新邦物流
+      kuaidaoyun-code: XBWL
+
+    xinfengwuliu:
+      id: 64 # yms
+      biz-code: xinfengwuliu
+      biz-name: 信丰物流
+      biz-simple-name: 信丰
+      biz-order-name: xinfengwuliu
+      logic-id: 015
+      order: 0
+      map-code: XFEX
+      kuaidaoyun-name: 信丰物流
+      kuaidaoyun-code: XFWL
+
+    xiyoutekuaidi:
+      id: -1
+      biz-code: xiyoutekuaidi
+      biz-name: 希优特快递
+      biz-simple-name: 希优特快递
+      biz-order-name: xiyoutekuaidi
+      logic-id: 185
+      order: 0
+      map-code: XYT
+
+    xsrd:
+      id: -1
+      biz-code: xsrd
+      biz-name: 鑫世锐达
+      biz-simple-name: 鑫世锐达
+      biz-order-name: xinshiruida
+      logic-id: 189
+      order: 0
+      map-code:
+
+    yafengsudi:
+      id: 71 # yms
+      biz-code: yafengsudi
+      biz-name: 亚风快递
+      biz-simple-name: 亚风
+      biz-order-name: yafengkuaidi
+      logic-id: 005
+      order: 0
+      map-code: YFSD
+
+    yibangwuliu:
+      id: -1
+      biz-code: yibangwuliu
+      biz-name: 一邦快递
+      biz-simple-name: 一邦快递
+      biz-order-name: yibangkuaidi
+      logic-id: 004
+      order: 0
+      map-code:
+
+    yilingsuyun:
+      id: -1
+      biz-code: yilingsuyun
+      biz-name: 亿领速运
+      biz-simple-name: 亿领速运
+      biz-order-name: yilingsuyun
+      logic-id: 197
+      order: 0
+      map-code:
+
+    yinjiesudi:
+      id: -1
+      biz-code: yinjiesudi
+      biz-name: 银捷速递
+      biz-simple-name: 银捷速递
+      biz-order-name: yinjiesudi
+      logic-id: 106
+      order: 0
+      map-code:
+
+    yinsu:
+      id: -1
+      biz-code: yinsu
+      biz-name: 音素快运
+      biz-simple-name: 音素快运
+      biz-order-name: yinsukuaiyun
+      logic-id: 196
+      order: 0
+      map-code: B
+
+    yiqiguojiwuliu:
+      id: -1
+      biz-code: yiqiguojiwuliu
+      biz-name: 一柒物流
+      biz-simple-name: 一柒物流
+      biz-order-name: yiqiwuliu
+      logic-id: 195
+      order: 0
+      map-code:
+
+    yishunhang:
+      id: -1
+      biz-code: yishunhang
+      biz-name: 亿顺航
+      biz-simple-name: 亿顺航
+      biz-order-name: yishunhang
+      logic-id: 190
+      order: 0
+      map-code:
+
+    yitongda:
+      id: -1
+      biz-code: yitongda
+      biz-name: 易通达
+      biz-simple-name: 易通达
+      biz-order-name: yitongda
+      logic-id: 193
+      order: 0
+      map-code:
+
+    yitongfeihong:
+      id: -1
+      biz-code: yitongfeihong
+      biz-name: 一统飞鸿
+      biz-simple-name: 一统飞鸿
+      biz-order-name: yitongfeihong
+      logic-id: 191
+      order: 0
+      map-code:
+
+    youbijia:
+      id: -1
+      biz-code: youbijia
+      biz-name: 邮必佳
+      biz-simple-name: 邮必佳
+      biz-order-name: youbijia
+      logic-id: 194
+      order: 0
+      map-code:
+
+    youshuwuliu:
+      id: 41 # yms
+      biz-code: youshuwuliu
+      biz-name: 优速物流
+      biz-simple-name: 优速
+      biz-order-name: yousuwuliu
+      logic-id: 092
+      order: 0
+      map-code: UC
+
+    youzhengguoji:
+      id: -1
+      biz-code: youzhengguoji
+      biz-name: 邮政国际包裹挂号信
+      biz-simple-name: 邮政国际包裹挂号信
+      biz-order-name: youzhengguojibaoguoguahaoxin
+      logic-id: 043
+      order: 0
+      map-code: GJYZ
+
+    youzhengguonei:
+      id: -1
+      biz-code: youzhengguonei
+      biz-name: 邮政包裹挂号信
+      biz-simple-name: 邮政包裹挂号信
+      biz-order-name: youzhengbaoguoguahaoxin
+      logic-id: 042
+      order: 0
+      map-code: YZPY
+
+    yuananda:
+      id: 72 # yms
+      biz-code: yuananda
+      biz-name: 源安达
+      biz-simple-name: 源安达
+      biz-order-name: yuananda
+      logic-id: 102
+      order: 0
+      map-code: YADEX
+
+    yuanchengwuliu:
+      id: -1
+      biz-code: yuanchengwuliu
+      biz-name: 远成物流
+      biz-simple-name: 远成物流
+      biz-order-name: yuanchengwuliu
+      logic-id: 014
+      order: 0
+      map-code: YCWL
+
+    yuanfeihangwuliu:
+      id: -1
+      biz-code: yuanfeihangwuliu
+      biz-name: 原飞航
+      biz-simple-name: 原飞航
+      biz-order-name: yuanfeihang
+      logic-id: 103
+      order: 0
+      map-code: YFHEX
+
+    yuantong:
+      id: 4 # yms
+      biz-code: yuantong
+      biz-name: 圆通速递
+      biz-simple-name: 圆通
+      biz-order-name: yuantongsudi
+      logic-id: 003
+      order: 6
+      map-code: YTO
+      kuaidaoyun-name: 圆通速递
+      kuaidaoyun-code: YTO
+
+    yuanweifeng:
+      id: -1
+      biz-code: yuanweifeng
+      biz-name: 源伟丰快递
+      biz-simple-name: 源伟丰快递
+      biz-order-name: yuanweifengkuaidi
+      logic-id: 099
+      order: 0
+      map-code:
+
+    yuanzhijiecheng:
+      id: -1
+      biz-code: yuanzhijiecheng
+      biz-name: 元智捷诚
+      biz-simple-name: 元智捷诚
+      biz-order-name: yuanzhijiecheng
+      logic-id: 100
+      order: 0
+      map-code:
+
+    yuefengwuliu:
+      id: -1
+      biz-code: yuefengwuliu
+      biz-name: 越丰物流
+      biz-simple-name: 越丰物流
+      biz-order-name: yuefengwuliu
+      logic-id: 101
+      order: 0
+      map-code: YFWL
+
+    yujiawuliu:
+      id: -1
+      biz-code: yujiawuliu
+      biz-name: 煜嘉物流
+      biz-simple-name: 煜嘉物流
+      biz-order-name: yujiawuliu
+      logic-id: 198
+      order: 0
+      map-code:
+
+    yunda:
+      id: 5 # yms
+      biz-code: yunda
+      biz-name: 韵达快递
+      biz-simple-name: 韵达
+      biz-order-name: yundakuaidi
+      logic-id: 002
+      order: 5
+      map-code: YD
+      kuaidaoyun-name: 韵达快递
+      kuaidaoyun-code: YUNDA
+
+    yuntongkuaidi:
+      id: 47 # yms
+      biz-code: yuntongkuaidi
+      biz-name: 运通快递
+      biz-simple-name: 运通
+      biz-order-name: yuntongkuaidi
+      logic-id: 098
+      order: 0
+      map-code: YTKD
+
+    yuxinwuliu:
+      id: -1
+      biz-code: yuxinwuliu
+      biz-name: 宇鑫物流
+      biz-simple-name: 宇鑫物流
+      biz-order-name: yuxinwuliu
+      logic-id: 192
+      order: 0
+      map-code:
+
+    zengyisudi:
+      id: 46 # yms
+      biz-code: zengyisudi
+      biz-name: 增益速递
+      biz-simple-name: 增益
+      biz-order-name: zengyisudi
+      logic-id: 205
+      order: 0
+      map-code: ZENY
+      kuaidaoyun-name: 增益速递
+      kuaidaoyun-code: QRT
+
+    zhaijisong:
+      id: 40 # yms
+      biz-code: zhaijisong
+      biz-name: 宅急送
+      biz-simple-name : 宅急送
+      biz-order-name: zhaijisong
+      logic-id: 013
+      order: 0
+      map-code: ZJS
+      kuaidaoyun-name: 宅急送
+      kuaidaoyun-code: ZJS
+
+    zhengzhoujianhua:
+      id: -1
+      biz-code: zhengzhoujianhua
+      biz-name: 郑州建华
+      biz-simple-name: 郑州建华
+      biz-order-name: zhengzhoujianhua
+      logic-id: 203
+      order: 0
+      map-code:
+
+    zhimakaimen:
+      id: -1
+      biz-code: zhimakaimen
+      biz-name: 芝麻开门
+      biz-simple-name: 芝麻开门
+      biz-order-name: zhimakaimen
+      logic-id: 105
+      order: 0
+      map-code:
+      kuaidaoyun-name: 芝麻开门
+      kuaidaoyun-code: ZMKM
+
+    zhongsukuaidi:
+      id: -1
+      biz-code: zhongsukuaidi
+      biz-name: 中速快件
+      biz-simple-name: 中速快件
+      biz-order-name: zhongsukuaijian
+      logic-id: 108
+      order: 0
+      map-code:
+
+    zhongtianwanyun:
+      id: -1
+      biz-code: zhongtianwanyun
+      biz-name: 中天万运
+      biz-simple-name: 中天万运
+      biz-order-name: zhongtianwanyun
+      logic-id: 109
+      order: 0
+      map-code:
+
+    zhongtiekuaiyun:
+      id: 49 # yms
+      biz-code: zhongtiekuaiyun
+      biz-name: 中铁快运
+      biz-simple-name: 中铁
+      biz-order-name: zhongtiekuaiyun
+      logic-id: 011
+      order: 0
+      map-code: ZTKY
+      kuaidaoyun-name: 中铁快运
+      kuaidaoyun-code: ZTKY
+
+    zhongtong:
+      id: 6 # yms
+      biz-code: zhongtong
+      biz-name: 中通快递
+      biz-simple-name: 中通
+      biz-order-name: zhongtongkuaidi
+      logic-id: 001
+      order: 7
+      map-code: ZTO
+      kuaidaoyun-name: 中通快递
+      kuaidaoyun-code: ZTO
+
+    zhongwaiyun:
+      id: -1
+      biz-code: zhongwaiyun
+      biz-name: 中外运速递
+      biz-simple-name: 中外运速递
+      biz-order-name: zhongwaiyunsudi
+      logic-id: 204
+      order: 0
+      map-code:
+
+    zhongxinda:
+      id: -1
+      biz-code: zhongxinda
+      biz-name: 忠信达快递
+      biz-simple-name: 忠信达快递
+      biz-order-name: zhongxindakuaidi
+      logic-id: 104
+      order: 0
+      map-code:
+
+    zhongyouwuliu:
+      id: 90 # yms
+      biz-code: zhongyouwuliu
+      biz-name: 中邮物流
+      biz-simple-name: 中邮
+      biz-order-name: zhongyouwuliu
+      logic-id: 107
+      order: 0
+      map-code: ZYWL
+
+    ztky:
+      id: -1
+      biz-code: ztky
+      biz-name: 中铁物流
+      biz-simple-name: 中铁物流
+      biz-order-name: zhongtiewuliu
+      logic-id: 202
+      order: 0
+      map-code: ZTWL
+      kuaidaoyun-name: 中铁物流
+      kuaidaoyun-code: ZTWL

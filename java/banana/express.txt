@@ -1,0 +1,663 @@
+kuaidaoyun-name: 百世快运
+kuaidaoyun-code: 800BESTFREIGHT
+
+kuaidaoyun-name: 德邦物流
+kuaidaoyun-code: DBL
+
+kuaidaoyun-name: 优速快递
+kuaidaoyun-code: UC
+
+kuaidaoyun-name: 思迈
+kuaidaoyun-code: SM
+
+kuaidaoyun-name: 邮政快递包裹
+kuaidaoyun-code: POSTB
+
+kuaidaoyun-name: 飞康达速运
+kuaidaoyun-code: BJFKD
+
+kuaidaoyun-name: 能达速递
+kuaidaoyun-code: NDSD
+
+kuaidaoyun-name: 南京100
+kuaidaoyun-code: NJ100
+
+kuaidaoyun-name: 佳吉快运
+kuaidaoyun-code: JJKY
+
+kuaidaoyun-name: 快速递
+kuaidaoyun-code: KSD
+
+kuaidaoyun-name: 新顺丰
+kuaidaoyun-code: NSF
+
+kuaidaoyun-name: 钱报速运
+kuaidaoyun-code: QBSY
+
+kuaidaoyun-name: 日日顺物流
+kuaidaoyun-code: RRS
+
+kuaidaoyun-name: 神盾快运
+kuaidaoyun-code: SDKY
+
+kuaidaoyun-name: ヤマト運輸
+kuaidaoyun-code: DHYS
+
+kuaidaoyun-name: 日本郵便
+kuaidaoyun-code: RBYB
+
+kuaidaoyun-name: logen路坚
+kuaidaoyun-code: LOGEN
+
+kuaidaoyun-name: CJ物流
+kuaidaoyun-code: CJ
+
+kuaidaoyun-name: 京华亿家
+kuaidaoyun-code: JHYJ
+
+kuaidaoyun-name: 南方传媒物流
+kuaidaoyun-code: NFCMWL
+
+kuaidaoyun-name: 佐川急便
+kuaidaoyun-code: SAGAWA
+
+kuaidaoyun-name: 西濃運輸
+kuaidaoyun-code: SEINO
+
+kuaidaoyun-name: 贝海国际速递
+kuaidaoyun-code: XLOBO
+
+kuaidaoyun-name: koreapost
+kuaidaoyun-code: KOREAPOST
+
+kuaidaoyun-name: 成都商报物流
+kuaidaoyun-code: CDSBWL
+
+kuaidaoyun-name: 冻到家物流
+kuaidaoyun-code: DDJ
+
+kuaidaoyun-name: 亚马逊物流
+kuaidaoyun-code: AMAZON
+
+kuaidaoyun-name: 央广购物
+kuaidaoyun-code: YGGW
+
+kuaidaoyun-name: 易时联国际速递
+kuaidaoyun-code: ESLINK88
+
+kuaidaoyun-name: 风先生物流
+kuaidaoyun-code: MRWIND
+
+kuaidaoyun-name: 耀启物流
+kuaidaoyun-code: YQWL
+
+kuaidaoyun-name: 内蒙EMS
+kuaidaoyun-code: NMEMS
+
+kuaidaoyun-name: 诚义物流
+kuaidaoyun-code: CHERRY56
+
+kuaidaoyun-name: PCAExpress
+kuaidaoyun-code: PCAEXPRESS
+
+kuaidaoyun-name: 万家康快递
+kuaidaoyun-code: WJKWL
+
+kuaidaoyun-name: 新西兰秦远国际物流
+kuaidaoyun-code: CHINZ56-NZ
+
+kuaidaoyun-name: 澳邮中国快运
+kuaidaoyun-code: AUE
+
+kuaidaoyun-name: 一号线国际速递
+kuaidaoyun-code: LINE-1
+
+kuaidaoyun-name: EWE国际物流
+kuaidaoyun-code: EWE
+
+kuaidaoyun-name: 爱送配送
+kuaidaoyun-code: AISONG
+
+kuaidaoyun-name: POSTNZ
+kuaidaoyun-code: POSTNZ
+
+kuaidaoyun-name: FASTGO
+kuaidaoyun-code: FASTGO
+
+kuaidaoyun-name: 鹏程快递
+kuaidaoyun-code: PCEXPRESS
+
+kuaidaoyun-name: 华美国际快递
+kuaidaoyun-code: HMUS
+
+kuaidaoyun-name: 中邮中环
+kuaidaoyun-code: CHS-ZHEXPRESS
+
+kuaidaoyun-name: 一速递
+kuaidaoyun-code: ONE
+
+kuaidaoyun-name: 航空便
+kuaidaoyun-code: TRACKING
+
+kuaidaoyun-name: 荷兰皇家快递
+kuaidaoyun-code: PARCEL
+
+kuaidaoyun-name: 国际航空
+kuaidaoyun-code: AIRCHINA
+
+kuaidaoyun-name: 新干线快递
+kuaidaoyun-code: ANL
+
+kuaidaoyun-name: Parcelforce
+kuaidaoyun-code: PARCELFORCE
+
+kuaidaoyun-name: 澳洲极地快递
+kuaidaoyun-code: POLAR
+
+kuaidaoyun-name: 品速国际快递
+kuaidaoyun-code: PINSUUS
+
+kuaidaoyun-name: 顺达快递
+kuaidaoyun-code: SD
+
+kuaidaoyun-name: 119洲际速递
+kuaidaoyun-code: YYJIU
+
+kuaidaoyun-name: 丰泰国际快递
+kuaidaoyun-code: SOONEXPRESS
+
+kuaidaoyun-name: 长江国际速递
+kuaidaoyun-code: CHANGJIANG
+
+kuaidaoyun-name: 中通澳新物流
+kuaidaoyun-code: ZTO-NZ
+
+kuaidaoyun-name: 鹰运国际速递
+kuaidaoyun-code: YINGYUN
+
+kuaidaoyun-name: 畅灵国际物流
+kuaidaoyun-code: SHL
+
+kuaidaoyun-name: CNE壹速递
+kuaidaoyun-code: CNE
+
+kuaidaoyun-name: 海星桥快递
+kuaidaoyun-code: HAIXING
+
+kuaidaoyun-name: 美邦快递
+kuaidaoyun-code: MEAREL
+
+kuaidaoyun-name: 顺通物流
+kuaidaoyun-code: SHUNTONG
+
+kuaidaoyun-name: 澳大利亚秦远国际物流
+kuaidaoyun-code: CHINZ56-AU
+
+kuaidaoyun-name: 百通物流
+kuaidaoyun-code: BUYTONG
+
+kuaidaoyun-name: 乐天快递
+kuaidaoyun-code: LT
+
+kuaidaoyun-name: 速翼快递
+kuaidaoyun-code: 91SOE
+
+kuaidaoyun-name: 七天快递
+kuaidaoyun-code: 7DEXPRESS
+
+kuaidaoyun-name: lpl速递
+kuaidaoyun-code: LPL
+
+kuaidaoyun-name: 万庚国际速递
+kuaidaoyun-code: VANGEN
+
+kuaidaoyun-name: 龙象快递
+kuaidaoyun-code: EDRAGONE
+
+kuaidaoyun-name: GOOD快递
+kuaidaoyun-code: GOODKUAIDI
+
+kuaidaoyun-name: 桔子公社
+kuaidaoyun-code: ORANGETO
+
+kuaidaoyun-name: 全橙快递
+kuaidaoyun-code: QUANCHENG
+
+kuaidaoyun-name: 海淘客365htk
+kuaidaoyun-code: HTK
+
+kuaidaoyun-name: 重庆中环
+kuaidaoyun-code: CQZHONGHUAN
+
+kuaidaoyun-name: 华中快递
+kuaidaoyun-code: CPS
+
+kuaidaoyun-name: 卡蒙
+kuaidaoyun-code: CAMELSH
+
+kuaidaoyun-name: A1快运
+kuaidaoyun-code: A1
+
+kuaidaoyun-name: 行必达
+kuaidaoyun-code: SPEEDA
+
+kuaidaoyun-name: EFS快递
+kuaidaoyun-code: EFSPOST
+
+kuaidaoyun-name: 中邮速递
+kuaidaoyun-code: 30POST
+
+kuaidaoyun-name: 一号仓
+kuaidaoyun-code: 1HCANG
+
+kuaidaoyun-name: 天越物流
+kuaidaoyun-code: SURPASS-GO
+
+kuaidaoyun-name: 德中物流
+kuaidaoyun-code: DEZHONGWL
+
+kuaidaoyun-name: 速通达跨境物流
+kuaidaoyun-code: SYT-EXPRESS
+
+kuaidaoyun-name: 五亨国际
+kuaidaoyun-code: HENGPOST
+
+kuaidaoyun-name: 迅物流
+kuaidaoyun-code: 52HAIGO
+
+kuaidaoyun-name: 彩虹速运
+kuaidaoyun-code: RAINBOWEZ
+
+kuaidaoyun-name: 全球快运
+kuaidaoyun-code: ABCGLOBAL
+
+kuaidaoyun-name: 威时沛运
+kuaidaoyun-code: WTDEX
+
+kuaidaoyun-name: 阳光国际速递
+kuaidaoyun-code: SHINING
+
+kuaidaoyun-name: 渼通快递
+kuaidaoyun-code: MEITONG
+
+kuaidaoyun-name: 澳洲新干线快递
+kuaidaoyun-code: PLUS
+
+kuaidaoyun-name: 中环国际（澳洲件）
+kuaidaoyun-code: ZHONGHUAN
+
+kuaidaoyun-name: 美仓快递
+kuaidaoyun-code: MEICANGEX
+
+kuaidaoyun-name: 澳通速递
+kuaidaoyun-code: AOTSD
+
+kuaidaoyun-name: 济南猎豹速递
+kuaidaoyun-code: LIEBAOSUDI
+
+kuaidaoyun-name: 优达生鲜
+kuaidaoyun-code: YDSX
+
+kuaidaoyun-name: 远成快运
+kuaidaoyun-code: YCGKY
+
+kuaidaoyun-name: 联昊通速递
+kuaidaoyun-code: LHTEX
+
+kuaidaoyun-name: 澳运速递
+kuaidaoyun-code: AU7EXPRESS
+
+kuaidaoyun-name: DHL德国
+kuaidaoyun-code: DHLDE
+
+kuaidaoyun-name: FedEx快递国际
+kuaidaoyun-code: FEDEXEN
+
+kuaidaoyun-name: P2UEXPRESS
+kuaidaoyun-code: P2UEXPRESS
+
+kuaidaoyun-name: 黑猫宅急便
+kuaidaoyun-code: KURONEKOYAMATO
+
+kuaidaoyun-name: 快客速运
+kuaidaoyun-code: GOTOQUICK
+
+kuaidaoyun-name: 安能电商小包
+kuaidaoyun-code: ANEDS
+
+kuaidaoyun-name: 当当物流
+kuaidaoyun-code: DANGDANG
+
+kuaidaoyun-name: 艾瑞斯远
+kuaidaoyun-code: AYSY
+
+kuaidaoyun-name: 斑马物联网
+kuaidaoyun-code: BANMA360
+
+kuaidaoyun-name: 泛捷国际速运
+kuaidaoyun-code: PANEX
+
+kuaidaoyun-name: 蓝天快递
+kuaidaoyun-code: BLUESKY
+
+kuaidaoyun-name: 银河物流
+kuaidaoyun-code: MILKYWAY
+
+kuaidaoyun-name: 海龟国际速递
+kuaidaoyun-code: TURTLE
+
+kuaidaoyun-name: 申通国际
+kuaidaoyun-code: STOUS
+
+kuaidaoyun-name: 安鲜达
+kuaidaoyun-code: EXFRESH
+
+kuaidaoyun-name: 闪送
+kuaidaoyun-code: SBINGEX
+
+kuaidaoyun-name: 我的物流
+kuaidaoyun-code: 5A56
+
+kuaidaoyun-name: 黑狗速递
+kuaidaoyun-code: HIGO
+
+kuaidaoyun-name: 富腾达快递
+kuaidaoyun-code: FTDNZ
+
+kuaidaoyun-name: 程光快递
+kuaidaoyun-code: FLYWAYEX
+
+kuaidaoyun-name: 吉祥邮
+kuaidaoyun-code: JIXIANGYOU
+
+kuaidaoyun-name: 鸿宇物流
+kuaidaoyun-code: HONGYUEX
+
+kuaidaoyun-name: 天时海淘转运
+kuaidaoyun-code: KDUFO
+
+kuaidaoyun-name: 亿翔快递
+kuaidaoyun-code: YXEXPRESS
+
+kuaidaoyun-name: 中澳国际物流
+kuaidaoyun-code: AU100
+
+kuaidaoyun-name: 蚂蚁马
+kuaidaoyun-code: MAYIMA
+
+kuaidaoyun-name: TrackParcel
+kuaidaoyun-code: TrackParcel
+
+kuaidaoyun-name: 新亚物流
+kuaidaoyun-code: NALEXPRESS
+
+kuaidaoyun-name: 美速通
+kuaidaoyun-code: MST99
+
+kuaidaoyun-name: 极客冷链
+kuaidaoyun-code: GEEKLOGISTICS
+
+kuaidaoyun-name: 云物流
+kuaidaoyun-code: CLOUDLOGISTICS
+
+kuaidaoyun-name: 星云速递
+kuaidaoyun-code: NEBUEX
+
+kuaidaoyun-name: 星辰快递
+kuaidaoyun-code: XINGCHENGEX
+
+kuaidaoyun-name: 中欧快运
+kuaidaoyun-code: OTOEXPRESS
+
+kuaidaoyun-name: 苏宁快递
+kuaidaoyun-code: SUNING
+
+kuaidaoyun-name: 中通国际
+kuaidaoyun-code: ZTOGUOJI
+
+kuaidaoyun-name: 澳大利亚AOL快递
+kuaidaoyun-code: AOL
+
+kuaidaoyun-name: 全速快递
+kuaidaoyun-code: FSEXP
+
+kuaidaoyun-name: 极客快递
+kuaidaoyun-code: GKLIFE
+
+kuaidaoyun-name: 金岸物流
+kuaidaoyun-code: GPL
+
+kuaidaoyun-name: UUE联通速运
+kuaidaoyun-code: UUE
+
+kuaidaoyun-name: 今枫国际快运
+kuaidaoyun-code: MAPLE
+
+kuaidaoyun-name: 西翼物流
+kuaidaoyun-code: WESTWING
+
+kuaidaoyun-name: 转运四方
+kuaidaoyun-code: TRANSRUSH
+
+kuaidaoyun-name: 心怡物流
+kuaidaoyun-code: ALOG
+
+kuaidaoyun-name: 易优包裹
+kuaidaoyun-code: EUPACKAGE
+
+kuaidaoyun-name: 环球速运
+kuaidaoyun-code: GLOBELEXPRESS
+
+kuaidaoyun-name: 飞翔快递
+kuaidaoyun-code: FLYINGPARCEL
+
+kuaidaoyun-name: 中联速运
+kuaidaoyun-code: AUVANDA
+
+kuaidaoyun-name: e邮客
+kuaidaoyun-code: YYOX
+
+
+kuaidaoyun-name: 天马迅达快递
+kuaidaoyun-code: TIANMA
+
+kuaidaoyun-name: 澳速物流
+kuaidaoyun-code: AUSPEED
+
+kuaidaoyun-name: UEQ
+kuaidaoyun-code: UEQ
+
+kuaidaoyun-name: 八达通
+kuaidaoyun-code: HK8DT
+
+kuaidaoyun-name: 美淘优递
+kuaidaoyun-code: PROHITAO
+
+kuaidaoyun-name: 晟邦物流
+kuaidaoyun-code: CHENGBANG
+
+kuaidaoyun-name: 转运中国
+kuaidaoyun-code: USZCN
+
+kuaidaoyun-name: 佳慧尔快递
+kuaidaoyun-code: JHEKD
+
+kuaidaoyun-name: 西邮寄
+kuaidaoyun-code: XIPOST
+
+kuaidaoyun-name: 九曳供应链
+kuaidaoyun-code: JIUYESCM
+
+kuaidaoyun-name: 速必达希杰物流
+kuaidaoyun-code: SPEEDEX
+
+kuaidaoyun-name: 虎跃快运
+kuaidaoyun-code: YDSES
+
+kuaidaoyun-name: 品骏快递
+kuaidaoyun-code: PJBESTPOP
+
+kuaidaoyun-name: 重庆巴伦支同城快递
+kuaidaoyun-code: CNBD
+
+kuaidaoyun-name: 特急送
+kuaidaoyun-code: INTJS
+
+kuaidaoyun-name: 狂派速递
+kuaidaoyun-code: FFK
+
+kuaidaoyun-name: 捷安达国际速递
+kuaidaoyun-code: GIANT POST
+
+kuaidaoyun-name: C&C全球快递
+kuaidaoyun-code: CNCEXP
+
+kuaidaoyun-name: 全时达快递
+kuaidaoyun-code: QSDKD
+
+kuaidaoyun-name: 香港萬威
+kuaidaoyun-code: WINWAYEXPRESS
+
+kuaidaoyun-name: 笨鸟国际
+kuaidaoyun-code: BENNIAO100
+
+kuaidaoyun-name: 小蜜蜂邮包
+kuaidaoyun-code: GZ11185
+
+kuaidaoyun-name: New Zealand Post
+kuaidaoyun-code: NEWZEALNDPOST
+
+kuaidaoyun-name: 汇通天下
+kuaidaoyun-code: httx56
+
+kuaidaoyun-name: 速购速递
+kuaidaoyun-code: SUGOUEX
+
+kuaidaoyun-name: 安得物流
+kuaidaoyun-code: ANNTO
+
+kuaidaoyun-name: 跨越速运
+kuaidaoyun-code: KYEXPRESS
+
+kuaidaoyun-name: 易客满
+kuaidaoyun-code: ECMS
+
+kuaidaoyun-name: 中通快运
+kuaidaoyun-code: ZTO56
+
+kuaidaoyun-name: 方舟国际速递
+kuaidaoyun-code: ARKEXPRESS
+
+kuaidaoyun-name: 壹米滴答
+kuaidaoyun-code: YIMIDIDA
+
+kuaidaoyun-name: 金社裕农物流
+kuaidaoyun-code: JSYNJT
+
+kuaidaoyun-name: 中华邮政台湾
+kuaidaoyun-code: POSTTW
+
+kuaidaoyun-name: 卓志速运
+kuaidaoyun-code: ESDEX
+
+kuaidaoyun-name: 安世通
+kuaidaoyun-code: AST
+
+kuaidaoyun-name: 耀飞快递
+kuaidaoyun-code: SZSDQH
+
+kuaidaoyun-name: 报通快递
+kuaidaoyun-code: BAOTONGKUAIDI
+
+kuaidaoyun-name: 洋包裹
+kuaidaoyun-code: YANGBAOGUO
+
+kuaidaoyun-name: 一运全成
+kuaidaoyun-code: YYQC56
+
+kuaidaoyun-name: 神马快递
+kuaidaoyun-code: SHENMA-EXPRESS
+
+kuaidaoyun-name: 优邦速运
+kuaidaoyun-code: UBONEX
+
+kuaidaoyun-name: 伊藤配送
+kuaidaoyun-code: YOULI
+
+kuaidaoyun-name: 货运皇
+kuaidaoyun-code: KINGFREIGHT
+
+kuaidaoyun-name: 东骏快捷物流
+kuaidaoyun-code: DJ56
+
+kuaidaoyun-name: 易达通
+kuaidaoyun-code: QEXPRESS
+
+kuaidaoyun-name: 怡佳转运
+kuaidaoyun-code: JZY1
+
+kuaidaoyun-name: ETA易达速递
+kuaidaoyun-code: ETA100
+
+kuaidaoyun-name: 中翼国际物流
+kuaidaoyun-code: CHNEXPRESS
+
+kuaidaoyun-name: 秀驿物流
+kuaidaoyun-code: COE
+
+kuaidaoyun-name: 澳洲云速递
+kuaidaoyun-code: YUNEXPRESS
+
+kuaidaoyun-name: 飞洋快递
+kuaidaoyun-code: SHIPGCE
+
+kuaidaoyun-name: 澳德物流
+kuaidaoyun-code: AUODEXPRESS
+
+kuaidaoyun-name: 迅达国际速递
+kuaidaoyun-code: XDEXPRESS
+
+kuaidaoyun-name: 驭丰速运
+kuaidaoyun-code: YFSUYUN
+
+kuaidaoyun-name: 51parce
+kuaidaoyun-code: 51PARCE
+
+kuaidaoyun-name: 海带宝
+kuaidaoyun-code: HAIDAIBAO
+
+kuaidaoyun-name: 柏域斯浩航跨境物流
+kuaidaoyun-code: PGS
+
+kuaidaoyun-name: 澳世快递
+kuaidaoyun-code: AUS
+
+kuaidaoyun-name: 同城道快递
+kuaidaoyun-code: TCDKD
+
+kuaidaoyun-name: 温报即时达
+kuaidaoyun-code: WZFX
+
+kuaidaoyun-name: 东风全球速递
+kuaidaoyun-code: DFG
+
+kuaidaoyun-name: 韵达快运
+kuaidaoyun-code: KDKY
+
+kuaidaoyun-name: 派威速递
+kuaidaoyun-code: PACWESTUSA
+
+kuaidaoyun-name: 威盛快递
+kuaidaoyun-code: WHEREEXPRESS
+
+kuaidaoyun-name: 居家通
+kuaidaoyun-code: HOMEEXPRESS
+
+kuaidaoyun-name: 澳丰速递
+kuaidaoyun-code: SFAU
+
+kuaidaoyun-name: 增速跨境
+kuaidaoyun-code: ZYZOOM
+
+kuaidaoyun-name: 跨境直邮通
+kuaidaoyun-code: KJDE

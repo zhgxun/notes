@@ -1,0 +1,2652 @@
+800bestfreight:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 百世快运
+  kuaidaoyun-code: 800BESTFREIGHT
+
+dbl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 德邦物流
+  kuaidaoyun-code: DBL
+
+uc:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 优速快递
+  kuaidaoyun-code: UC
+
+sm:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 思迈
+  kuaidaoyun-code: SM
+
+postb:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 邮政快递包裹
+  kuaidaoyun-code: POSTB
+
+bjfkd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 飞康达速运
+  kuaidaoyun-code: BJFKD
+
+ndsd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 能达速递
+  kuaidaoyun-code: NDSD
+
+nj100:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 南京100
+  kuaidaoyun-code: NJ100
+
+jjky:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 佳吉快运
+  kuaidaoyun-code: JJKY
+
+ksd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 快速递
+  kuaidaoyun-code: KSD
+
+nsf:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 新顺丰
+  kuaidaoyun-code: NSF
+
+qbsy:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 钱报速运
+  kuaidaoyun-code: QBSY
+
+rrs:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 日日顺物流
+  kuaidaoyun-code: RRS
+
+sdky:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 神盾快运
+  kuaidaoyun-code: SDKY
+
+dhys:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: ヤマト運輸
+  kuaidaoyun-code: DHYS
+
+rbyb:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 日本郵便
+  kuaidaoyun-code: RBYB
+
+logen:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: logen路坚
+  kuaidaoyun-code: LOGEN
+
+cj:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: CJ物流
+  kuaidaoyun-code: CJ
+
+jhyj:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 京华亿家
+  kuaidaoyun-code: JHYJ
+
+nfcmwl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 南方传媒物流
+  kuaidaoyun-code: NFCMWL
+
+sagawa:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 佐川急便
+  kuaidaoyun-code: SAGAWA
+
+seino:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 西濃運輸
+  kuaidaoyun-code: SEINO
+
+xlobo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 贝海国际速递
+  kuaidaoyun-code: XLOBO
+
+koreapost:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: koreapost
+  kuaidaoyun-code: KOREAPOST
+
+cdsbwl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 成都商报物流
+  kuaidaoyun-code: CDSBWL
+
+ddj:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 冻到家物流
+  kuaidaoyun-code: DDJ
+
+amazon:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 亚马逊物流
+  kuaidaoyun-code: AMAZON
+
+yggw:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 央广购物
+  kuaidaoyun-code: YGGW
+
+eslink88:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 易时联国际速递
+  kuaidaoyun-code: ESLINK88
+
+mrwind:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 风先生物流
+  kuaidaoyun-code: MRWIND
+
+yqwl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 耀启物流
+  kuaidaoyun-code: YQWL
+
+nmems:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 内蒙EMS
+  kuaidaoyun-code: NMEMS
+
+cherry56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 诚义物流
+  kuaidaoyun-code: CHERRY56
+
+pcaexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: PCAExpress
+  kuaidaoyun-code: PCAEXPRESS
+
+wjkwl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 万家康快递
+  kuaidaoyun-code: WJKWL
+
+chinz56-nz:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 新西兰秦远国际物流
+  kuaidaoyun-code: CHINZ56-NZ
+
+aue:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳邮中国快运
+  kuaidaoyun-code: AUE
+
+line-1:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 一号线国际速递
+  kuaidaoyun-code: LINE-1
+
+ewe:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: EWE国际物流
+  kuaidaoyun-code: EWE
+
+aisong:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 爱送配送
+  kuaidaoyun-code: AISONG
+
+postnz:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: POSTNZ
+  kuaidaoyun-code: POSTNZ
+
+fastgo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: FASTGO
+  kuaidaoyun-code: FASTGO
+
+pcexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 鹏程快递
+  kuaidaoyun-code: PCEXPRESS
+
+hmus:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 华美国际快递
+  kuaidaoyun-code: HMUS
+
+chs-zhexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中邮中环
+  kuaidaoyun-code: CHS-ZHEXPRESS
+
+one:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 一速递
+  kuaidaoyun-code: ONE
+
+tracking:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 航空便
+  kuaidaoyun-code: TRACKING
+
+parcel:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 荷兰皇家快递
+  kuaidaoyun-code: PARCEL
+
+airchina:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 国际航空
+  kuaidaoyun-code: AIRCHINA
+
+anl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 新干线快递
+  kuaidaoyun-code: ANL
+
+parcelforce:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: Parcelforce
+  kuaidaoyun-code: PARCELFORCE
+
+polar:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳洲极地快递
+  kuaidaoyun-code: POLAR
+
+pinsuus:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 品速国际快递
+  kuaidaoyun-code: PINSUUS
+
+sd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 顺达快递
+  kuaidaoyun-code: SD
+
+yyjiu:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 119洲际速递
+  kuaidaoyun-code: YYJIU
+
+soonexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 丰泰国际快递
+  kuaidaoyun-code: SOONEXPRESS
+
+changjiang:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 长江国际速递
+  kuaidaoyun-code: CHANGJIANG
+
+zto-nz:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中通澳新物流
+  kuaidaoyun-code: ZTO-NZ
+
+yingyun:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 鹰运国际速递
+  kuaidaoyun-code: YINGYUN
+
+shl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 畅灵国际物流
+  kuaidaoyun-code: SHL
+
+cne:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: CNE壹速递
+  kuaidaoyun-code: CNE
+
+haixing:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 海星桥快递
+  kuaidaoyun-code: HAIXING
+
+mearel:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 美邦快递
+  kuaidaoyun-code: MEAREL
+
+shuntong:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 顺通物流
+  kuaidaoyun-code: SHUNTONG
+
+chinz56-au:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳大利亚秦远国际物流
+  kuaidaoyun-code: CHINZ56-AU
+
+buytong:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 百通物流
+  kuaidaoyun-code: BUYTONG
+
+lt:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 乐天快递
+  kuaidaoyun-code: LT
+
+91soe:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 速翼快递
+  kuaidaoyun-code: 91SOE
+
+7dexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 七天快递
+  kuaidaoyun-code: 7DEXPRESS
+
+lpl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: lpl速递
+  kuaidaoyun-code: LPL
+
+vangen:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 万庚国际速递
+  kuaidaoyun-code: VANGEN
+
+edragone:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 龙象快递
+  kuaidaoyun-code: EDRAGONE
+
+goodkuaidi:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: GOOD快递
+  kuaidaoyun-code: GOODKUAIDI
+
+orangeto:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 桔子公社
+  kuaidaoyun-code: ORANGETO
+
+quancheng:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 全橙快递
+  kuaidaoyun-code: QUANCHENG
+
+htk:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 海淘客365htk
+  kuaidaoyun-code: HTK
+
+cqzhonghuan:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 重庆中环
+  kuaidaoyun-code: CQZHONGHUAN
+
+cps:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 华中快递
+  kuaidaoyun-code: CPS
+
+camelsh:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 卡蒙
+  kuaidaoyun-code: CAMELSH
+
+a1:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: A1快运
+  kuaidaoyun-code: A1
+
+speeda:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 行必达
+  kuaidaoyun-code: SPEEDA
+
+efspost:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: EFS快递
+  kuaidaoyun-code: EFSPOST
+
+30post:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中邮速递
+  kuaidaoyun-code: 30POST
+
+1hcang:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 一号仓
+  kuaidaoyun-code: 1HCANG
+
+surpass-go:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 天越物流
+  kuaidaoyun-code: SURPASS-GO
+
+dezhongwl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 德中物流
+  kuaidaoyun-code: DEZHONGWL
+
+syt-express:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 速通达跨境物流
+  kuaidaoyun-code: SYT-EXPRESS
+
+hengpost:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 五亨国际
+  kuaidaoyun-code: HENGPOST
+
+52haigo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 迅物流
+  kuaidaoyun-code: 52HAIGO
+
+rainbowez:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 彩虹速运
+  kuaidaoyun-code: RAINBOWEZ
+
+abcglobal:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 全球快运
+  kuaidaoyun-code: ABCGLOBAL
+
+wtdex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 威时沛运
+  kuaidaoyun-code: WTDEX
+
+shining:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 阳光国际速递
+  kuaidaoyun-code: SHINING
+
+meitong:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 渼通快递
+  kuaidaoyun-code: MEITONG
+
+plus:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳洲新干线快递
+  kuaidaoyun-code: PLUS
+
+zhonghuan:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中环国际（澳洲件）
+  kuaidaoyun-code: ZHONGHUAN
+
+meicangex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 美仓快递
+  kuaidaoyun-code: MEICANGEX
+
+aotsd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳通速递
+  kuaidaoyun-code: AOTSD
+
+liebaosudi:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 济南猎豹速递
+  kuaidaoyun-code: LIEBAOSUDI
+
+ydsx:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 优达生鲜
+  kuaidaoyun-code: YDSX
+
+ycgky:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 远成快运
+  kuaidaoyun-code: YCGKY
+
+lhtex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 联昊通速递
+  kuaidaoyun-code: LHTEX
+
+au7express:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳运速递
+  kuaidaoyun-code: AU7EXPRESS
+
+dhlde:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: DHL德国
+  kuaidaoyun-code: DHLDE
+
+fedexen:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: FedEx快递国际
+  kuaidaoyun-code: FEDEXEN
+
+p2uexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: P2UEXPRESS
+  kuaidaoyun-code: P2UEXPRESS
+
+kuronekoyamato:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 黑猫宅急便
+  kuaidaoyun-code: KURONEKOYAMATO
+
+gotoquick:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 快客速运
+  kuaidaoyun-code: GOTOQUICK
+
+aneds:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 安能电商小包
+  kuaidaoyun-code: ANEDS
+
+dangdang:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 当当物流
+  kuaidaoyun-code: DANGDANG
+
+aysy:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 艾瑞斯远
+  kuaidaoyun-code: AYSY
+
+banma360:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 斑马物联网
+  kuaidaoyun-code: BANMA360
+
+panex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 泛捷国际速运
+  kuaidaoyun-code: PANEX
+
+bluesky:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 蓝天快递
+  kuaidaoyun-code: BLUESKY
+
+milkyway:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 银河物流
+  kuaidaoyun-code: MILKYWAY
+
+turtle:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 海龟国际速递
+  kuaidaoyun-code: TURTLE
+
+stous:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 申通国际
+  kuaidaoyun-code: STOUS
+
+exfresh:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 安鲜达
+  kuaidaoyun-code: EXFRESH
+
+sbingex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 闪送
+  kuaidaoyun-code: SBINGEX
+
+5a56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 我的物流
+  kuaidaoyun-code: 5A56
+
+higo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 黑狗速递
+  kuaidaoyun-code: HIGO
+
+ftdnz:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 富腾达快递
+  kuaidaoyun-code: FTDNZ
+
+flywayex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 程光快递
+  kuaidaoyun-code: FLYWAYEX
+
+jixiangyou:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 吉祥邮
+  kuaidaoyun-code: JIXIANGYOU
+
+hongyuex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 鸿宇物流
+  kuaidaoyun-code: HONGYUEX
+
+kdufo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 天时海淘转运
+  kuaidaoyun-code: KDUFO
+
+yxexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 亿翔快递
+  kuaidaoyun-code: YXEXPRESS
+
+au100:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中澳国际物流
+  kuaidaoyun-code: AU100
+
+mayima:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 蚂蚁马
+  kuaidaoyun-code: MAYIMA
+
+trackparcel:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: TrackParcel
+  kuaidaoyun-code: TrackParcel
+
+nalexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 新亚物流
+  kuaidaoyun-code: NALEXPRESS
+
+mst99:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 美速通
+  kuaidaoyun-code: MST99
+
+geeklogistics:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 极客冷链
+  kuaidaoyun-code: GEEKLOGISTICS
+
+cloudlogistics:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 云物流
+  kuaidaoyun-code: CLOUDLOGISTICS
+
+nebuex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 星云速递
+  kuaidaoyun-code: NEBUEX
+
+xingchengex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 星辰快递
+  kuaidaoyun-code: XINGCHENGEX
+
+otoexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中欧快运
+  kuaidaoyun-code: OTOEXPRESS
+
+suning:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 苏宁快递
+  kuaidaoyun-code: SUNING
+
+ztoguoji:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中通国际
+  kuaidaoyun-code: ZTOGUOJI
+
+aol:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳大利亚AOL快递
+  kuaidaoyun-code: AOL
+
+fsexp:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 全速快递
+  kuaidaoyun-code: FSEXP
+
+gklife:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 极客快递
+  kuaidaoyun-code: GKLIFE
+
+gpl:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 金岸物流
+  kuaidaoyun-code: GPL
+
+uue:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: UUE联通速运
+  kuaidaoyun-code: UUE
+
+maple:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 今枫国际快运
+  kuaidaoyun-code: MAPLE
+
+westwing:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 西翼物流
+  kuaidaoyun-code: WESTWING
+
+transrush:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 转运四方
+  kuaidaoyun-code: TRANSRUSH
+
+alog:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 心怡物流
+  kuaidaoyun-code: ALOG
+
+eupackage:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 易优包裹
+  kuaidaoyun-code: EUPACKAGE
+
+globelexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 环球速运
+  kuaidaoyun-code: GLOBELEXPRESS
+
+flyingparcel:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 飞翔快递
+  kuaidaoyun-code: FLYINGPARCEL
+
+auvanda:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中联速运
+  kuaidaoyun-code: AUVANDA
+
+yyox:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: e邮客
+  kuaidaoyun-code: YYOX
+
+tianma:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 天马迅达快递
+  kuaidaoyun-code: TIANMA
+
+auspeed:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳速物流
+  kuaidaoyun-code: AUSPEED
+
+ueq:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: UEQ
+  kuaidaoyun-code: UEQ
+
+hk8dt:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 八达通
+  kuaidaoyun-code: HK8DT
+
+prohitao:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 美淘优递
+  kuaidaoyun-code: PROHITAO
+
+chengbang:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 晟邦物流
+  kuaidaoyun-code: CHENGBANG
+
+uszcn:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 转运中国
+  kuaidaoyun-code: USZCN
+
+jhekd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 佳慧尔快递
+  kuaidaoyun-code: JHEKD
+
+xipost:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 西邮寄
+  kuaidaoyun-code: XIPOST
+
+jiuyescm:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 九曳供应链
+  kuaidaoyun-code: JIUYESCM
+
+speedex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 速必达希杰物流
+  kuaidaoyun-code: SPEEDEX
+
+ydses:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 虎跃快运
+  kuaidaoyun-code: YDSES
+
+pjbestpop:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 品骏快递
+  kuaidaoyun-code: PJBESTPOP
+
+cnbd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 重庆巴伦支同城快递
+  kuaidaoyun-code: CNBD
+
+intjs:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 特急送
+  kuaidaoyun-code: INTJS
+
+ffk:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 狂派速递
+  kuaidaoyun-code: FFK
+
+giant post:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 捷安达国际速递
+  kuaidaoyun-code: GIANT POST
+
+cncexp:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: C&C全球快递
+  kuaidaoyun-code: CNCEXP
+
+qsdkd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 全时达快递
+  kuaidaoyun-code: QSDKD
+
+winwayexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 香港萬威
+  kuaidaoyun-code: WINWAYEXPRESS
+
+benniao100:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 笨鸟国际
+  kuaidaoyun-code: BENNIAO100
+
+gz11185:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 小蜜蜂邮包
+  kuaidaoyun-code: GZ11185
+
+newzealndpost:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: New Zealand Post
+  kuaidaoyun-code: NEWZEALNDPOST
+
+httx56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 汇通天下
+  kuaidaoyun-code: httx56
+
+sugouex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 速购速递
+  kuaidaoyun-code: SUGOUEX
+
+annto:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 安得物流
+  kuaidaoyun-code: ANNTO
+
+kyexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 跨越速运
+  kuaidaoyun-code: KYEXPRESS
+
+ecms:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 易客满
+  kuaidaoyun-code: ECMS
+
+zto56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中通快运
+  kuaidaoyun-code: ZTO56
+
+arkexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 方舟国际速递
+  kuaidaoyun-code: ARKEXPRESS
+
+yimidida:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 壹米滴答
+  kuaidaoyun-code: YIMIDIDA
+
+jsynjt:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 金社裕农物流
+  kuaidaoyun-code: JSYNJT
+
+posttw:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中华邮政台湾
+  kuaidaoyun-code: POSTTW
+
+esdex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 卓志速运
+  kuaidaoyun-code: ESDEX
+
+ast:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 安世通
+  kuaidaoyun-code: AST
+
+szsdqh:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 耀飞快递
+  kuaidaoyun-code: SZSDQH
+
+baotongkuaidi:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 报通快递
+  kuaidaoyun-code: BAOTONGKUAIDI
+
+yangbaoguo:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 洋包裹
+  kuaidaoyun-code: YANGBAOGUO
+
+yyqc56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 一运全成
+  kuaidaoyun-code: YYQC56
+
+shenma-express:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 神马快递
+  kuaidaoyun-code: SHENMA-EXPRESS
+
+ubonex:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 优邦速运
+  kuaidaoyun-code: UBONEX
+
+youli:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 伊藤配送
+  kuaidaoyun-code: YOULI
+
+kingfreight:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 货运皇
+  kuaidaoyun-code: KINGFREIGHT
+
+dj56:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 东骏快捷物流
+  kuaidaoyun-code: DJ56
+
+qexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 易达通
+  kuaidaoyun-code: QEXPRESS
+
+jzy1:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 怡佳转运
+  kuaidaoyun-code: JZY1
+
+eta100:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: ETA易达速递
+  kuaidaoyun-code: ETA100
+
+chnexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 中翼国际物流
+  kuaidaoyun-code: CHNEXPRESS
+
+coe:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 秀驿物流
+  kuaidaoyun-code: COE
+
+yunexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳洲云速递
+  kuaidaoyun-code: YUNEXPRESS
+
+shipgce:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 飞洋快递
+  kuaidaoyun-code: SHIPGCE
+
+auodexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳德物流
+  kuaidaoyun-code: AUODEXPRESS
+
+xdexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 迅达国际速递
+  kuaidaoyun-code: XDEXPRESS
+
+yfsuyun:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 驭丰速运
+  kuaidaoyun-code: YFSUYUN
+
+51parce:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 51parce
+  kuaidaoyun-code: 51PARCE
+
+haidaibao:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 海带宝
+  kuaidaoyun-code: HAIDAIBAO
+
+pgs:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 柏域斯浩航跨境物流
+  kuaidaoyun-code: PGS
+
+aus:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳世快递
+  kuaidaoyun-code: AUS
+
+tcdkd:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 同城道快递
+  kuaidaoyun-code: TCDKD
+
+wzfx:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 温报即时达
+  kuaidaoyun-code: WZFX
+
+dfg:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 东风全球速递
+  kuaidaoyun-code: DFG
+
+kdky:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 韵达快运
+  kuaidaoyun-code: KDKY
+
+pacwestusa:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 派威速递
+  kuaidaoyun-code: PACWESTUSA
+
+whereexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 威盛快递
+  kuaidaoyun-code: WHEREEXPRESS
+
+homeexpress:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 居家通
+  kuaidaoyun-code: HOMEEXPRESS
+
+sfau:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 澳丰速递
+  kuaidaoyun-code: SFAU
+
+zyzoom:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 增速跨境
+  kuaidaoyun-code: ZYZOOM
+
+kjde:
+  id: -1
+  biz-code: 
+  biz-name: 
+  biz-simple-name: 
+  biz-order-name: 
+  logic-id: 0
+  order: 0
+  map-code: 
+  kuaidaoyun-name: 跨境直邮通
+  kuaidaoyun-code: KJDE
+
