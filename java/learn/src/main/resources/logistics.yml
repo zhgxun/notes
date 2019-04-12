@@ -1,0 +1,14 @@
+# 物流公司配置, 注意需要指定前缀, Spring Boot 2 才能将其进行 Map 方式装配到对象中
+# 后续可以优化为存 MySQL 表后将其 dump 到 redis 中
+all-logistics:
+  logistics:
+    aae:
+      # 映射yms标识, 不对应时默认为 -1
+      id: -1
+      biz-code: aae
+      biz-name: AAE全球专递
+
+    annengwuliu:
+      id: -1
+      biz-code: annengwuliu
+      biz-name: 安能物流
