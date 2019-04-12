@@ -29,3 +29,7 @@ spring:
   data:
     mongodb:
       uri: mongodb://127.0.0.1/express
+  mail:
+    host: smtp.163.com
+    username: zhgxun1989@163.com
+    password: abc*abc

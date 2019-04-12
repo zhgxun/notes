@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>这是一封测试邮件</title>
+</head>
+<body>
+<p th:text="'这是你的名字: ' + ${name}">默认名字</p>
+<p th:text="'这是你的年龄: ' + ${age}">默认年龄</p>
+<!-- 如果为空则标签不展示 -->
+<p th:text="${height}">默认身高</p>
+</body>
+</html>
