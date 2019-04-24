@@ -3,10 +3,10 @@
 package main
 
 import (
-	"fmt"
 	"crypto/md5"
-	"io"
 	"encoding/hex"
+	"fmt"
+	"io"
 )
 
 func main() {
@@ -35,4 +35,12 @@ func main() {
 	fmt.Println(hex.EncodeToString(h.Sum(b)))
 
 	fmt.Print("Hi\n")
+
+	data := "this is a test content"
+	t := md5.New()
+	n, err := io.WriteString(t, data)
+	if n < 0 || err != nil {
+		fmt.Println("Error")
+	}
+	fmt.Println(hex.EncodeToString(t.Sum(nil)))
 }

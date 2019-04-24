@@ -48,5 +48,5 @@ public class LogisticsTraceBean {
     private int subscribeTime = 0;
 
     // 快递跟踪信息
-    private List<TraceBean> traces;
+    private List<TraceBeanV2> traces;
 }

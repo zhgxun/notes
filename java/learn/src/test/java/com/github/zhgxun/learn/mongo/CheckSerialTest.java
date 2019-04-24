@@ -1,7 +1,9 @@
 package com.github.zhgxun.learn.mongo;
 
+import com.github.zhgxun.learn.common.bean.BaseTraceBean;
 import com.github.zhgxun.learn.common.bean.LogisticsTraceBean;
 import com.github.zhgxun.learn.common.bean.TraceBean;
+import com.github.zhgxun.learn.common.bean.TraceBeanV2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,11 +26,11 @@ public class CheckSerialTest {
 
     @Test
     public void upsert() {
-        List<TraceBean> beans = new ArrayList<>();
-        beans.add(new TraceBean("北京亦庄发出", "2019-04-01"));
-        beans.add(new TraceBean("北京亦庄出库", "2019-04-02"));
-        beans.add(new TraceBean("北京昌平收货", "2019-04-03"));
-        beans.add(new TraceBean("北京昌平签收", "2019-04-04"));
+        List<TraceBeanV2> beans = new ArrayList<>();
+        beans.add(new TraceBeanV2("北京亦庄发出", "2019-04-01"));
+        beans.add(new TraceBeanV2("北京亦庄出库", "2019-04-02"));
+        beans.add(new TraceBeanV2("北京昌平收货", "2019-04-03"));
+        beans.add(new TraceBeanV2("北京昌平签收", "2019-04-04"));
 
         LogisticsTraceBean bean = new LogisticsTraceBean();
         bean.setShipperCode("jd");
@@ -65,6 +67,38 @@ public class CheckSerialTest {
         // traces 快递链路信息
         update.set("traces", bean.getTraces());
 
+        System.out.println("========================新增===================");
         System.out.println(mongoTemplate.upsert(query, update, LogisticsTraceBean.class, "kuaidibird"));
+    }
+
+    @Test
+    public void find() {
+        System.out.println("===============查询=================");
+//        System.out.println(mongoTemplate.findOne(
+//                new Query(Criteria.where("callback").is("1-2-3")),
+//                LogisticsTraceBean.class, "kuaidibird"));
+
+        System.out.println(mongoTemplate.findOne(
+                new Query(Criteria.where("callback").is("2-3-4")),
+                BaseTraceBean.class, "kuaidibird"));
+    }
+
+    @Test
+    public void insert() {
+        List<TraceBean> beans = new ArrayList<>();
+        beans.add(new TraceBean("北京亦庄发出", "2019-04-01"));
+        beans.add(new TraceBean("北京亦庄出库", "2019-04-02"));
+        beans.add(new TraceBean("北京昌平收货", "2019-04-03"));
+        beans.add(new TraceBean("北京昌平签收", "2019-04-04"));
+
+        BaseTraceBean bean = new BaseTraceBean();
+        bean.setCallback("2-3-4");
+        bean.setTraces(beans);
+
+        Query query = new Query(Criteria.where("callback").is(bean.getCallback()));
+        Update update = new Update();
+        update.set("callback", bean.getCallback());
+        update.set("traces", bean.getTraces());
+        System.out.println(mongoTemplate.upsert(query, update, BaseTraceBean.class, "kuaidibird"));
     }
 }
