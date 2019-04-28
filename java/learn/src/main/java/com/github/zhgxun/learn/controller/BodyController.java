@@ -1,5 +1,6 @@
 package com.github.zhgxun.learn.controller;
 
+import com.github.zhgxun.learn.common.util.ApiX5ResponseUtil;
 import com.github.zhgxun.learn.common.util.JsonUtil;
 import lombok.Data;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -11,15 +12,13 @@ import org.springframework.web.bind.annotation.RestController;
 public class BodyController {
 
     @PostMapping("body")
-    public Param test(@RequestParam String data) {
-        System.out.println("控制器");
-        Param param = JsonUtil.fromJson(data, Param.class);
-        return param;
+    public ApiX5ResponseUtil<Param> test(@RequestParam String data) {
+        return ApiX5ResponseUtil.success(JsonUtil.fromJson(data, Param.class));
     }
 
     @PostMapping("body2")
-    public Param test1(@RequestBody Param param) {
-        return param;
+    public ApiX5ResponseUtil<Param> test1(@RequestBody Param param) {
+        return ApiX5ResponseUtil.success(param);
     }
 }
 
