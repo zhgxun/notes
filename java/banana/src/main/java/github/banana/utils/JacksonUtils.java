@@ -17,6 +17,10 @@ public class JacksonUtils {
 
     private static ObjectMapper mapper;
 
+    private JacksonUtils() {
+        
+    }
+
     static {
         mapper = new ObjectMapper();
         // 反序列化遇见未知属性时不抛出异常, 默认抛出异常
