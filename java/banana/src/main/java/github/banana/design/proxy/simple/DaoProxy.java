@@ -1,6 +1,4 @@
-package github.banana.design.proxy;
-
-import github.banana.design.proxy.Dao;
+package github.banana.design.proxy.simple;
 
 public class DaoProxy implements Dao {
 

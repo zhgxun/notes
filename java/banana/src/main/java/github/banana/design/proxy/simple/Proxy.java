@@ -1,4 +1,4 @@
-package github.banana.design.proxy;
+package github.banana.design.proxy.simple;
 
 /**
  * 静态代理

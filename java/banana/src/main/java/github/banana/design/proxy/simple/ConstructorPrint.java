@@ -1,4 +1,4 @@
-package github.banana.design.proxy;
+package github.banana.design.proxy.simple;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Method;

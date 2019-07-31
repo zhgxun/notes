@@ -1,4 +1,4 @@
-package github.banana.design.proxy;
+package github.banana.design.proxy.simple;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

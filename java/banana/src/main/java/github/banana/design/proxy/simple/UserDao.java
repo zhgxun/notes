@@ -1,4 +1,4 @@
-package github.banana.design.proxy;
+package github.banana.design.proxy.simple;
 
 public class UserDao implements Dao {
 
