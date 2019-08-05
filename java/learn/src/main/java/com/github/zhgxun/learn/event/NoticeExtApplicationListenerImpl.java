@@ -55,11 +55,10 @@ public class NoticeExtApplicationListenerImpl implements ApplicationListener {
             try {
                 TimeUnit.SECONDS.sleep(5);
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                log.error("error: {}", e.getMessage());
+            } finally {
+                log.info("支付事件处理结束: {}", new Date());
             }
-            log.info("支付事件处理结束: {}", new Date());
-        } else {
-            log.info("未知事件, 暂不处理: {}", event.getClass().getSimpleName());
         }
     }
 }

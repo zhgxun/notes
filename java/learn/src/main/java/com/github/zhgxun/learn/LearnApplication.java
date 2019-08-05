@@ -4,7 +4,9 @@ import com.github.zhgxun.learn.common.task.TaskApplicationListener;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.ServletComponentScan;
+import org.springframework.scheduling.annotation.EnableAsync;
 
+@EnableAsync
 @SpringBootApplication
 @ServletComponentScan
 public class LearnApplication {
