@@ -12,16 +12,22 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class Notice {
 
-    @Async
+    @Async("taskEventExecutor")
     @EventListener
-    public void notice(PayRegisterEvent event) {
+    public void notice(Object e) {
+        if (!(e instanceof PayRegisterEvent)) {
+            return;
+        }
+
+        PayRegisterEvent event = (PayRegisterEvent) e;
         log.info("Pay Start... {}", new Date());
         log.info("支付成功回调信息: {}", event.getPay());
         try {
-            TimeUnit.SECONDS.sleep(2);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+            TimeUnit.SECONDS.sleep(20);
+        } catch (InterruptedException e1) {
+            log.error("error: {}", e1.getMessage());
+        } finally {
+            log.info("Pay End: {}", new Date());
         }
-        log.info("Pay End: {}", new Date());
     }
 }

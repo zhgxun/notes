@@ -37,7 +37,7 @@ import java.util.concurrent.TimeUnit;
  * Web相关事件, 只能应用于使用DispatcherServlet的Web应用
  * 在使用Spring作为前端的MVC控制器时, 当Spring处理用户请求结束后, 系统会自动触发该事件
  */
-@Component
+//@Component
 @Slf4j
 public class NoticeExtApplicationListenerImpl implements ApplicationListener {
 
@@ -47,7 +47,7 @@ public class NoticeExtApplicationListenerImpl implements ApplicationListener {
      * @param event 通用事件类型, 需要转化为感兴趣的事件
      */
     @Override
-    @Async
+    @Async("taskEventExecutor")
     public void onApplicationEvent(ApplicationEvent event) {
         // 需要选择感兴趣的事件, 即该类能处理的事件, 其它事件不做处理
         if (event instanceof PayRegisterEvent) {
