@@ -17,8 +17,10 @@ public class ThreeSumClosest {
     public static int threeSumClosest(int[] nums, int target) {
         int length = nums.length;
 
+        // 数组排序
         Arrays.sort(nums);
 
+        // 记录相对较小的值, 最终相对较小的值就是跟目标值最接近的值
         int closeValue = nums[0] + nums[1] + nums[2];
         for (int i = 0; i < length; i++) {
             int left = i + 1, right = length - 1;
@@ -29,6 +31,7 @@ public class ThreeSumClosest {
                     closeValue = current;
                 }
 
+                // 当前值太大, 需要减小右值
                 if (current > target) {
                     right--;
                 } else if (current < target) {
