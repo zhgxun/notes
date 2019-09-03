@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
+
 public class InsertionSortList {
 
     public static void main(String[] args) {

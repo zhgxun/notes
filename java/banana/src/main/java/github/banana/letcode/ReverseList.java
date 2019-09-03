@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
+
 /**
  * 反转单链表
  */

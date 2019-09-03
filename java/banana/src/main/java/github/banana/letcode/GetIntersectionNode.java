@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
+
 /**
  * 160. 相交链表
  * <p>

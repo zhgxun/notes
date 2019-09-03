@@ -1,5 +1,6 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

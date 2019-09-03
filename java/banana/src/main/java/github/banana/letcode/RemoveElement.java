@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
+
 /**
  * 从数组中移除目标值, 新数组追加都数组开始处
  */

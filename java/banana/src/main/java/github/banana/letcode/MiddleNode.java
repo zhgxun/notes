@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.ListNode;
+
 /**
  * 链表的中间节点
  */
