@@ -6,6 +6,10 @@ package github.banana.common;
 public class PrintListNode {
 
     public static void print(ListNode node) {
+        if (node == null) {
+            return;
+        }
+
         StringBuilder sb = new StringBuilder();
         while (node != null) {
             sb.append(node.val);

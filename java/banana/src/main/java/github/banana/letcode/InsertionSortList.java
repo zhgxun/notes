@@ -16,16 +16,18 @@ public class InsertionSortList {
         }
     }
 
+    // 插入排序, 时间复杂度O(n^2)效率中等
     public ListNode insertionSortList(ListNode head) {
         if (head == null || head.next == null) {
             return head;
         }
 
+        // 链表操作的哑节点
         ListNode dummyHead = new ListNode(0);
         dummyHead.next = head;
 
         // head~pre是排好序的部分
-        // pre 是有序链表的最后一个节点
+        // pre 记录当前节点的上一个节点
         ListNode pre = head;
 
         // 第一个元素默认是有序的
@@ -47,7 +49,7 @@ public class InsertionSortList {
                 pre = cur;
                 cur = cur.next;
             } else {
-                // cur的需要插入到insertPre后面的位置
+                // cur需要插入到insertPre后面的位置
                 /*
                  *                      4(cur)
                  *                      |
@@ -61,11 +63,14 @@ public class InsertionSortList {
                  * 这样就完成了3个链表节点的交换
                  * 还是比较烧脑的, 链表就这点特别复杂, 弄错就互相找不到了
                  */
+                // 当前节点要被插入到其它地方, 可能相邻也可能不相邻, 故需要记录当前节点, 避免丢失
+                // 完全可以用一个临时节点来记录, 不一定非要复用pre, 减少一次空间复杂度而已
                 pre.next = cur.next;
+                // 这个交换就比较简单了, 其实就是找到待插入位置的上一个节点, 设置他们的下一个节点位置即可
                 cur.next = insertPre.next;
                 insertPre.next = cur;
 
-                // 移动cur
+                // 移动cur, 之前不能丢失当前节点, 否则链表找不到位置了, 哈哈哈
                 cur = pre.next;
             }
         }
@@ -76,9 +81,9 @@ public class InsertionSortList {
     /**
      * 查找cur要插入位置的前一个节点
      *
-     * @param head
-     * @param cur
-     * @return
+     * @param head 链表的头节点
+     * @param cur  当前节点
+     * @return 当前节点应该在链表中的位置, 说明cur应该插入在该节点的后面
      */
     private ListNode findInsertIndexPre(ListNode head, ListNode cur) {
         while (head.next != cur) {
