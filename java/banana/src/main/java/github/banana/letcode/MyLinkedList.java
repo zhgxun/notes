@@ -4,7 +4,7 @@ import github.banana.common.ListNode;
 import github.banana.common.PrintListNode;
 
 /**
- * 实现一个整形链表, 可以使用泛型, 道理类似, 这不是一个县城安全的链表
+ * 实现一个整形链表, 可以使用泛型, 道理类似, 这不是一个线程安全的链表
  * <p>
  * 以下索引均从0开始
  */
@@ -108,7 +108,6 @@ public class MyLinkedList {
                 cur = cur.next;
                 index--;
             }
-            System.out.println(cur.val);
             // 需要在cur的位置插入, 即是在cur的前面插入
             ListNode temp = new ListNode(val);
             // 将刚才找到的位置的下一个补在后面
@@ -128,13 +127,20 @@ public class MyLinkedList {
      * @param index 期望删除的索引位置
      */
     public void deleteAtIndex(int index) {
-        if (index > size || index < 0) {
+        if (index > size - 1 || index < 0) {
             return;
         }
 
         // 仅有一个节点
         if (size == 1) {
             head = null;
+            size--;
+            return;
+        }
+
+        // 删除头结点
+        if (index == 0) {
+            head = head.next;
             size--;
             return;
         }
@@ -153,13 +159,12 @@ public class MyLinkedList {
     public static void main(String[] args) {
         MyLinkedList linkedList = new MyLinkedList();
         linkedList.addAtHead(1);
-//        linkedList.addAtTail(3);
-//        linkedList.addAtIndex(1, 2);
-        // 1->2->3
+        linkedList.addAtTail(3);
+        linkedList.addAtIndex(1,2);
         PrintListNode.print(linkedList.head);
-//        System.out.println(linkedList.get(1));
+        System.out.println(linkedList.get(1));
         linkedList.deleteAtIndex(0);
         PrintListNode.print(linkedList.head);
-//        System.out.println(linkedList.get(1));
+        System.out.println(linkedList.get(0));
     }
 }
