@@ -11,10 +11,15 @@ public class PrintListNode {
         }
 
         StringBuilder sb = new StringBuilder();
+        int i = 0;
         while (node != null) {
             sb.append(node.val);
             sb.append("->");
             node = node.next;
+            // 避免大连表打印
+            if (i++ >= 10) {
+                break;
+            }
         }
         String content = sb.toString();
         System.out.println(content.substring(0, content.lastIndexOf("->")));
