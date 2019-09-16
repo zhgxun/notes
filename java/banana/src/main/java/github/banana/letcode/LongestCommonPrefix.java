@@ -3,9 +3,11 @@ package github.banana.letcode;
 public class LongestCommonPrefix {
 
     public static void main(String[] args) {
-
+        String[] strings = new String[]{"flower", "flow", "flowight"};
+        System.out.println(longestCommonPrefixV2(strings));
     }
 
+    // 二分执行效率很高
     public static String longestCommonPrefix(String[] strs) {
         if (strs == null || strs.length == 0) {
             return "";
@@ -42,5 +44,29 @@ public class LongestCommonPrefix {
             }
         }
         return true;
+    }
+
+    // 容易理解但是执行效率相比二分降低了一半
+    public static String longestCommonPrefixV2(String[] strs) {
+        if (strs == null || strs.length == 0) {
+            return "";
+        }
+
+        int minLength = Integer.MAX_VALUE;
+        for (String s : strs) {
+            minLength = Math.min(minLength, s.length());
+        }
+
+        int maxPrefix = 0;
+        for (int i = 0; i <= minLength; i++) {
+            maxPrefix = i;
+            // 找到第一个不是公共前缀的字符则停止搜索
+            if (!isCommonPrefix(strs, i)) {
+                maxPrefix = i - 1;
+                break;
+            }
+        }
+
+        return strs[0].substring(0, maxPrefix);
     }
 }
