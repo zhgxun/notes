@@ -7,6 +7,7 @@ public class PrintListNode {
 
     public static void print(ListNode node) {
         if (node == null) {
+            System.out.println("Current ListNode is null");
             return;
         }
 
