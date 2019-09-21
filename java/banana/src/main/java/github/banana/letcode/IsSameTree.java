@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 /**
  * 相同的树
  * <p>

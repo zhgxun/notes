@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
@@ -49,15 +51,5 @@ public class LevelOrder {
             res.add(list);
         }
         return res;
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode(int val) {
-        this.val = val;
     }
 }

@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 import java.util.LinkedList;
 import java.util.Queue;
 

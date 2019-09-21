@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 /**
  * 687. 最长同值路径
  * <p>

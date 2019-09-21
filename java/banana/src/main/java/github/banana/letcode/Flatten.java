@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 /**
  * 114. 二叉树展开为链表
  * <p>

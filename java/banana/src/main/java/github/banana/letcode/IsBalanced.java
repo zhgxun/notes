@@ -1,5 +1,7 @@
 package github.banana.letcode;
 
+import github.banana.common.TreeNode;
+
 /**
  * 110. 平衡二叉树
  * <p>
