@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.event;
+package com.github.zhgxun.learn.common.event;
 
 import lombok.Getter;
 import org.springframework.context.ApplicationEvent;

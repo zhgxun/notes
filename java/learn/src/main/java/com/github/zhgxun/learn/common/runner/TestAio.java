@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.runner;
+package com.github.zhgxun.learn.common.runner;
 
 import java.net.InetSocketAddress;
 import java.nio.ByteBuffer;

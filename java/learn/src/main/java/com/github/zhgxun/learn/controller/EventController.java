@@ -1,9 +1,9 @@
 package com.github.zhgxun.learn.controller;
 
-import com.github.zhgxun.learn.event.OrderBean;
-import com.github.zhgxun.learn.event.OrderRegisterEvent;
-import com.github.zhgxun.learn.event.Pay;
-import com.github.zhgxun.learn.event.PayRegisterEvent;
+import com.github.zhgxun.learn.common.event.OrderBean;
+import com.github.zhgxun.learn.common.event.OrderRegisterEvent;
+import com.github.zhgxun.learn.common.event.Pay;
+import com.github.zhgxun.learn.common.event.PayRegisterEvent;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;

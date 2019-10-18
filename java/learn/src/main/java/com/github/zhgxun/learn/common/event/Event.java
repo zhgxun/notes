@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.event;
+package com.github.zhgxun.learn.common.event;
 
 /**
  * 1. Java的事件机制

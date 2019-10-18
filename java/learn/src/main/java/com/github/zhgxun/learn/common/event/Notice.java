@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.event;
+package com.github.zhgxun.learn.common.event;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;

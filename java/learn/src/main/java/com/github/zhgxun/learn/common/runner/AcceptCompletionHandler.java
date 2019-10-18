@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.runner;
+package com.github.zhgxun.learn.common.runner;
 
 import lombok.extern.slf4j.Slf4j;
 

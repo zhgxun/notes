@@ -1,4 +1,4 @@
-package com.github.zhgxun.learn.event;
+package com.github.zhgxun.learn.common.event;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.context.event.EventListener;
@@ -10,18 +10,23 @@ import java.util.concurrent.TimeUnit;
 
 @Component
 @Slf4j
-public class Message {
+public class Email {
 
+    /**
+     * 监听其实只需关注事件即可
+     *
+     * @param event 监听的事件
+     */
     @Async
     @EventListener
     public void send(OrderRegisterEvent event) {
-        log.info("Message Start... {}", new Date());
-        log.info("短信发送信息: {}", event.getOrderBean());
+        log.info("Email Start... {}", new Date());
+        log.info("邮件发送信息: {}", event.getOrderBean());
         try {
             TimeUnit.SECONDS.sleep(2);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        log.info("Message End: {}", new Date());
+        log.info("Email End: {}", new Date());
     }
 }
