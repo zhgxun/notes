@@ -1,6 +1,7 @@
-package com.github.zhgxun.learn.notes.config;
+package com.github.zhgxun.learn.config;
 
 import com.github.zhgxun.learn.notes.Person;
+import com.github.zhgxun.learn.notes.config.BeanConfig;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
