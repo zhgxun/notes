@@ -12,9 +12,6 @@ public class MacOSCondition implements Condition {
         Environment environment = context.getEnvironment();
         String osName = environment.getProperty("os.name");
         System.out.println(osName);
-        if (osName != null && osName.contains("Mac OS X")) {
-            return true;
-        }
-        return false;
+        return osName != null && osName.contains("Mac OS X");
     }
 }

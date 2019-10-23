@@ -11,7 +11,7 @@ public class BeanLifeCycleTest {
     public static void main(String[] args) {
         ApplicationContext context = new AnnotationConfigApplicationContext(BeanLifeCycleConfig.class);
         LifeCycle lifeCycle = context.getBean(LifeCycle.class);
-        lifeCycle.setPerson(new Person("李四", 10, "臭弟弟"));
+        lifeCycle.setPerson(new Person("小李子", 10, "龟儿子"));
         System.out.println(lifeCycle.getPerson());
     }
 }

@@ -12,9 +12,6 @@ public class LinuxCondition implements Condition {
         Environment environment = context.getEnvironment();
         String osName = environment.getProperty("os.name");
         System.out.println(osName);
-        if (osName != null && osName.contains("linux")) {
-            return true;
-        }
-        return false;
+        return osName != null && osName.contains("linux");
     }
 }
