@@ -33,3 +33,6 @@ spring:
     host: smtp.163.com
     username: zhgxun1989@163.com
     password: abc*abc
+
+  profiles:
+    active: staging

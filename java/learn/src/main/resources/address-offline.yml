@@ -1,0 +1,8 @@
+addressOffline:
+  addressMap:
+    10:
+      name: 中国测试
+      desc: 北京测试
+    11:
+      name: 亚洲测试
+      desc: 日本测试

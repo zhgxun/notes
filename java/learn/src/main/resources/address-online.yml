@@ -1,0 +1,8 @@
+addressOnline:
+  addressMap:
+    10:
+      name: 中国
+      desc: 北京
+    11:
+      name: 亚洲
+      desc: 日本
