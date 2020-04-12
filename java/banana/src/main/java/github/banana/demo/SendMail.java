@@ -16,13 +16,13 @@ import javax.mail.Transport;
 public class SendMail {
     public static void main(String[] args) {
         text();
-        html();
-        try {
-            attachment();
-            image();
-        } catch (IOException | MessagingException e) {
-            e.printStackTrace();
-        }
+//        html();
+//        try {
+//            attachment();
+//            image();
+//        } catch (IOException | MessagingException e) {
+//            e.printStackTrace();
+//        }
     }
 
     /**
@@ -32,7 +32,7 @@ public class SendMail {
         Email email = new Email();
         Session session = email.SSLSession();
         try {
-            Message message = email.text(session, "zhgxun1989@sina.com", "zhgxun1989@163.com", "千与千寻",
+            Message message = email.text(session, "z@oef.org.cn", "zhangguangxun@xiaomi.com", "千与千寻",
                     "天空是连着的，如果我们也能各自发光的话，无论距离有多远，都能看到彼此努力的身影。");
             Transport.send(message);
         } catch (MessagingException e) {

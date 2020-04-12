@@ -31,4 +31,29 @@ func main() {
 	}
 	fmt.Printf("%s\n", data)
 	fmt.Println("Done")
+
+	//同步包裹运单号
+	type PackageExpressReq struct {
+		OutPackageId string `json:"outPackageId"`
+		ExpressSn    string `json:"expressSn"`
+		ExpressName  string `json:"expressName"`
+		BizCode      string `json:"bizCode"`
+	}
+
+	var reqObj = []PackageExpressReq{
+		{
+			OutPackageId: "abc",
+			ExpressSn:    "asdv",
+			BizCode:      "jd",
+			ExpressName:  "京东",
+		},
+	}
+
+	reqObjBytes, e := json.Marshal(reqObj)
+	if e != nil {
+		log.Fatalf("JSON marshaling failed: %s", e)
+	}
+	fmt.Printf("%s\n", reqObjBytes)
+	fmt.Println("Done")
+
 }

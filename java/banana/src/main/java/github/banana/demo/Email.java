@@ -1,9 +1,5 @@
 package github.banana.demo;
 
-import java.io.IOException;
-import java.io.InputStream;
-import java.util.Properties;
-
 import javax.activation.DataHandler;
 import javax.mail.Authenticator;
 import javax.mail.BodyPart;
@@ -17,6 +13,9 @@ import javax.mail.internet.MimeBodyPart;
 import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 import javax.mail.util.ByteArrayDataSource;
+import java.io.IOException;
+import java.io.InputStream;
+import java.util.Properties;
 
 /**
  * 邮箱公共信息
@@ -25,15 +24,15 @@ import javax.mail.util.ByteArrayDataSource;
  */
 public class Email {
     // 邮箱服务地址
-    private String host = "smtp.sina.com";
+    private String host = "smtp.office365.com";
     // 邮箱用户名
-    private String username = "zhgxun1989@sina.com";
+    private String username = "z@oef.org.cn";
     // 邮箱密码
-    private String password = "******";
+    private String password = "";
     // 是否开启调试模式
     private boolean debug = true;
     // 邮箱服务端口
-    private String port = "465";
+    private String port = "587";
 
     public Email() {
 
@@ -70,8 +69,9 @@ public class Email {
         // 启用用户登陆认证
         properties.put("mail.smtp.auth", "true");
         // 启用SSL
-        properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-        properties.put("mail.smtp.socketFactory.port", this.port);
+//        properties.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+//        properties.put("mail.smtp.socketFactory.port", this.port);
+        properties.put("mail.smtp.starttls.enable", "true");
         // 用户认证
         Session session = Session.getInstance(properties, new Authenticator() {
             protected PasswordAuthentication getPasswordAuthentication() {
